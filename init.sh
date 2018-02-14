@@ -6,6 +6,14 @@ dbname=$(sed -e 's/dev.//' -e 's/\.\.*/_/' <<< $envURL)
 sed -i '' "s/database_name/$dbname/g" .env.example
 cp .env.example .env
 
+cp /usr/local/etc/nginx/sites-available/digirock.conf /usr/local/etc/nginx/sites-available/$envURL.conf
+subl /usr/local/etc/nginx/sites-available/$envURL.conf
+read -p "Klicka på [Enter] när NGINX är klart"
+sudo brew services restart nginx
+
+subl /etc/hosts
+read -p "Klicka på [Enter] när hosts är klart"
+
 echo ""
 echo "Skapar en ny databas..."
 mysql -uroot -e "CREATE DATABASE ${dbname} CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;"
