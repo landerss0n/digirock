@@ -7,8 +7,9 @@ sed -i '' "s/database_name/$dbname/g" .env.example
 cp .env.example .env
 
 cp /usr/local/etc/nginx/sites-available/digirock.conf /usr/local/etc/nginx/sites-available/$envURL.conf
-subl /usr/local/etc/nginx/sites-available/$envURL.conf
-read -p "Klicka på [Enter] när NGINX är klart"
+nginx=$(sed -e 's/dev.//' <<< $envURL)
+sed -i '' "s/digirock.se/$nginx/g" /usr/local/etc/nginx/sites-available/$envURL.conf
+ln -s /usr/local/etc/nginx/sites-available/$envURL.conf /usr/local/etc/nginx/sites-enabled/$envURL.conf
 sudo brew services restart nginx
 
 subl /etc/hosts
@@ -46,3 +47,5 @@ git remote add origin git@bitbucket.org:landerss0n/$bitbucketRepo.git
 git add .
 git commit -m "Initial commit"
 git push -u origin master
+
+sed -i '' "s/apa.se/lol.se/g" /usr/local/etc/nginx/sites-available/dev.digi.se.conf
