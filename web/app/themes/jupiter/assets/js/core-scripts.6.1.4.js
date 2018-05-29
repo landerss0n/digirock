@@ -6806,7 +6806,6 @@ $(document).ready(function() {
     mk_ajax_search();
     mk_hover_events();
     mk_portfolio_ajax();
-    mk_love_post();
     product_loop_add_cart();
   //  mk_social_share();
     mk_portfolio_widget();
@@ -7960,28 +7959,21 @@ function mk_blog_carousel() {
  *
  * Mostly implemented in Vanilla JS instead of jQuery.
  */
-
 function mk_contact_form() {
     "use strict";
-
     var mkContactForms = document.getElementsByClassName('mk-contact-form');
-
     if (mkContactForms.length === 0) {
         return;
     }
-
     var captchaImageHolder = $('.captcha-image-holder');
     var activeClassName = 'is-active';
     var invalidClassName = 'mk-invalid';
-
     for (var i = 0; i < mkContactForms.length; i++) {
         initializeForm(mkContactForms[i], activeClassName, invalidClassName);
     }
-
-    if(captchaImageHolder.length > 0) {
-        $(window).on('load', initializeCaptchas);    
+    if (captchaImageHolder.length > 0) {
+        $(window).on('load', initializeCaptchas);
     }
-
     /**
      * Initialize mk forms. e.g add activeClassName for inputs.
      *
@@ -7991,22 +7983,18 @@ function mk_contact_form() {
      */
     function initializeForm(form, activeClassName, invalidClassName) {
         var inputs = getFormInputs(form);
-
         for (var i = 0; i < inputs.length; i++) {
             markActiveClass(inputs[i]);
         }
-
-        form.addEventListener('submit', function (e) {
+        form.addEventListener('submit', function(e) {
             validateForm(e, invalidClassName);
         });
-
         /**
          * Set activeClassName for the parent node of the inout
          */
         function setActiveClass() {
             addClass(this.parentNode, activeClassName);
         }
-
         /**
          * Unset activeClassName from the parent node of the input.
          * We need to unset activeClassName only if the data was empty.
@@ -8017,7 +8005,6 @@ function mk_contact_form() {
                 removeClass(this.parentNode, activeClassName);
             }
         }
-
         /**
          * Add event listeners (focus,blur) for input to set and unset activeClassName.
          *
@@ -8028,7 +8015,6 @@ function mk_contact_form() {
             input.addEventListener('blur', unsetActiveClass);
         }
     }
-
     /**
      * Validate form when it's submitted. If everything was valid, we with post form in ajax request.
      *
@@ -8041,12 +8027,14 @@ function mk_contact_form() {
         var inputs = getFormInputs(form);
         var isValidForm = true;
         var hasCaptchaField = false;
-
         for (var i = 0; i < inputs.length; i++) {
             var input = inputs[i];
             input.value = String(input.value).trim();
             switch (input.type) {
                 case 'hidden':
+                    break;
+                case 'checkbox':
+                    isValidForm = validateCheckBox(input, invalidClassName) && isValidForm;
                     break;
                 case 'email':
                     isValidForm = validateEmail(input, invalidClassName) && isValidForm;
@@ -8076,7 +8064,6 @@ function mk_contact_form() {
                     break;
             }
         }
-
         if (isValidForm) {
             if (hasCaptchaField) {
                 validateCaptcha(form, invalidClassName, sendForm);
@@ -8085,7 +8072,6 @@ function mk_contact_form() {
             }
         }
     }
-
     /**
      * Validate captcha of form. If everything was, we will execute captchaIsValidCallback which as sendForm().
      *
@@ -8096,15 +8082,13 @@ function mk_contact_form() {
      */
     function validateCaptcha(form, invalidClassName, captchaIsValidCallback) {
         var input = form.querySelectorAll('[data-type="captcha"]')[0];
-
         if (input.value.length === 0) {
             addClass(input, invalidClassName);
             return false;
         } else {
-            window.get.captcha(input.value).done(function (data) {
+            window.get.captcha(input.value).done(function(data) {
                 loadCaptcha();
                 input.value = '';
-
                 if (data !== 'ok') {
                     addClass(input, invalidClassName);
                     addClass(input, 'contact-captcha-invalid');
@@ -8120,7 +8104,6 @@ function mk_contact_form() {
             });
         }
     }
-
     /**
      * Send submitted form.
      *
@@ -8129,22 +8112,24 @@ function mk_contact_form() {
     function sendForm(form) {
         var $form = $(form);
         var data = getFormData(form);
-
         progressButton.loader($form);
-        $.post(ajaxurl, data, function (response) {
+        $.post(ajaxurl, data, function(response) {
             var res = JSON.parse(response);
             if (res.action_Status) {
                 progressButton.success($form);
                 $form.find('.text-input').val('');
                 $form.find('textarea').val('');
-                $form.find('.contact-form-message').addClass('state-success').html(res.message);
+                $form.find('input[type=checkbox]').attr("checked", false);
+                $form.find('.contact-form-message').slideDown().addClass('state-success').html(res.message);
+                setTimeout(function() {
+                   $form.find('.contact-form-message').slideUp();  
+                }, 5000);
             } else {
                 progressButton.error($form);
                 $form.find('.contact-form-message').removeClass('state-success').html(res.message);
             }
         });
     }
-
     /**
      * Initialize all captcha images for first time. All captcha images is always same. e.g. if we have multiple form,
      * all of them will have the same image.
@@ -8156,7 +8141,6 @@ function mk_contact_form() {
             captchaChangeImageButtons[i].addEventListener('click', loadCaptcha);
         }
     }
-
     /**
      * Load captcha text and append the image to captcha container.
      * If it used as a callback, it will prevent default behave of the event.
@@ -8166,9 +8150,9 @@ function mk_contact_form() {
         if (e) {
             e.preventDefault();
         }
-
-        $.post(ajaxurl, {action: 'mk_create_captcha_image'}, appendImage);
-
+        $.post(ajaxurl, {
+            action: 'mk_create_captcha_image'
+        }, appendImage);
         /**
          * The callback function for append or change old image src based on response. T
          * The captchaImageURL is the url of the captcha which is provided in ajax response of mk_create_captcha_image.
@@ -8178,12 +8162,10 @@ function mk_contact_form() {
             if (captchaImageHolder.find('.captcha-image').length === 0) {
                 captchaImageHolder.html('<img src="' + captchaImageURL + '" class="captcha-image" alt="captcha txt">');
             } else {
-                captchaImageHolder.find('.captcha-image').attr("src", captchaImageURL+'?'+ new Date().getTime());
+                captchaImageHolder.find('.captcha-image').attr("src", captchaImageURL + '?' + new Date().getTime());
             }
         }
     }
-
-
     /**
      * Get form inputs using querySelectorAll().
      * It returns <input> and <textarea> tags. If you need any other tags such as <select>, please update this function.
@@ -8194,8 +8176,6 @@ function mk_contact_form() {
     function getFormInputs(form) {
         return form.querySelectorAll('input,textarea');
     }
-
-
     /**
      * Get data of the form inputs and textareas as a object.
      *
@@ -8203,7 +8183,9 @@ function mk_contact_form() {
      * @returns {{action: string}}
      */
     function getFormData(form) {
-        var data = {action: 'mk_contact_form'};
+        var data = {
+            action: 'mk_contact_form'
+        };
         var inputs = getFormInputs(form);
         for (var i = 0; i < inputs.length; i++) {
             data[inputs[i].name] = inputs[i].value;
@@ -8211,16 +8193,12 @@ function mk_contact_form() {
         return data;
     }
 }
-
-
 /* Ajax Login Form */
 /* -------------------------------------------------------------------- */
-
 function mk_login_form() {
-
-    $('form.mk-login-form').each(function () {
+    $('form.mk-login-form').each(function() {
         var $this = $(this);
-        $this.on('submit', function (e) {
+        $this.on('submit', function(e) {
             $('p.mk-login-status', $this).show().text(ajax_login_object.loadingmessage);
             $.ajax({
                 type: 'POST',
@@ -8232,7 +8210,7 @@ function mk_login_form() {
                     'password': $('#password', $this).val(),
                     'security': $('#security', $this).val()
                 },
-                success: function (data) {
+                success: function(data) {
                     $('p.mk-login-status', $this).text(data.message);
                     if (data.loggedin === true) {
                         document.location.href = ajax_login_object.redirecturl;
@@ -8243,87 +8221,68 @@ function mk_login_form() {
         });
     });
 }
-
-
 /* Progress Button */
 /* -------------------------------------------------------------------- */
-
 var progressButton = {
-    loader: function (form) {
-        MK.core.loadDependencies([MK.core.path.plugins + 'tweenmax.js'], function () {
+    loader: function(form) {
+        MK.core.loadDependencies([MK.core.path.plugins + 'tweenmax.js'], function() {
             var $form = form,
                 progressBar = $form.find(".mk-progress-button .mk-progress-inner"),
                 buttonText = $form.find(".mk-progress-button .mk-progress-button-content"),
                 progressButton = new TimelineLite();
-
-            progressButton
-                .to(progressBar, 0, {
-                    width: "100%",
-                    scaleX: 0,
-                    scaleY: 1
-                })
-                .to(buttonText, .3, {
-                    y: -5
-                })
-                .to(progressBar, 1.5, {
-                    scaleX: 1,
-                    ease: Power2.easeInOut
-                }, "-=.1")
-                .to(buttonText, .3, {
-                    y: 0
-                })
-                .to(progressBar, .3, {
-                    scaleY: 0
-                });
+            progressButton.to(progressBar, 0, {
+                width: "100%",
+                scaleX: 0,
+                scaleY: 1
+            }).to(buttonText, .3, {
+                y: -5
+            }).to(progressBar, 1.5, {
+                scaleX: 1,
+                ease: Power2.easeInOut
+            }, "-=.1").to(buttonText, .3, {
+                y: 0
+            }).to(progressBar, .3, {
+                scaleY: 0
+            });
         });
     },
-
-    success: function (form) {
-        MK.core.loadDependencies([MK.core.path.plugins + 'tweenmax.js'], function () {
+    success: function(form) {
+        MK.core.loadDependencies([MK.core.path.plugins + 'tweenmax.js'], function() {
             var $form = form,
                 buttonText = $form.find(".mk-button .mk-progress-button-content, .mk-contact-button .mk-progress-button-content"),
                 successIcon = $form.find(".mk-progress-button .state-success"),
                 progressButtonSuccess = new TimelineLite({
                     onComplete: hideSuccessMessage
                 });
-
-            progressButtonSuccess
-                .to(buttonText, .3, {
-                    paddingRight: 20,
-                    ease: Power2.easeInOut
-                }, "+=1")
-                .to(successIcon, .3, {
-                    opacity: 1
-                })
-                .to(successIcon, 2, {
-                    opacity: 1
-                });
+            progressButtonSuccess.to(buttonText, .3, {
+                paddingRight: 20,
+                ease: Power2.easeInOut
+            }, "+=1").to(successIcon, .3, {
+                opacity: 1
+            }).to(successIcon, 2, {
+                opacity: 1
+            });
 
             function hideSuccessMessage() {
                 progressButtonSuccess.reverse()
             }
         });
     },
-
-    error: function (form) {
-        MK.core.loadDependencies([MK.core.path.plugins + 'tweenmax.js'], function () {
+    error: function(form) {
+        MK.core.loadDependencies([MK.core.path.plugins + 'tweenmax.js'], function() {
             var $form = form,
                 buttonText = $form.find(".mk-button .mk-progress-button-content, .mk-contact-button .mk-progress-button-content"),
                 errorIcon = $form.find(".mk-progress-button .state-error"),
                 progressButtonError = new TimelineLite({
                     onComplete: hideErrorMessage
                 });
-
-            progressButtonError
-                .to(buttonText, .3, {
-                    paddingRight: 20
-                }, "+=1")
-                .to(errorIcon, .3, {
-                    opacity: 1
-                })
-                .to(errorIcon, 2, {
-                    opacity: 1
-                });
+            progressButtonError.to(buttonText, .3, {
+                paddingRight: 20
+            }, "+=1").to(errorIcon, .3, {
+                opacity: 1
+            }).to(errorIcon, 2, {
+                opacity: 1
+            });
 
             function hideErrorMessage() {
                 progressButtonError.reverse()
@@ -8755,40 +8714,6 @@ var $lightbox = $(".mk-lightbox");
 }
 
 
-/* Love This */
-/* -------------------------------------------------------------------- */
-
-function mk_love_post() {
-
-  "use strict";
-
-  $('body').on('click', '.mk-love-this', function () {
-    var $this = $(this),
-      $id = $this.attr('id');
-
-    if ($this.hasClass('item-loved')) return false;
-
-    if ($this.hasClass('item-inactive')) return false;
-
-    var $sentdata = {
-      action: 'mk_love_post',
-      post_id: $id
-    }
-
-    $.post(ajaxurl, $sentdata, function (data) {
-      $this.find('.mk-love-count').html(data);
-      $this.addClass('item-loved');
-    });
-
-    $this.addClass('item-inactive');
-    return false;
-  });
-
-}
-
-
-
-
 /* Milestone Number Shortcode */
 /* -------------------------------------------------------------------- */
 
@@ -9058,7 +8983,6 @@ function validateEmail(input, invalidClassName) {
         return true;
     }
 }
-
 /**
  * Validate text entry.
  *
@@ -9068,7 +8992,6 @@ function validateEmail(input, invalidClassName) {
  */
 function validateText(input, invalidClassName) {
     var value = input.value.trim();
-
     if (input.required && value.length === 0) {
         if (invalidClassName) {
             addClass(input, invalidClassName);
@@ -9081,12 +9004,30 @@ function validateText(input, invalidClassName) {
         return true;
     }
 }
-
-
+/**
+ * Validate Checkbox.
+ *
+ * @param input
+ * @param invalidClassName
+ * @returns boolean
+ */
+function validateCheckBox(input, invalidClassName) {
+    if (input.required && input.checked == false) {
+        if (invalidClassName) {
+            addClass(input, invalidClassName);
+        }
+        return false;
+    } else {
+        if (invalidClassName) {
+            removeClass(input, invalidClassName);
+        }
+        return true;
+    }
+}
 /**
  * If we're running under Node for testing purpose.
  */
-if(typeof exports !== 'undefined') {
+if (typeof exports !== 'undefined') {
     exports.validateEmail = validateEmail;
     exports.validateText = validateText;
 }
@@ -9117,23 +9058,6 @@ if(typeof exports !== 'undefined') {
     });
 
 })( jQuery );
-(function( $ ) {
-	'use strict';
-
-	MK.ui.preloader = {
-		dom : {
-			overlay: '.mk-body-loader-overlay'
-		},
-
-		hide : function hide() {
-			$( this.dom.overlay ).fadeOut(600, "easeInOutExpo", function() {
-				$('body').removeClass('loading');
-            //$( this ).remove();
-         });
-		}
-	};  
-
-})( jQuery ); 
 (function($) {
 	'use strict';
 	
@@ -9664,6 +9588,23 @@ if(typeof exports !== 'undefined') {
 	}
 
 }(jQuery));
+(function( $ ) {
+	'use strict';
+
+	MK.ui.preloader = {
+		dom : {
+			overlay: '.mk-body-loader-overlay'
+		},
+
+		hide : function hide() {
+			$( this.dom.overlay ).fadeOut(600, "easeInOutExpo", function() {
+				$('body').removeClass('loading');
+            //$( this ).remove();
+         });
+		}
+	};  
+
+})( jQuery ); 
 (function($) {
 	'use strict';
 
@@ -10254,8 +10195,11 @@ jQuery(function($) {
 	 *
 	 * @since 5.9.8
 	 * @since 6.0.1 Improve logic to handle LTR responsive state.
+	 * @since 6.0.1 Fix missing padding-left if row has its own padding-left when
+	 *              Vertical Header is active.
 	 */
 	function MkfullWidthRow() {
+		var $windowWidth = $(document).width();
 		var $elements = $('[data-mk-full-width="true"]');
 		var direction = $('body.rtl').length ? 'right' : 'left';
 		var verticalHeader = $('body.vertical-header-enabled').length ? true : false;
@@ -10271,7 +10215,9 @@ jQuery(function($) {
 		if ( verticalHeader && boxed ) {
 			verticalHeaderWidthBoxed = ( $( '.header-style-4 .mk-header-inner' ).outerWidth() > 270 ) ? 0 : verticalHeaderRtl * verticalHeaderRight * 135;
 		}
-		if ( $('.transparent-header').length > 0 ) {
+
+		var transparentHeader = $('.transparent-header').length;
+		if ( transparentHeader > 0 ) {
 			verticalHeaderWidthBoxed = 0;
 		}
 
@@ -10310,6 +10256,63 @@ jQuery(function($) {
 						$el.css(css)
 					}
 				}
+
+				/**
+				 * Fix AM-2974
+				 *
+				 * When user set padding-left or padding-right in the row, both of them
+				 * will be prioritized as important styles. It breaks padding-left set
+				 * by Vertical Header to make the row content fit with the content
+				 * container. We need to repopulate the padding-{side - based on Vertical
+				 * Header position} value.
+				 *
+				 * Works when:
+				 * - Vertical Header is active
+				 * - Main layout is not boxed
+				 * - Page Section is full layout
+				 * - Row is full width layout and content
+				 * - Row has its own padding-left and padding-right
+				 * - There is no additional padding added
+				 *
+				 * How it works:
+				 * Get current row padding-left and vertical header width. If both of them
+				 * are equal, it means row position is correct related to Vertical Header.
+				 * If not, we should sum both of them, then declare new padding-{side}
+				 * style attribute.
+				 *
+				 * Tested with:
+				 * - Main Layout: Full & Boxed Layout
+				 * - Page Section: Full Layout and Non Full Layout
+				 * - Row: Full Width, Full Width Content, and Non Full Width
+				 * - Header: Non vertical headers
+				 * - Transparent Header
+				 * - RTL and LTR
+				 */
+				if ( verticalHeader && ! boxed && ! transparentHeader && ! css.hasOwnProperty( 'padding-left' ) && ! css.hasOwnProperty( 'padding-right' )) {
+					// Get row padding-{side} and Vertical Header width.
+					var side = 'left';
+					if ( verticalHeaderRight === -1 ) {
+						side = 'right';
+					}
+					var el_padding_dir = parseInt( $el.css( 'padding-' + side ), 10 );
+					var header_padding_dir = $( '.header-style-4 .mk-header-inner' ).outerWidth();
+					// Compare both of row and vertical header padding-{side}.
+					if ( el_padding_dir != header_padding_dir) {
+						if($windowWidth > mk_responsive_nav_width) {
+							$el[0].style.setProperty( 'padding-' + side, header_padding_dir + 'px', 'important' );	
+						} else {
+							$el[0].style.removeProperty( 'padding-' + side);	
+						}
+						
+
+						// Reset padding-{side} for page section.
+						var $el_page_section = $el.find( '.mk-page-section.full_layout' );
+						if ( $el_page_section.length > 0 ) {
+							$el_page_section[0].style.setProperty( 'padding-' + side, 'unset', 'important' );
+						}
+					}
+				}
+
 				$el.attr("data-mk-full-width-init", "true"), $el.removeClass("vc_hidden"), $(document).trigger("vc-full-width-row-single", {
 					el: $el,
 					offset: offset,
@@ -10319,14 +10322,14 @@ jQuery(function($) {
 					width: width
 				})
 			}
-		}), $(document).trigger("mk-full-width-row", $elements)
+		}), $(document).trigger("mk-full-width-row", $elements);
 	}
 
 	MkfullWidthRow();
 	var debounceResize = null;
 	$(window).on("resize", function() {
 		if( debounceResize !== null ) { clearTimeout( debounceResize ); }
-		debounceResize = setTimeout( MkfullWidthRow, 50 );
+		debounceResize = setTimeout( MkfullWidthRow, 100 );
 	});
 
 })( jQuery );
@@ -13489,6 +13492,26 @@ function mk_tabs_responsive(){
         $rootLevelEls.each( function rootLevelEl() {
             var $animateEl = $(this).find( '.mk-animate-element' );
             $animateEl.each( spyViewport );
+
+            /**
+             * Firefox has known issue where horizontal scrollbar will appear if an
+             * element uses animation CSS. The solution should be set the element
+             * position as fixed or overflow-x as hidden. Position fixed is not possible
+             * to use because it's only cause other big problems. The best way is
+             * set overflow-x as hidden in the page content container #theme-page.
+             *
+             * NOTE: The problem is spotted on Right To Left viewport only. So, it's
+             *       limited to '.right-to-left' selector only for now to avoid other
+             *       problems. Please extend the functionallity if it's happen in
+             *       other viewport animation effect.
+             */
+            var browserName  = MK.utils.browser.name;
+            if ( browserName === 'Firefox' ) {
+                var $rightToLeft = $( this ).find( '.right-to-left' );
+                if ( $rightToLeft.length > 0 ) {
+                    $( '#theme-page' ).css( 'overflow-x', 'hidden' );
+                }
+            }
         });   
     };
 

@@ -18,13 +18,11 @@
             data.options.mapTypeId = google.maps.MapTypeId[data.options.mapTypeId];
             data.options.styles = data.style;
 
-
             bounds = new google.maps.LatLngBounds();
             map = new google.maps.Map(el, data.options);
             infoWindow = new google.maps.InfoWindow();
-            
 
-             map.setOptions({
+            map.setOptions({
                 panControl : data.options.panControl,
                 draggable:  data.options.draggable,
                 zoomControl:  data.options.zoomControl,
@@ -62,7 +60,23 @@
                         };
                     })(marker, i));
 
-                    map.fitBounds(bounds);
+                    /**
+                     * If there is only one marker, map.fitBounds will zoom-in too much.
+                     * Only run map.fitBounds if the markers are more than 1. Use setCenter
+                     * instead if the the marker is only 1.
+                     */
+                    if ( i > 0 ) {
+                        map.fitBounds( bounds );
+                    } else {
+                        // Set latitude and longtitude as float.
+                        var latLang = {
+                            lat: parseFloat( data.places[i].latitude ),
+                            lng: parseFloat( data.places[i].longitude )
+                        };
+                        map.setCenter( latLang );
+                        // Need to setZoom here as we didn't trigger bounds_changed event.
+                        map.setZoom( data.options.zoom );
+                    }
                 }
             }
 
@@ -593,11 +607,10 @@
 }(jQuery));
 (function($) {
     'use strict';
-
     // Update countdown style in VC FEE - AM-2684.
-    $(window).on('vc_reload', function(){
-        $('.mk-event-countdown-ul').each(function(){
-            if($(this).width() < 750){
+    $(window).on('vc_reload', function() {
+        $('.mk-event-countdown-ul').each(function() {
+            if ($(this).width() < 750) {
                 $(this).addClass('mk-event-countdown-ul-block');
             } else {
                 $(this).removeClass('mk-event-countdown-ul-block');
@@ -945,21 +958,130 @@ jQuery(function($) {
 
 (function($) {
     'use strict';
-
     // Move header to last wrapper of page section if its added into page section. 
     $('.js-header-shortcode').each(function() {
-	    var $this = $(this),
-	        $parent_page_section = $this.parents('.mk-page-section'),
-	        $is_inside = $parent_page_section.attr('id');
-
-	    if ($is_inside) {
-	        $this.detach().appendTo($parent_page_section);
-	    }
-
-	    /* Fix: AM-1918 Add z-index to the header shortcode parent element so that menu is visible on responsive screen when menu icon is clicked */
-	    $this.parent().css('z-index', 99999);
+        var $this = $(this),
+            $parent_page_section = $this.parents('.mk-page-section'),
+            $parent_row = $this.parents('.js-master-row'),
+            $is_inside = $parent_page_section.attr('id');
+        if ($is_inside) {
+            $this.detach().appendTo($parent_page_section);
+        }
+        /* Its needed for sub menus to appear */
+        $parent_page_section.css({
+            'overflow': 'visible'
+        });
+        $parent_row.css({
+            'overflow': 'visible'
+        });
+        /* Fix: AM-1918 Add z-index to the header shortcode parent element so that menu is visible on responsive screen when menu icon is clicked */
+        $this.parent().css('z-index', 99999);
     });
 })(jQuery);
+(function($) {
+	'use strict';
+
+	function mk_page_title_parallax() {
+	    if (!MK.utils.isMobile() && mk_smooth_scroll !== 'false') {
+
+	        $('.mk-effect-wrapper').each(function() {
+	            var $this = $(this),
+                	progressVal,
+                    currentPoint,
+                    ticking = false,
+                    scrollY = MK.val.scroll(),
+                    $window = $(window),
+                    windowHeight = $(window).height(),
+                    parentHeight = $this.outerHeight(),
+                    startPoint = 0,
+                    endPoint = $this.offset().top + parentHeight,
+                    effectLayer = $this.find('.mk-effect-bg-layer'),
+                    gradientLayer = effectLayer.find('.mk-effect-gradient-layer'),
+                    cntLayer = $this.find('.mk-page-title-box-content'),
+                    animation = effectLayer.attr('data-effect'),
+                    top = $this.offset().top,
+                    height = $this.outerHeight();
+
+                var parallaxSpeed = 0.7,
+                    zoomFactor = 1.3;
+
+                var parallaxTopGap = function() {
+                    var gap = top * parallaxSpeed;
+
+                    effectLayer.css({
+                        height : height + gap + 'px',
+                        top : (-gap) + 'px'
+                    });
+                };
+
+
+                if (animation == ("parallax" || "parallaxZoomOut") ) {
+                    parallaxTopGap();
+                }
+
+                var animationSet = function() {
+                    scrollY = MK.val.scroll();
+
+                    if (animation == "parallax") {
+                        currentPoint = (startPoint + scrollY) * parallaxSpeed;
+                        effectLayer.get(0).style.transform = 'translateY(' + currentPoint + 'px)';
+                    }
+
+                    if (animation == "parallaxZoomOut") {
+                    	console.log(effectLayer);
+                        currentPoint = (startPoint + scrollY) * parallaxSpeed;
+                        progressVal = (1 / (endPoint - startPoint) * (scrollY - startPoint));
+                        var zoomCalc = zoomFactor - ((zoomFactor - 1) * progressVal);
+
+                        effectLayer.get(0).style.transform = 'translateY(' + currentPoint + 'px) scale(' + zoomCalc + ')';
+                    }
+
+                    if (animation == "gradient") {
+                        progressVal = (1 / (endPoint - startPoint) * (scrollY - startPoint));
+                        gradientLayer.css({
+                            opacity: progressVal * 2
+                        });
+                    }
+
+                    if (animation != "gradient") {
+                        progressVal = (1 / (endPoint - startPoint) * (scrollY - startPoint));
+                        cntLayer.css({
+                            opacity: 1 - (progressVal * 4)
+                        });
+                    }
+
+                    // Stop ticking
+                    ticking = false;
+                };
+                animationSet();
+
+                // This will limit the calculation of the background position to
+                // 60fps as well as blocking it from running multiple times at once
+                var requestTick = function() {
+                    if (!ticking) {
+                        window.requestAnimationFrame(animationSet);
+                        ticking = true;
+                    }
+                };
+
+                $window.off('scroll', requestTick);
+                $window.on('scroll', requestTick);
+
+	        });
+	    }
+	}
+
+
+	var $window = $(window);
+	var debounceResize = null;
+
+	$window.on('load', mk_page_title_parallax);
+    $window.on("resize", function() {
+        if( debounceResize !== null ) { clearTimeout( debounceResize ); }
+        debounceResize = setTimeout( mk_page_title_parallax, 300 );
+    });
+
+}(jQuery));
 (function($) {
   'use strict';
 
@@ -1145,7 +1267,20 @@ jQuery(function($) {
 				if (size > 0) {
 					$col.removeAttr("style");
 					$col.children('div').each(function() {
-						$(this).removeAttr("style");
+						var $this = $( this );
+						/**
+						 * Fix Advanced Google Maps (AGM) issue on page section.
+						 *
+						 * Problem: AGM set the height as inline CSS property (style attribute).
+						 * In this case, the style attribute will be removed before checking the
+						 * elements height in each of the column. That's why AGM container will
+						 * loose the height and the map can't be displayed properly (only 1px)
+						 * because it overlap other row in the page. We need to check if current
+						 * element is AGM or not before removing style attribute of the element.
+						 */
+						if ( ! $this.hasClass( 'mk-advanced-gmaps' ) ) {
+							$this.removeAttr( 'style' );
+						}
 					});
 				}
 			});
@@ -1188,7 +1323,12 @@ jQuery(function($) {
 						if ($colWrapper.hasClass('vertical-align-center')) {
 							$col.children('div').each(function() {
 								var elHeight = ($(window).width() < maxWidth) ? 'initial' : (colHeight/size);
-								$(this).css("height", elHeight);
+								/**
+								 * Fix Advanced Google Maps (AGM) issue on page section.
+								 */
+								if ( ! $(this).hasClass( 'mk-advanced-gmaps' ) ) {
+									$(this).css("height", elHeight);
+								}
 							});
 						}
 					}
@@ -1214,380 +1354,239 @@ jQuery(function($) {
 
 }(jQuery));
 (function($) {
-	'use strict';
-
-	function mk_page_title_parallax() {
-	    if (!MK.utils.isMobile() && mk_smooth_scroll !== 'false') {
-
-	        $('.mk-effect-wrapper').each(function() {
-	            var $this = $(this),
-                	progressVal,
-                    currentPoint,
-                    ticking = false,
-                    scrollY = MK.val.scroll(),
-                    $window = $(window),
-                    windowHeight = $(window).height(),
-                    parentHeight = $this.outerHeight(),
-                    startPoint = 0,
-                    endPoint = $this.offset().top + parentHeight,
-                    effectLayer = $this.find('.mk-effect-bg-layer'),
-                    gradientLayer = effectLayer.find('.mk-effect-gradient-layer'),
-                    cntLayer = $this.find('.mk-page-title-box-content'),
-                    animation = effectLayer.attr('data-effect'),
-                    top = $this.offset().top,
-                    height = $this.outerHeight();
-
-                var parallaxSpeed = 0.7,
-                    zoomFactor = 1.3;
-
-                var parallaxTopGap = function() {
-                    var gap = top * parallaxSpeed;
-
-                    effectLayer.css({
-                        height : height + gap + 'px',
-                        top : (-gap) + 'px'
-                    });
-                };
-
-
-                if (animation == ("parallax" || "parallaxZoomOut") ) {
-                    parallaxTopGap();
-                }
-
-                var animationSet = function() {
-                    scrollY = MK.val.scroll();
-
-                    if (animation == "parallax") {
-                        currentPoint = (startPoint + scrollY) * parallaxSpeed;
-                        effectLayer.get(0).style.transform = 'translateY(' + currentPoint + 'px)';
-                    }
-
-                    if (animation == "parallaxZoomOut") {
-                    	console.log(effectLayer);
-                        currentPoint = (startPoint + scrollY) * parallaxSpeed;
-                        progressVal = (1 / (endPoint - startPoint) * (scrollY - startPoint));
-                        var zoomCalc = zoomFactor - ((zoomFactor - 1) * progressVal);
-
-                        effectLayer.get(0).style.transform = 'translateY(' + currentPoint + 'px) scale(' + zoomCalc + ')';
-                    }
-
-                    if (animation == "gradient") {
-                        progressVal = (1 / (endPoint - startPoint) * (scrollY - startPoint));
-                        gradientLayer.css({
-                            opacity: progressVal * 2
-                        });
-                    }
-
-                    if (animation != "gradient") {
-                        progressVal = (1 / (endPoint - startPoint) * (scrollY - startPoint));
-                        cntLayer.css({
-                            opacity: 1 - (progressVal * 4)
-                        });
-                    }
-
-                    // Stop ticking
-                    ticking = false;
-                };
-                animationSet();
-
-                // This will limit the calculation of the background position to
-                // 60fps as well as blocking it from running multiple times at once
-                var requestTick = function() {
-                    if (!ticking) {
-                        window.requestAnimationFrame(animationSet);
-                        ticking = true;
-                    }
-                };
-
-                $window.off('scroll', requestTick);
-                $window.on('scroll', requestTick);
-
-	        });
-	    }
-	}
-
-
-	var $window = $(window);
-	var debounceResize = null;
-
-	$window.on('load', mk_page_title_parallax);
-    $window.on("resize", function() {
-        if( debounceResize !== null ) { clearTimeout( debounceResize ); }
-        debounceResize = setTimeout( mk_page_title_parallax, 300 );
-    });
-
-}(jQuery));
-(function( $ ) {
-	'use strict';
-
-	var utils = MK.utils,
-		core  = MK.core,
-		path  = MK.core.path;
-
-	MK.component.PhotoAlbum = function( el ) {
-		this.album = el;
-		this.initialOpen = false;
-	};
-
-
-	MK.component.PhotoAlbum.prototype = { 
-		dom: {
-			gallery 			: '.slick-slider-wrapper',
-			title 				: '.slick-title',
-			galleryContainer 	: '.slick-slides',
-			closeBtn 			: '.slick-close-icon',
-			thumbList 			: '.slick-dots',
-			thumbs 				: '.slick-dots li',
-			imagesData  		: 'photoalbum-images',
-			titleData  			: 'photoalbum-title',
-			idData  			: 'photoalbum-id',
-			urlData  			: 'photoalbum-url',
-			activeClass 		: 'is-active'
-		},
- 
-		tpl: {
-			gallery: '#tpl-photo-album',
-			slide: '<div class="slick-slide"></div>'
-		},
-
-		init: function() {  
-			this.cacheElements();
-			this.bindEvents();
-			this.openByLink();
-		},
-
-		cacheElements: function() {
-			this.$album = $( this.album );
-			this.imagesSrc = this.$album.data( this.dom.imagesData );
-
-			this.albumLength = this.imagesSrc.length; 
-
-			this.title = this.$album.data( this.dom.titleData );
-			this.id = this.$album.data( this.dom.idData );
-			this.url = this.$album.data( this.dom.urlData );
-
-			this.images = []; // stores dom objects to insert into gallery instance
-		},
-
-		bindEvents: function() {
-			this.$album.not('[data-photoalbum-images="[null]"]').on( 'click', this.albumClick.bind( this ) );
-			$( document ).on( 'click', this.dom.closeBtn, this.closeClick.bind( this ) );
-			$( window ).on( 'resize', this.thumbsVisibility.bind( this ) );
-			$( window ).on( 'resize', this.makeArrows.bind( this ) );
-		},
-
-		albumClick: function( e ) {
-			e.preventDefault();
-			this.open();
-			MK.ui.loader.add(this.album);
-		},
-
-		closeClick: function( e ) {
-			e.preventDefault();
-
-			// Because one close btn rules them all 
-			if( this.slider ) {
-				this.removeGallery();
-				this.slider.exitFullScreen();  
-			}
-		},
-
-		thumbsVisibility: function() {
-			if( !this.thumbsWidth ) return;
-			if( window.matchMedia( '(max-width:'+ (this.thumbsWidth + 260) +'px)' ).matches ) this.hideThumbs(); // 260 is 2 * 120 - right corner buttons width + scrollbar
-			else this.showThumbs();
-		},
-
-		hideThumbs: function() {
-			if( ! this.$thumbList ) return;
-			this.$thumbList.hide();
-		},
-
-		showThumbs: function() {
-			if( ! this.$thumbList ) return;
-			this.$thumbList.show();
-		},
-
-		open: function() {
-			var self = this;
-			core.loadDependencies([ path.plugins + 'slick.js' ], function() {
-				self.createGallery();
-				self.loadImages();
-			});
-		},
-
-		createGallery: function() {
-			// only one per page
-			if( ! $( this.dom.gallery ).length ) {
-				var tpl = $( this.tpl.gallery ).eq( 0 ).html();
-				$( 'body' ).append( tpl );
-			}
-			// and cache obj
-			this.$gallery = $( this.dom.gallery ); 
-			this.$closeBtn = $( this.dom.closeBtn );
-		},
-
-		createSlideshow : function() {
-			var self = this;
-
-			this.slider = new MK.ui.FullScreenGallery( this.dom.galleryContainer, {
-				id: this.id,
-				url: this.url
-			});
-			this.slider.init();
-
-			$(window).trigger('resize');
-			this.makeArrows();
-
-			this.$thumbList = $( this.dom.thumbList );
-			this.$thumbs = $( this.dom.thumbs ); 
-			this.thumbsWidth = (this.$thumbs.length) * 95;
-			this.thumbsVisibility();
-
-			setTimeout(function() {
-				MK.ui.loader.remove(self.album);
-			}, 100);
-
-			MK.utils.eventManager.publish('photoAlbum-open');
-		},
-
-		makeArrows: function() {
-			if (this.arrowsTimeout) clearTimeout(this.arrowsTimeout);
-			this.arrowsTimeout = setTimeout(function() {
-				var $prev = $('.slick-prev').find('svg');
-				var $next = $('.slick-next').find('svg');
-
-				$prev.wrap('<div class="slick-nav-holder"></div>');
-				$next.wrap('<div class="slick-nav-holder"></div>');
-
-				if(matchMedia("(max-width: 1024px)").matches) {
-					$prev.attr({width: 12, height: 22}).find('polyline').attr('points', '12,0 0,11 12,22');
-					$next.attr({width: 12, height: 22}).find('polyline').attr('points', '0,0 12,11 0,22');
-				} else {
-					$prev.attr({width: 33, height: 65}).find('polyline').attr('points', '0.5,0.5 32.5,32.5 0.5,64.5');
-					$next.attr({width: 33, height: 65}).find('polyline').attr('points', '0.5,0.5 32.5,32.5 0.5,64.5');
-				}
-			}, 0);
-		},
-
-		loadImages: function() {
-			var self = this,
-				n = 0;
-
-			// cache images on first load. 
-			if( ! this.images.length ) {
-				this.imagesSrc.forEach( function( src ) {
-					if(src === null) return; // protect from nulls
-					var img = new Image(); 
-
-					img.onload = function() {
-						self.onLoad( n += 1 );
-					};
-
-					img.src = src; 
-					self.images.push( img );
-				});
-			} else {
-				this.onLoad( this.albumLength );
-			}
-		},
-
-		onLoad : function( n ) {
-			if( n === this.albumLength ) {
-				this.insertImages(); 
-				this.showGallery();
-				this.createSlideshow();
-			}
-		},
-
-		insertImages : function() {
-			var $galleryContainer = this.$gallery.find( this.dom.galleryContainer ),
-				$title = $( this.dom.title ),
-				slide = this.tpl.slide;
-
-			// clear first
-			$galleryContainer.html( '' ); 
-			$title.html( this.title );
-
-			this.images.forEach( function( img ) {
-				var $slide = $( slide );
-				$slide.html( img );
-				$galleryContainer.prepend( $slide );
-			});
-		},
-
-		showGallery : function() {
-			var self = this;
-
-			this.$gallery.addClass( this.dom.activeClass );
-
-			utils.scroll.disable();
- 
-		},
-
-		removeGallery : function() {
-			var self = this;
-
-			this.$gallery.removeClass( this.dom.activeClass );
-
-			setTimeout( function() {
-				self.$gallery.remove();	
-			}, 300 );
-
-			utils.scroll.enable();
-		},
-
-		openByLink : function() {
-			var loc = window.location,
-				hash = loc.hash,
-				id;
-
-			if ( hash.length && hash.substring(1).length ) {
-				id = hash.substring(1);
-				id = id.replace( '!loading', '' );
-				if( id == this.id && !this.initialOpen ) {
-					this.initialOpen = true;
-					this.open();
-				}
-			}
-		}
-	};
-
-
-	// Barts note; Rifat duplication and coupling here. Remove it when have time
-	MK.component.PhotoAlbumBlur = function( el ) {
-         var init = function(){
-			core.loadDependencies([ path.plugins + 'pixastic.js' ], function() {
-         		blurImage($('.mk-album-item figure')); 
-         	});
-         };
-
-         var blurImage = function($item) {
-         	return $item.each(function() {
-				var $_this = $(this);
-				var img = $_this.find('.album-cover-image');
-				img.clone().addClass("blur-effect item-blur-thumbnail").removeClass('album-cover-image').prependTo(this);
-
-				var blur_this = $(".blur-effect", this);
-				blur_this.each(function(index, element){
-					if (img[index].complete === true) {
-						Pixastic.process(blur_this[index], "blurfast", {amount:0.5});
-					}
-					else {
-						blur_this.load(function () {
-							Pixastic.process(blur_this[index], "blurfast", {amount:0.5});
-						});
-					}
-				});
-			});
-         };
-
-         return {
-         	init : init
-         };
+    'use strict';
+    var utils = MK.utils,
+        core = MK.core,
+        path = MK.core.path;
+    MK.component.PhotoAlbum = function(el) {
+        this.album = el;
+        this.initialOpen = false;
     };
-
-})( jQuery );
+    MK.component.PhotoAlbum.prototype = {
+        dom: {
+            gallery: '.slick-slider-wrapper',
+            title: '.slick-title',
+            galleryContainer: '.slick-slides',
+            closeBtn: '.slick-close-icon',
+            thumbList: '.slick-dots',
+            thumbs: '.slick-dots li',
+            imagesData: 'photoalbum-images',
+            titleData: 'photoalbum-title',
+            idData: 'photoalbum-id',
+            urlData: 'photoalbum-url',
+            activeClass: 'is-active'
+        },
+        tpl: {
+            gallery: '#tpl-photo-album',
+            slide: '<div class="slick-slide"></div>'
+        },
+        init: function() {
+            this.cacheElements();
+            this.bindEvents();
+            this.openByLink();
+        },
+        cacheElements: function() {
+            this.$album = $(this.album);
+            this.imagesSrc = this.$album.data(this.dom.imagesData);
+            this.albumLength = this.imagesSrc.length;
+            this.title = this.$album.data(this.dom.titleData);
+            this.id = this.$album.data(this.dom.idData);
+            this.url = this.$album.data(this.dom.urlData);
+            this.images = []; // stores dom objects to insert into gallery instance
+        },
+        bindEvents: function() {
+            this.$album.not('[data-photoalbum-images="[null]"]').on('click', this.albumClick.bind(this));
+            $(document).on('click', this.dom.closeBtn, this.closeClick.bind(this));
+            $(window).on('resize', this.thumbsVisibility.bind(this));
+            $(window).on('resize', this.makeArrows.bind(this));
+        },
+        albumClick: function(e) {
+            e.preventDefault();
+            this.open();
+            MK.ui.loader.add(this.album);
+        },
+        closeClick: function(e) {
+            e.preventDefault();
+            // Because one close btn rules them all 
+            if (this.slider) {
+                this.removeGallery();
+                this.slider.exitFullScreen();
+            }
+        },
+        thumbsVisibility: function() {
+            if (!this.thumbsWidth) return;
+            if (window.matchMedia('(max-width:' + (this.thumbsWidth + 260) + 'px)').matches) this.hideThumbs(); // 260 is 2 * 120 - right corner buttons width + scrollbar
+            else this.showThumbs();
+        },
+        hideThumbs: function() {
+            if (!this.$thumbList) return;
+            this.$thumbList.hide();
+        },
+        showThumbs: function() {
+            if (!this.$thumbList) return;
+            this.$thumbList.show();
+        },
+        open: function() {
+            var self = this;
+            core.loadDependencies([path.plugins + 'slick.js'], function() {
+                self.createGallery();
+                self.loadImages();
+            });
+        },
+        createGallery: function() {
+            // only one per page
+            if (!$(this.dom.gallery).length) {
+                var tpl = $(this.tpl.gallery).eq(0).html();
+                $('body').append(tpl);
+            }
+            // and cache obj
+            this.$gallery = $(this.dom.gallery);
+            this.$closeBtn = $(this.dom.closeBtn);
+        },
+        createSlideshow: function() {
+            var self = this;
+            this.slider = new MK.ui.FullScreenGallery(this.dom.galleryContainer, {
+                id: this.id,
+                url: this.url
+            });
+            this.slider.init();
+            $(window).trigger('resize');
+            this.makeArrows();
+            this.$thumbList = $(this.dom.thumbList);
+            this.$thumbs = $(this.dom.thumbs);
+            this.thumbsWidth = (this.$thumbs.length) * 95;
+            this.thumbsVisibility();
+            setTimeout(function() {
+                MK.ui.loader.remove(self.album);
+            }, 100);
+            MK.utils.eventManager.publish('photoAlbum-open');
+        },
+        makeArrows: function() {
+            if (this.arrowsTimeout) clearTimeout(this.arrowsTimeout);
+            this.arrowsTimeout = setTimeout(function() {
+                var $prev = $('.slick-prev').find('svg');
+                var $next = $('.slick-next').find('svg');
+                $prev.wrap('<div class="slick-nav-holder"></div>');
+                $next.wrap('<div class="slick-nav-holder"></div>');
+                if (matchMedia("(max-width: 1024px)").matches) {
+                    $prev.attr({
+                        width: 12,
+                        height: 22
+                    }).find('polyline').attr('points', '12,0 0,11 12,22');
+                    $next.attr({
+                        width: 12,
+                        height: 22
+                    }).find('polyline').attr('points', '0,0 12,11 0,22');
+                } else {
+                    $prev.attr({
+                        width: 33,
+                        height: 65
+                    }).find('polyline').attr('points', '0.5,0.5 32.5,32.5 0.5,64.5');
+                    $next.attr({
+                        width: 33,
+                        height: 65
+                    }).find('polyline').attr('points', '0.5,0.5 32.5,32.5 0.5,64.5');
+                }
+            }, 0);
+        },
+        loadImages: function() {
+            var self = this,
+                n = 0;
+            // cache images on first load. 
+            if (!this.images.length) {
+                this.imagesSrc.forEach(function(src) {
+                    if (src === null) return; // protect from nulls
+                    var img = new Image();
+                    img.onload = function() {
+                        self.onLoad(n += 1);
+                    };
+                    img.src = src;
+                    self.images.push(img);
+                });
+            } else {
+                this.onLoad(this.albumLength);
+            }
+        },
+        onLoad: function(n) {
+            if (n === this.albumLength) {
+                this.insertImages();
+                this.showGallery();
+                this.createSlideshow();
+            }
+        },
+        insertImages: function() {
+            var $galleryContainer = this.$gallery.find(this.dom.galleryContainer),
+                $title = $(this.dom.title),
+                slide = this.tpl.slide;
+            // clear first
+            $galleryContainer.html('');
+            $title.html(this.title);
+            this.images.forEach(function(img) {
+                var $slide = $(slide);
+                $slide.html(img);
+                $galleryContainer.prepend($slide);
+            });
+        },
+        showGallery: function() {
+            var self = this;
+            this.$gallery.addClass(this.dom.activeClass);
+            utils.scroll.disable();
+        },
+        removeGallery: function() {
+            var self = this;
+            this.$gallery.removeClass(this.dom.activeClass);
+            setTimeout(function() {
+                self.$gallery.remove();
+            }, 300);
+            utils.scroll.enable();
+        },
+        openByLink: function() {
+            var loc = window.location,
+                hash = loc.hash,
+                id;
+            if (hash.length && hash.substring(1).length) {
+                id = hash.substring(1);
+                id = id.replace('!loading', '');
+                if (id == this.id && !this.initialOpen) {
+                    this.initialOpen = true;
+                    this.open();
+                }
+            }
+        }
+    };
+    // Barts note; Rifat duplication and coupling here. Remove it when have time
+    MK.component.PhotoAlbumBlur = function(el) {
+        var init = function() {
+            core.loadDependencies([path.plugins + 'pixastic.js'], function() {
+                blurImage($('.mk-album-item figure'));
+            });
+        };
+        var blurImage = function($item) {
+            return $item.each(function() {
+                var $_this = $(this);
+                var img = $_this.find('.album-cover-image');
+                img.clone().addClass("blur-effect item-blur-thumbnail").removeClass('album-cover-image').prependTo(this);
+                var blur_this = $(".blur-effect", this);
+                blur_this.each(function(index, element) {
+                    if (img[index].complete === true) {
+                        Pixastic.process(blur_this[index], "blurfast", {
+                            amount: 0.5
+                        });
+                    } else {
+                        blur_this.load(function() {
+                            Pixastic.process(blur_this[index], "blurfast", {
+                                amount: 0.5
+                            });
+                        });
+                    }
+                });
+            });
+        };
+        return {
+            init: init
+        };
+    };
+})(jQuery);
 jQuery(document).ready(function( $ ) {
 
 	// Continue only on Safari.
@@ -1665,77 +1664,65 @@ jQuery(function($) {
 
 
 
-jQuery(document).ready(function( $ ) {
-	'use strict';
-	
-	/**
-	 * Get dynamic width of items for passing in `flexslider()`.
-	 * @param  string style      Style of the carousel, classic/modern
-	 * @param  integer showItems Number of items to show
-	 * @param  integer id        ID of the carousel
-	 * @return interger          The width for items
-	 */
-	function get_item_width( style, showItems, id ) {
+jQuery(document).ready(function($) {
+    'use strict';
+    /**
+     * Get dynamic width of items for passing in `flexslider()`.
+     * @param  string style      Style of the carousel, classic/modern
+     * @param  integer showItems Number of items to show
+     * @param  integer id        ID of the carousel
+     * @return interger          The width for items
+     */
+    function get_item_width(style, showItems, id) {
+        var item_width;
+        if (style == "classic") {
+            item_width = 275;
+            items_to_show = 4;
+        } else {
+            var screen_width = $('#portfolio-carousel-' + id).width(),
+                items_to_show = showItems;
+            if (screen_width >= 1100) {
+                item_width = screen_width / items_to_show;
+            } else if (screen_width <= 1200 && screen_width >= 800) {
+                item_width = screen_width / 3;
+            } else if (screen_width <= 800 && screen_width >= 540) {
+                item_width = screen_width / 2;
+            } else {
+                item_width = screen_width;
+            }
+        }
+        return item_width;
+    }
+    jQuery(window).on("load vc_reload", function() {
+        MK.core.loadDependencies([MK.core.path.plugins + 'jquery.flexslider.js'], function() {
 
-		var item_width;
+            $('.portfolio-carousel .mk-flexslider').each(function() {
+            	var $this = $(this);
+            	var $pauseOnHover = $this.attr('data-pauseOnHover') == "true" ? true : false;
 
-		if(style == "classic") {
-			item_width = 275;
-			items_to_show = 4;
-		} else {
-			var screen_width = $( '#portfolio-carousel-' + id ).width(),
-			items_to_show = showItems;
-			
-			if(screen_width >= 1100) {
-				item_width = screen_width/items_to_show;
-			} else if(screen_width <= 1200 && screen_width >= 800) {
-				item_width = screen_width/3;
-			} else if(screen_width <= 800 && screen_width >= 540){
-				item_width = screen_width/2;
-			} else {
-				item_width = screen_width;
-			}
-		}
-
-		return item_width;
-
-	}
-
-	jQuery(window).on("load vc_reload",function () {
-
-		MK.core.loadDependencies([ MK.core.path.plugins + 'jquery.flexslider.js' ], function() {
-
-			$( '.portfolio-carousel .mk-flexslider' ).each( function() {
-
-				$( this ).flexslider({
-					selector: ".mk-flex-slides > li",
-					slideshow: !isTest,
-					animation: "slide",
-					slideshowSpeed: 6000,
-					animationSpeed: 400,
-					pauseOnHover: true,
-					controlNav: false,
-					smoothHeight: false,
-					useCSS: false,
-					directionNav: $( this ).data( 'directionNav' ),
-					prevText: "",
-					nextText: "",
-					itemWidth: get_item_width( $(this).data('style'), $( this ).data( 'showItems' ), $( this ).data( 'id' ) ),
-					itemMargin: 0,
-					maxItems: ( $( this ).data( 'style' ) === 'modern' ) ? $( this ).data( 'showItems' ) : 4,
-					minItems: 1,
-					move: 1
-				});
-
-			}); // End each().
-
-		}); // End loadDependencies().
-
-	}); // End on().
-	
+                $this.flexslider({
+                    selector: ".mk-flex-slides > li",
+                    slideshow: !isTest,
+                    animation: "slide",
+                    slideshowSpeed: parseInt($this.attr('data-slideshowSpeed')),
+                    animationSpeed: parseInt($this.attr('data-animationSpeed')),
+                    pauseOnHover: $pauseOnHover,
+                    controlNav: false,
+                    smoothHeight: false,
+                    useCSS: false,
+                    directionNav: $this.data('directionNav'),
+                    prevText: "",
+                    nextText: "",
+                    itemWidth: get_item_width($this.data('style'), $this.data('showItems'), $this.data('id')),
+                    itemMargin: 0,
+                    maxItems: ($this.data('style') === 'modern') ? $this.data('showItems') : 4,
+                    minItems: 1,
+                    move: 1
+                });
+            }); // End each().
+        }); // End loadDependencies().
+    }); // End on().
 });
-
-
 (function( $ ) {
 	'use strict';
 
@@ -1857,6 +1844,7 @@ jQuery(document).ready(function( $ ) {
 
 	function run() {
 		var $slider = $(this);
+
 		var $slides = $slider.find('.mk-slideshow-box-item');
 		var $transition_time = $slider.data('transitionspeed');
 		var $time_between_slides = $slider.data('slideshowspeed');
@@ -1882,10 +1870,37 @@ jQuery(document).ready(function( $ ) {
 				setTimeout(autoScroll, $time_between_slides);
 			});
 		}
+
+		/**
+		 * Need to set the height manually as min-height property doesn't work with display
+		 * table and table-cell in Firefox and Safari. We use Javascript to set them only
+		 * for Firefox and Safari to avoid any problem with Chrome users. The problem is only
+		 * happen when the window screen size bigger than 850px.
+		 */
+		var browserName  = MK.utils.browser.name;
+		if ( browserName === 'Firefox' || browserName === 'Safari' ) {
+			var currentWidth = parseInt( $( window ).width() );
+			if ( currentWidth >= 850 ) {
+				var height = $slider.css( 'min-height' );
+				if ( typeof height !== 'undefined' ) {
+					$slider.find( '.mk-slideshow-box-items' ).height( parseInt( height ) );
+				}
+			} else {
+				$slider.find( '.mk-slideshow-box-items' ).removeAttr( 'style' );
+			}
+		}
 	}
 	$(window).on('vc_reload', function(){
 		handleLoad();
 	});
+
+	// Handle resize event only for Safari and Firefox.
+	window.addEventListener( 'resize', function(){
+		var browserName  = MK.utils.browser.name;
+		if ( browserName === 'Firefox' || browserName === 'Safari' ) {
+			handleLoad();
+		}
+	}, true);
 }(jQuery));
 (function($) {
 	'use strict';
@@ -1894,6 +1909,7 @@ jQuery(document).ready(function( $ ) {
 		var $this = $(this);
 		
 		$this.find('.mk-subscribe--form').submit(function(e){
+			$this.addClass('form-in-progress');
 			e.preventDefault();
 			$.ajax({
 				url: MK.core.path.ajaxUrl,
@@ -1904,9 +1920,21 @@ jQuery(document).ready(function( $ ) {
 					list_id: $this.find(".mk-subscribe--list-id").val(),
 					optin: $this.find(".mk-subscribe--optin").val()
 				},
-				success: function (res) {
-					$this.find(".mk-subscribe--message").html($.parseJSON(res).message);
-					console.log($.parseJSON(res).message);
+				success: function (response) {
+					$this.removeClass('form-in-progress');
+					var data = $.parseJSON(response),
+						$messaage_box = $this.find(".mk-subscribe--message");
+
+					$messaage_box.html(data.message);
+
+					if(data.action_status == true) {
+						$messaage_box.addClass('success');
+					} else {
+						$messaage_box.addClass('error');
+					}
+
+					$this.find(".mk-subscribe--email").val('');
+
 				}
 			});
 		});
@@ -2013,9 +2041,11 @@ jQuery(document).ready(function( $ ) {
 
 		}
 		
-		$( '.mk-swiper-container' ).each( function() {
-			new MK.component.SwipeSlideshow( this ).init();
-		} );
+        /* Why we need to reinitialize it? it causes double sliding effect
+    		$( '.mk-swiper-container' ).each( function() {
+    			new MK.component.SwipeSlideshow( this ).init();
+    		} );
+        */
 	}
 
 	init();
@@ -2051,6 +2081,33 @@ jQuery(document).ready(function( $ ) {
 
 })(jQuery);
 
+(function( $ ) {
+	'use strict';
+
+	/**
+	 * Fix issue with WC Recent Carousel classic style when SC is active.
+	 * At the first load of shortcode, the height is not correct, only cover the image
+	 * without product detail. This script only set the min-height.
+	 */
+	function mkWcCarouselSwiperHeight() {
+		var mkWCRecentCarousel = $( '.mk-woocommerce-carousel.classic-style' );
+		mkWCRecentCarousel.each( function() {
+			var maxHeight = 0;
+			var height = $( this ).height();
+			var childs = $( this ).find( '.item' );
+			childs.each( function(){
+				if ( $( this ).height() > maxHeight ) {
+					maxHeight = $( this ).height();
+				}
+			} );
+			var swiperContainers = $( this ).find( '.mk-swiper-container' );
+			swiperContainers[0].style.setProperty( 'min-height', maxHeight + 'px', 'important' );
+		} );
+	}
+
+	mkWcCarouselSwiperHeight();
+
+})( jQuery );
 (function ($) {
 	'use strict';  
 
