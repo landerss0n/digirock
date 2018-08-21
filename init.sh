@@ -25,7 +25,7 @@ open http://$envURL
 read -p "Klicka på [Enter] när WordPress är installerat (du behöver inte logga in)"
 
 wp theme activate jupiter-child
-wp plugin activate soil disable-comments post-duplicator js_composer_theme artbees-captcha nginx-cache
+wp plugin activate soil disable-comments post-duplicator js_composer_theme artbees-captcha
 wp option update blogdescription ''
 wp cache flush
 wp dotenv salts regenerate
