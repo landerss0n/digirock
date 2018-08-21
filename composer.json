@@ -43,7 +43,8 @@
     "wpackagist-plugin/disable-comments": "*",
     "wpackagist-plugin/nginx-cache": "*",
     "wpackagist-plugin/autodescription": "*",
-    "wpackagist-plugin/post-duplicator": "*"
+    "wpackagist-plugin/post-duplicator": "*",
+    "wpackagist-plugin/mailgun": "1.5.8.5"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.0.2"

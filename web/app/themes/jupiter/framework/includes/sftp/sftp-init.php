@@ -10,7 +10,7 @@
  */
 function mk_sftp_filesystem_method_file( $abstraction_file, $method ) {
 	if ( 'sftp' == $method ) {
-		$abstraction_file = dirname(__FILE__) . '/class-wp-filesystem-sftp.php';
+		$abstraction_file = dirname( __FILE__ ) . '/class-wp-filesystem-sftp.php';
 	}
 	return $abstraction_file;
 }
@@ -50,11 +50,11 @@ add_filter( 'fs_ftp_connection_types', 'mk_sftp_fs_ftp_connection_types', 10, 5 
  */
 function mk_sftp_filesystem_method( $method, $args, $context, $allow_relaxed_file_ownership ) {
 
-	if ( 'direct' == $method ){
+	if ( 'direct' == $method ) {
 		return $method;
 	}
 
-	if( isset( $args['connection_type'] ) && 'sftp' == $args['connection_type'] ){
+	if ( isset( $args['connection_type'] ) && 'sftp' == $args['connection_type'] ) {
 		return 'sftp';
 	}
 
@@ -69,15 +69,15 @@ add_filter( 'filesystem_method', 'mk_sftp_filesystem_method', 10, 4 );
  *
  * @param string $credentials                  Default credentials data passed.
  * @param string $form_post                    The URL to post the form to.
- * @param string $type               		   Chosen type of filesystem.
- * @param string $error 					   Whether the current request has failed to connect.
+ * @param string $type                         Chosen type of filesystem.
+ * @param string $error                        Whether the current request has failed to connect.
  * @param string $context                      Full path to the directory that is tested for being writable.
  * @param string $extra_fields                 Extra POST fields.
  * @param bool   $allow_relaxed_file_ownership Whether to allow Group/World writable.
  */
 function mk_request_filesystem_credentials( $credentials, $form_post, $type, $error, $context, $extra_fields, $allow_relaxed_file_ownership ) {
 
-	if ( isset( $extra_fields['mk_check_ftp_credentials'] ) ){
+	if ( isset( $extra_fields['mk_check_ftp_credentials'] ) ) {
 		return $credentials;
 	}
 
@@ -85,15 +85,15 @@ function mk_request_filesystem_credentials( $credentials, $form_post, $type, $er
 
 	$config_file = trailingslashit( $upload_dir['basedir'] ) . 'mk-fs-creds/index.php';
 
-	if( file_exists( $config_file ) ){
+	if ( file_exists( $config_file ) ) {
 		require $config_file;
-		if( !empty( $mkfs_config ) ){
+		if ( ! empty( $mkfs_config ) ) {
 			$mkfs_config_arr = json_decode( $mkfs_config );
-			if( $mkfs_config_arr && ( is_array( $mkfs_config_arr ) || is_object( $mkfs_config_arr ) ) ){
+			if ( $mkfs_config_arr && ( is_array( $mkfs_config_arr ) || is_object( $mkfs_config_arr ) ) ) {
 				$credentials = array();
 				// Assign $credentials data
 				foreach ( $mkfs_config_arr as $key => $value ) {
-					$credentials[$key] = Abb_Logic_Helpers::encrypt_decrypt( $value, 'd' );
+					$credentials[ $key ] = Abb_Logic_Helpers::encrypt_decrypt( $value, 'd' );
 				}
 			}
 		}

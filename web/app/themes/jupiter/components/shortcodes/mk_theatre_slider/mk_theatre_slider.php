@@ -39,7 +39,7 @@ $background_style = str_replace('_style', '', $background_style);
 
 				if($stream_host_website == 'youtube'){ ?>
 
-						<iframe width="560" height="315" src="//www.youtube.com/embed/<?php echo $stream_video_id; ?>?rel=0&amp;controls=<?php echo ($video_controls == 'true' ? 1 : 0); ?>&amp;showinfo=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+						<iframe width="560" height="315" src="//www.<?php echo mk_get_thirdparty_domain_name('youtube'); ?>/embed/<?php echo $stream_video_id; ?>?rel=0&amp;controls=<?php echo ($video_controls == 'true' ? 1 : 0); ?>&amp;showinfo=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 				        <?php
 				        wp_enqueue_script('api-youtube');

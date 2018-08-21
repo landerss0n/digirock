@@ -11,15 +11,11 @@
  * the readme will list any important changes.
  *
  * @see     https://docs.woocommerce.com/document/template-structure/
- * @author  WooThemes
  * @package WooCommerce/Templates
- * @version 3.0.0
+ * @version 3.4.0
  */
 
-
-if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly.
-}
+defined( 'ABSPATH' ) || exit;
 
 global $product, $woocommerce_loop, $mk_options;
 
@@ -108,7 +104,7 @@ if ( $columns ) {
 
 ?>
 
-<article <?php post_class( $classes ); ?>>
+<article <?php wc_product_class( $classes ); ?>>
 <div class="mk-product-holder">
 		<div class="product-loop-thumb">
 		<?php

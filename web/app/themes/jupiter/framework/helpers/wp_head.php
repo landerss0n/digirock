@@ -242,7 +242,7 @@ if ( ! function_exists( 'mk_preloader_body_overlay' ) ) {
 					$prelaoder_logo_width = absint( $prelaoder_logo_width / 2 );
 					$prelaoder_logo_height = absint( $prelaoder_logo_height / 2 );
 				}
-				echo '<img alt="' . get_bloginfo( 'name' ) . '" class="preloader-logo" src="' . esc_url( $mk_options['preloader_logo'] ) . '" width="' . esc_attr( $prelaoder_logo_width ) . '" height="' . esc_attr( $prelaoder_logo_height ) . '" >';
+				echo '<img alt="' . esc_attr( get_bloginfo( 'name' ) ) . '" class="preloader-logo" src="' . esc_url( $mk_options['preloader_logo'] ) . '" width="' . esc_attr( $prelaoder_logo_width ) . '" height="' . esc_attr( $prelaoder_logo_height ) . '" >';
 
 			}
 
@@ -335,7 +335,7 @@ if ( ! function_exists( 'mk_get_body_class' ) ) {
 		if ( $post_id ) {
 			$enable = get_post_meta( $post_id, '_enable_local_backgrounds', true );
 
-			if ( $enable == 'true' ) {
+			if ( 'true' == $enable ) {
 				$header_style_meta = get_post_meta( $post_id, 'theme_header_style', true );
 				$header_style = (isset( $header_style_meta ) && ! empty( $header_style_meta )) ? $header_style_meta : $header_style;
 			}
@@ -352,7 +352,7 @@ if ( ! function_exists( 'mk_get_body_class' ) ) {
 			$header_style = 'custom';
 		}
 
-		if ( ($mk_options['background_selector_orientation'] == 'boxed_layout') && ! ($post_id && get_post_meta( $post_id, '_enable_local_backgrounds', true ) == 'true' && get_post_meta( $post_id, 'background_selector_orientation', true ) == 'full_width_layout') ) {
+		if ( ('boxed_layout' == $mk_options['background_selector_orientation']) && ! ($post_id && get_post_meta( $post_id, '_enable_local_backgrounds', true ) == 'true' && get_post_meta( $post_id, 'background_selector_orientation', true ) == 'full_width_layout') ) {
 
 			$body_class[] = 'mk-boxed-enabled';
 		} elseif ( $post_id && get_post_meta( $post_id, '_enable_local_backgrounds', true ) == 'true' && get_post_meta( $post_id, 'background_selector_orientation', true ) == 'boxed_layout' ) {
@@ -360,25 +360,25 @@ if ( ! function_exists( 'mk_get_body_class' ) ) {
 			$body_class[] = 'mk-boxed-enabled';
 		}
 
-		if ( $header_style == 4 ) {
+		if ( 4 == $header_style ) {
 			$vertical_header_logo_align = (isset( $mk_options['vertical_header_logo_align'] ) && ! empty( $mk_options['vertical_header_logo_align'] )) ? $mk_options['vertical_header_logo_align'] : 'center';
 			$header_align = ! empty( $mk_options['theme_header_align'] ) ? $mk_options['theme_header_align'] : 'left';
 
 			if ( $post_id ) {
 				$enable = get_post_meta( $post_id, '_enable_local_backgrounds', true );
 
-				if ( $enable == 'true' ) {
+				if ( 'true' == $enable ) {
 					$header_align_meta = get_post_meta( $post_id, 'theme_header_align', true );
 					$header_align = (isset( $header_align_meta ) && ! empty( $header_align_meta )) ? $header_align_meta : $header_align;
 				}
 			}
 
-			$body_class[] = 'vertical-header-enabled vertical-header-' . $header_align . ' logo-align-' . $vertical_header_logo_align;
+			$body_class[] = 'vertical-header-enabled vertical-header-' . esc_attr( $header_align ) . ' logo-align-' . esc_attr( $vertical_header_logo_align );
 		}
 
 		return $body_class;
 	}
-}// End if().
+}
 
 /*
 Checks if header is transparent

@@ -153,21 +153,21 @@ class Mk_Ajax_Portfolio
                                 if ($video_site == 'vimeo') { ?>
                                     <div class="mk-portfolio-video">
                                         <div class="mk-video-container">
-                                            <iframe src="//player.vimeo.com/video/<?php echo $video_id; ?>?title=0&amp;byline=0&amp;portrait=0&amp;" width="<?php echo $mk_options['grid_width']; ?>" height="<?php echo $video_height; ?>" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+                                            <iframe src="//player.vimeo.com/video/<?php echo esc_attr( $video_id ); ?>?title=0&amp;byline=0&amp;portrait=0&amp;" width="<?php echo esc_attr( $mk_options['grid_width'] ); ?>" height="<?php echo esc_attr( $video_height ); ?>" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
                                         </div>
                                     </div>
                                 <?php }
                                 if ($video_site == 'youtube') { ?>
                                     <div class="mk-portfolio-video">
                                         <div class="mk-video-container">
-                                            <iframe src="//www.youtube.com/embed/<?php echo $video_id; ?>?showinfo=0" frameborder="0" width="<?php echo $mk_options['grid_width']; ?>" height="<?php echo $video_height; ?>" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+                                            <iframe src="//www.<?php echo mk_get_thirdparty_domain_name('youtube'); ?>/embed/<?php echo esc_attr( $video_id ); ?>?showinfo=0" frameborder="0" width="<?php echo esc_attr( $mk_options['grid_width'] ); ?>" height="<?php echo esc_attr( $video_height ); ?>" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
                                         </div>
                                     </div>
                                 <?php }
                                 if ($video_site == 'dailymotion') { ?>
                                     <div  class="mk-portfolio-video">
                                         <div class="mk-video-container">
-                                            <iframe src="//www.dailymotion.com/embed/video/<?php echo $video_id; ?>?logo=0" frameborder="0" width="<?php echo $mk_options['grid_width']; ?>" height="<?php echo $video_height; ?>" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+                                            <iframe src="//www.dailymotion.com/embed/video/<?php echo esc_attr( $video_id ); ?>?logo=0" frameborder="0" width="<?php echo esc_attr( $mk_options['grid_width'] ); ?>" height="<?php echo esc_attr( $video_height ); ?>" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
                                         </div>
                                     </div>
                                 <?php }

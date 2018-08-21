@@ -53,7 +53,7 @@ class Artbees_Widget_Contact_Form extends WP_Widget {
 				?>
 				<div class="mk-contact-widget-gdpr-consent">
 				<div>
-				<input type="checkbox" name="contact_form_gdpr_check" id="gdpr_check_<?php echo esc_attr( $gdpr_tabindex ); ?>" class="mk-checkbox" required="required" value="" tabindex="<?php echo esc_attr( $gdpr_tabindex ); ?>" /><label for="gdpr_check_<?php echo esc_attr( $gdpr_tabindex ); ?>"><?php echo esc_html( $gdpr_consent_text ); ?></label>
+				<input type="checkbox" name="contact_form_gdpr_check" id="gdpr_check_<?php echo esc_attr( $gdpr_tabindex ); ?>" class="mk-checkbox" required="required" value="" tabindex="<?php echo esc_attr( $gdpr_tabindex ); ?>" /><label for="gdpr_check_<?php echo esc_attr( $gdpr_tabindex ); ?>"><?php echo wp_kses_post( $gdpr_consent_text ); ?></label>
 					</div>
 				</div>
 				<?php endif; ?>
@@ -112,20 +112,18 @@ class Artbees_Widget_Contact_Form extends WP_Widget {
 		?>
 		<p><label for="<?php echo $this->get_field_id( 'email' ); ?>"><?php esc_html_e( 'Email:', 'mk_framework' ); ?></label>
 		<input class="widefat" id="<?php echo $this->get_field_id( 'email' ); ?>" name="<?php echo $this->get_field_name( 'email' ); ?>" type="text" value="<?php echo $email; ?>" /></p>
-		<br>
 		<p><input type="checkbox" class="checkbox" id="<?php echo $this->get_field_id( 'captcha' ); ?>" name="<?php echo $this->get_field_name( 'captcha' ); ?>"<?php checked( $captcha ); ?> />
-		<label for="<?php echo $this->get_field_id( 'captcha' ); ?>"><?php esc_html_e( 'Show Captcha?', 'mk_framework' ); ?></label>
-		<br><?php echo $captcha_plugin_status; ?>
+		<label for="<?php echo $this->get_field_id( 'captcha' ); ?>"><?php esc_html_e( 'Show Captcha?', 'mk_framework' ); ?></label><?php echo $captcha_plugin_status; ?>
 		</p>
 
 		<p><input type="checkbox" class="checkbox" id="<?php echo $this->get_field_id( 'phone' ); ?>" name="<?php echo $this->get_field_name( 'phone' ); ?>"<?php checked( $phone ); ?> />
-		<label for="<?php echo $this->get_field_id( 'phone' ); ?>"><?php esc_html_e( 'Show Phone Number Field?', 'mk_framework' ); ?></label></p><br>
+		<label for="<?php echo $this->get_field_id( 'phone' ); ?>"><?php esc_html_e( 'Show Phone Number Field?', 'mk_framework' ); ?></label></p>
 
 		<p><input type="checkbox" class="checkbox" id="<?php echo $this->get_field_id( 'gdpr_consent' ); ?>" name="<?php echo $this->get_field_name( 'gdpr_consent' ); ?>"<?php checked( $gdpr_consent ); ?> />
 		<label for="<?php echo $this->get_field_id( 'gdpr_consent' ); ?>"><?php esc_html_e( 'GDPR Consent Check', 'mk_framework' ); ?></label></p>
 
 		<p><label for="<?php echo $this->get_field_id( 'gdpr_consent_text' ); ?>"><?php esc_html_e( 'GDPR Consent Checkbox Text:', 'mk_framework' ); ?></label>
-		<input class="widefat" id="<?php echo $this->get_field_id( 'gdpr_consent_text' ); ?>" name="<?php echo $this->get_field_name( 'gdpr_consent_text' ); ?>" type="text" value="<?php echo $gdpr_consent_text; ?>" /></p>
+		<textarea style="width:98%" rows="6" id="<?php echo $this->get_field_id( 'gdpr_consent_text' ); ?>" name="<?php echo $this->get_field_name( 'gdpr_consent_text' ); ?>"><?php echo $gdpr_consent_text; ?></textarea></p>
 
 <?php
 

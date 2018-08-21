@@ -48,7 +48,7 @@ Mk_Send_Mail::update_contact_form_email( 2342, 15, $mk_options['quick_contact_em
 					?>
 				<div class="mk-quick-contact-gdpr-consent">
 					<div>
-					<input type="checkbox" name="contact_form_gdpr_check" id="gdpr_check_<?php echo esc_attr( $gdpr_tabindex ); ?>" class="mk-checkbox" required="required" value="" tabindex="<?php echo esc_attr( $gdpr_tabindex ); ?>" /><label for="gdpr_check_<?php echo esc_attr( $gdpr_tabindex ); ?>"><?php echo esc_html( $mk_options['quick_contact_gdpr_consent_text'] ); ?></label>
+					<input type="checkbox" name="contact_form_gdpr_check" id="gdpr_check_<?php echo esc_attr( $gdpr_tabindex ); ?>" class="mk-checkbox" required="required" value="" tabindex="<?php echo esc_attr( $gdpr_tabindex ); ?>" /><label for="gdpr_check_<?php echo esc_attr( $gdpr_tabindex ); ?>"><?php echo wp_kses_post( $mk_options['quick_contact_gdpr_consent_text'] ); ?></label>
 					</div>
 				</div>
 				<?php endif; ?>

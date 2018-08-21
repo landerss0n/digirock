@@ -64,3 +64,15 @@ Mk_Static_Files::addLocalStyle(
 );
 
 
+/*
+Remove extra height from VC controls. Somehow this is not reproducable with other WP themes!
+*/
+Mk_Static_Files::addLocalStyle(
+	'
+	.compose-mode .vc_element-name .vc_btn-content {
+    	height: auto !important;
+	}
+'
+);
+
+

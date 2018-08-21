@@ -46,7 +46,7 @@
              ),
 
              array(
-                 'type' => 'textfield',
+                 'type' => 'textarea',
                  'heading' => __( 'GDPR Consent Checkbox Text', 'mk_framework' ),
                  'param_name' => 'gdpr_consent_text',
                  'value' => sprintf( __( 'I consent to %s collecting my details through this form.', 'mk_framework' ), get_bloginfo( 'name' ) ),

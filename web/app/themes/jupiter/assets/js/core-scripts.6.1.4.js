@@ -11689,36 +11689,6 @@ jQuery(function($) {
 
 
 
-(function( $ ) {
-	'use strict';
-
-	var utils = MK.utils;
-	var val   = MK.val;
-
-	/**
-	 * Keep track of top Level sections so we can easly skip to next one.
-	 * We must be explicit about DOM level to nested sections.
-	 * The list of sections is static. If you'd need to refreh it on ajax etc do it with pub/sub (not really needed now).
-	 * We keep track for the same sections in Footer for mutating window location with '!loading' to prevent native anchor behaviour.
-	 */
-	var $topLevelSections = $('#theme-page > .vc_row, #theme-page > .mk-main-wrapper-holder, #theme-page > .mk-page-section');
-
-	$( document ).on( 'click', '.mk-skip-to-next', function() {
-		var $this = $( this ),
-			/**
-			 * Static height of button + the space to the bottom of the container.
-			 *
-			 * @TODO Possible to calculate dynamically.
-			 */
-			btnHeight = $this.hasClass( 'edge-skip-slider' ) ? 150 : 76,
-			offset = $this.offset().top + btnHeight,
-			nextOffset = utils.nextHigherVal( utils.offsets( $topLevelSections ), [offset] );
-
-		utils.scrollTo( nextOffset - val.offsetHeaderHeight( nextOffset ) );
-	});
-
-})( jQuery );
-
 (function($) {
 	'use strict';
 
@@ -13104,6 +13074,36 @@ jQuery(function($) {
 	};
 
 })(jQuery);
+(function( $ ) {
+	'use strict';
+
+	var utils = MK.utils;
+	var val   = MK.val;
+
+	/**
+	 * Keep track of top Level sections so we can easly skip to next one.
+	 * We must be explicit about DOM level to nested sections.
+	 * The list of sections is static. If you'd need to refreh it on ajax etc do it with pub/sub (not really needed now).
+	 * We keep track for the same sections in Footer for mutating window location with '!loading' to prevent native anchor behaviour.
+	 */
+	var $topLevelSections = $('#theme-page > .vc_row, #theme-page > .mk-main-wrapper-holder, #theme-page > .mk-page-section');
+
+	$( document ).on( 'click', '.mk-skip-to-next', function() {
+		var $this = $( this ),
+			/**
+			 * Static height of button + the space to the bottom of the container.
+			 *
+			 * @TODO Possible to calculate dynamically.
+			 */
+			btnHeight = $this.hasClass( 'edge-skip-slider' ) ? 150 : 76,
+			offset = $this.offset().top + btnHeight,
+			nextOffset = utils.nextHigherVal( utils.offsets( $topLevelSections ), [offset] );
+
+		utils.scrollTo( nextOffset - val.offsetHeaderHeight( nextOffset ) );
+	});
+
+})( jQuery );
+
 /* Social Share */
 /* -------------------------------------------------------------------- */
 (function($) {

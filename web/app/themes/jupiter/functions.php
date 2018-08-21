@@ -137,11 +137,8 @@ class Theme {
 		define( 'THEME_CUSTOMIZER_DIR', THEME_DIR . '/framework/admin/customizer' );
 		define( 'THEME_CUSTOMIZER_URI', THEME_DIR_URI . '/framework/admin/customizer' );
 
-		// Just delete this constant before releasing Jupiter. This can be defined anywhere.
-		define( 'ARTBEES_HEADER_BUILDER', true );
-
-		define( 'ARTBEES_VC_FRONTEND', true );
 	}
+
 	public function backward_compatibility() {
 		include_once THEME_HELPERS . '/php-backward-compatibility.php';
 	}
@@ -330,29 +327,6 @@ class Theme {
 				'control_panel',
 			)
 		);
-
-		if ( NEW_UI_LIBRARY ) {
-			add_submenu_page(
-				THEME_NAME, __( 'New UI', 'mk_framework' ), __( 'New UI', 'mk_framework' ), 'edit_posts', 'ui-library', array(
-					&$this,
-					'ui_library',
-				)
-			);
-			add_submenu_page(
-				THEME_NAME, __( 'UI Page Options', 'mk_framework' ), __( 'UI Page Options', 'mk_framework' ), 'edit_posts', 'ui-page-options', array(
-					&$this,
-					'ui_page_options',
-				)
-			);
-		}
-	}
-
-
-	public function ui_page_options() {
-		include_once THEME_CONTROL_PANEL . '/logic/ui-page-options.php';
-	}
-	public function ui_library() {
-		include_once THEME_CONTROL_PANEL . '/logic/ui-library.php';
 	}
 
 

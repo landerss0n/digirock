@@ -4377,7 +4377,6 @@ Line Style
 .compose-mode .mk-contact-form .mk-progress-button, .compose-mode .mk-contact-form .captcha-change-image:active {
     pointer-events: none;
 }
-
 /* Shortcode:Container Box
 -------------------------------------------------------------------- */
 .mk-content-box {
@@ -7332,6 +7331,86 @@ This shortcode styles are moved to core styles as its used outside of this short
   width: 32px !important;
 }
 
+/* Shortcode:Icon Box 2
+-------------------------------------------------------------------- */
+.mk-box-icon-2 {
+  display: block;
+}
+.mk-box-icon-2 .mk-box-icon-2-icon {
+  border-width: 2px !important;
+  border-radius: 50%;
+  transition: all ease-in 0.2s;
+  display: inline-block;
+  text-align: center;
+}
+.mk-box-icon-2 .mk-box-icon-2-icon i {
+  display: block;
+  vertical-align: middle;
+  line-height: inherit;
+  text-align: center;
+  display: inline-block;
+}
+.mk-box-icon-2 .mk-box-icon-2-icon.size-16 {
+  line-height: 50px;
+  height: 54px;
+  width: 54px;
+}
+.mk-box-icon-2 .mk-box-icon-2-icon.size-32 {
+  line-height: 80px;
+  height: 84px;
+  width: 84px;
+}
+.mk-box-icon-2 .mk-box-icon-2-icon.size-48 {
+  line-height: 98px;
+  height: 100px;
+  width: 100px;
+}
+.mk-box-icon-2 .mk-box-icon-2-icon.size-64 {
+  line-height: 128px;
+  height: 130px;
+  width: 130px;
+}
+.mk-box-icon-2 .mk-box-icon-2-icon.size-128 {
+  line-height: 188px;
+  height: 190px;
+  width: 190px;
+}
+.mk-box-icon-2 svg {
+  vertical-align: middle;
+}
+.mk-box-icon-2 .mk-box-icon-2-image svg {
+  width: 100%;
+}
+.mk-box-icon-2 .mk-box-icon-2-title {
+  display: block;
+  margin: 0;
+}
+.mk-box-icon-2 .mk-box-icon-2-content {
+  display: block;
+}
+.mk-box-icon-2.box-align-left {
+  text-align: left;
+}
+.mk-box-icon-2.box-align-center {
+  text-align: center;
+}
+.mk-box-icon-2 .mk-box-icon-2-icon {
+  display: inline-block;
+}
+.mk-box-icon-2 .mk-box-icon-2-image {
+  display: block;
+}
+.mk-box-icon-2.box-align-center .mk-box-icon-2-icon,
+.mk-box-icon-2.box-align-center .mk-box-icon-2-image {
+  margin: 0 auto;
+}
+.mk-box-icon-2.box-align-right {
+  text-align: right;
+}
+.mk-box-icon-2.box-align-right .mk-box-icon-2-image {
+  display: inline-block;
+}
+
 .mk-iconBox-gradient .icon {
   display: inline-block;
   position: relative;
@@ -7519,86 +7598,6 @@ This shortcode styles are moved to core styles as its used outside of this short
   min-height: 80px;
   line-height: 80px;
   text-align: center;
-}
-
-/* Shortcode:Icon Box 2
--------------------------------------------------------------------- */
-.mk-box-icon-2 {
-  display: block;
-}
-.mk-box-icon-2 .mk-box-icon-2-icon {
-  border-width: 2px !important;
-  border-radius: 50%;
-  transition: all ease-in 0.2s;
-  display: inline-block;
-  text-align: center;
-}
-.mk-box-icon-2 .mk-box-icon-2-icon i {
-  display: block;
-  vertical-align: middle;
-  line-height: inherit;
-  text-align: center;
-  display: inline-block;
-}
-.mk-box-icon-2 .mk-box-icon-2-icon.size-16 {
-  line-height: 50px;
-  height: 54px;
-  width: 54px;
-}
-.mk-box-icon-2 .mk-box-icon-2-icon.size-32 {
-  line-height: 80px;
-  height: 84px;
-  width: 84px;
-}
-.mk-box-icon-2 .mk-box-icon-2-icon.size-48 {
-  line-height: 98px;
-  height: 100px;
-  width: 100px;
-}
-.mk-box-icon-2 .mk-box-icon-2-icon.size-64 {
-  line-height: 128px;
-  height: 130px;
-  width: 130px;
-}
-.mk-box-icon-2 .mk-box-icon-2-icon.size-128 {
-  line-height: 188px;
-  height: 190px;
-  width: 190px;
-}
-.mk-box-icon-2 svg {
-  vertical-align: middle;
-}
-.mk-box-icon-2 .mk-box-icon-2-image svg {
-  width: 100%;
-}
-.mk-box-icon-2 .mk-box-icon-2-title {
-  display: block;
-  margin: 0;
-}
-.mk-box-icon-2 .mk-box-icon-2-content {
-  display: block;
-}
-.mk-box-icon-2.box-align-left {
-  text-align: left;
-}
-.mk-box-icon-2.box-align-center {
-  text-align: center;
-}
-.mk-box-icon-2 .mk-box-icon-2-icon {
-  display: inline-block;
-}
-.mk-box-icon-2 .mk-box-icon-2-image {
-  display: block;
-}
-.mk-box-icon-2.box-align-center .mk-box-icon-2-icon,
-.mk-box-icon-2.box-align-center .mk-box-icon-2-image {
-  margin: 0 auto;
-}
-.mk-box-icon-2.box-align-right {
-  text-align: right;
-}
-.mk-box-icon-2.box-align-right .mk-box-icon-2-image {
-  display: inline-block;
 }
 
 /* Shortcode:Image
@@ -9213,6 +9212,78 @@ only screen and (max-width: 736px) {
     }
 }
 
+/* Page Title Box
+-------------------------------------------------------------------- */
+.mk-effect-wrapper {
+  overflow: hidden;
+  position: relative;
+}
+.mk-page-title-box {
+  text-align: center;
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+.mk-page-title-box .mk-effect-bg-layer {
+  position: absolute;
+  height: 120%;
+  width: 100%;
+  top: -20%;
+  left: 0;
+  -webkit-transform: tranzlateZ(0);
+          -ms-transform: tranzlateZ(0);
+      transform: tranzlateZ(0);
+  -webkit-transform-origin: top center;
+          -ms-transform-origin: top center;
+      transform-origin: top center;
+}
+.mk-page-title-box .mk-effect-bg-layer .mk-effect-gradient-layer {
+  position: absolute;
+  top: 1px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #ffffff);
+  background-color: rgba(255, 255, 255, 0);
+}
+.mk-page-title-box .mk-page-title-box-content {
+  display: table-cell;
+  vertical-align: middle;
+  position: relative;
+}
+.mk-page-title-box .mk-page-title-box-subtitle {
+  margin-bottom: 0;
+}
+.mk-page-title-box .mk-page-title-box-title {
+  letter-spacing: 1px;
+  display: inline-block;
+}
+.mk-page-title-box .mk-page-title-box-title.mk-page-title-box-title--underline {
+  position: relative;
+}
+.mk-page-title-box .mk-page-title-box-title.mk-page-title-box-title--underline:after {
+  display: block;
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -15px;
+  width: 30px;
+  height: 3px;
+}
+
+@media handheld, only screen and (max-width: 480px) {
+
+  .mk-page-title-box:not(.mk-page-title-box--forcefont) .mk-page-title-box-title {
+    font-size: 9vw !important;
+    word-break: break-word;
+  }
+  .mk-page-title-box:not(.mk-page-title-box--forcefont-subtitle) .mk-page-title-box-subtitle {
+    font-size: 18px !important;
+  }
+
+}
 /* For bulletproof centering via flexbox, columns should be wrapper by row, pretty much as table */
 .mk-page-section-wrapper {
   display: -webkit-box;
@@ -9595,78 +9666,6 @@ html:not(.IE):not(.Edge) .mk-page-section .mk-color-layer {
 /* Show delete btn */
 .compose-mode .parent-mk_page_section.vc_active .vc_advanced {
 	width: 149px !important;
-}
-/* Page Title Box
--------------------------------------------------------------------- */
-.mk-effect-wrapper {
-  overflow: hidden;
-  position: relative;
-}
-.mk-page-title-box {
-  text-align: center;
-  display: table;
-  width: 100%;
-  height: 100%;
-}
-.mk-page-title-box .mk-effect-bg-layer {
-  position: absolute;
-  height: 120%;
-  width: 100%;
-  top: -20%;
-  left: 0;
-  -webkit-transform: tranzlateZ(0);
-          -ms-transform: tranzlateZ(0);
-      transform: tranzlateZ(0);
-  -webkit-transform-origin: top center;
-          -ms-transform-origin: top center;
-      transform-origin: top center;
-}
-.mk-page-title-box .mk-effect-bg-layer .mk-effect-gradient-layer {
-  position: absolute;
-  top: 1px;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #ffffff);
-  background-color: rgba(255, 255, 255, 0);
-}
-.mk-page-title-box .mk-page-title-box-content {
-  display: table-cell;
-  vertical-align: middle;
-  position: relative;
-}
-.mk-page-title-box .mk-page-title-box-subtitle {
-  margin-bottom: 0;
-}
-.mk-page-title-box .mk-page-title-box-title {
-  letter-spacing: 1px;
-  display: inline-block;
-}
-.mk-page-title-box .mk-page-title-box-title.mk-page-title-box-title--underline {
-  position: relative;
-}
-.mk-page-title-box .mk-page-title-box-title.mk-page-title-box-title--underline:after {
-  display: block;
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  margin-left: -15px;
-  width: 30px;
-  height: 3px;
-}
-
-@media handheld, only screen and (max-width: 480px) {
-
-  .mk-page-title-box:not(.mk-page-title-box--forcefont) .mk-page-title-box-title {
-    font-size: 9vw !important;
-    word-break: break-word;
-  }
-  .mk-page-title-box:not(.mk-page-title-box--forcefont-subtitle) .mk-page-title-box-subtitle {
-    font-size: 18px !important;
-  }
-
 }
 [data-photoalbum-images="[null]"] {
     pointer-events: none;
@@ -10375,6 +10374,123 @@ html:not(.IE):not(.Edge) .mk-page-section .mk-color-layer {
     -webkit-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
     transform: rotate(180deg);
+}
+/*
+ * Background-position and Transform techniques tested and compared.
+ *
+ * Background-position is smooth in Chrome but laggy in other browsers,
+ * It also causes performance issue.
+ *
+ * Transform is a bit laggy in Chrome but smooth in other browsers. It's a Chrome issue.
+ * No performance issue found.
+ */
+/*.mk-photo-roller,
+.mk-photo-roller-frame {
+	will-change: transform;
+	-webkit-transform: translate3d(0,0,0);
+	        transform: translate3d(0,0,0);
+}*/
+
+.mk-photo-roller {
+	width: 100%;
+	overflow: hidden; 
+	position: relative;
+}
+
+.mk-photo-roller-frame {
+	width: 100%;
+	position: relative;
+	-webkit-animation: mk-photo-roller-horizontal 30s infinite linear;
+	        animation: mk-photo-roller-horizontal 30s infinite linear;
+}
+
+.mk-photo-roller-frame.mk-vertical {
+	-webkit-animation: mk-photo-roller-vertical 30s infinite reverse linear;
+	        animation: mk-photo-roller-vertical 30s infinite reverse linear;
+}
+
+@media (max-width: 993px) {
+	.mk-photo-roller div.mk-photo-roller-frame.mk-vertical {
+		width: 100%;
+	}
+}
+
+.mk-photo-roller-frame:after {
+	content: "";
+	height: 100%;
+	width: 500%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background-size: 20% 100%;
+}
+
+.mk-photo-roller-frame.mk-vertical:after {
+	height: 500%;
+	background-size: auto 20%;
+}
+
+.mk-photo-roller-frame.mk-reverse-direction {
+	-webkit-animation-direction: reverse;
+	        animation-direction: reverse;
+}
+
+.mk-photo-roller-frame.mk-vertical.mk-reverse-direction {
+	-webkit-animation-direction: normal;
+	        animation-direction: normal;
+}
+
+.mk-photo-roller-frame.mk-pause-hover:hover {
+	-webkit-animation-play-state: paused;
+	        animation-play-state: paused;
+}
+
+.mk-photo-roller-frame-img {
+	width: 100%;
+}
+
+@-webkit-keyframes mk-photo-roller-horizontal {
+	0% {
+		-webkit-transform: translateX(-100%);
+		        transform: translateX(-100%);
+	}
+	100% {
+		-webkit-transform: translateX(-200%);
+		        transform: translateX(-200%);
+	}
+}
+
+@keyframes mk-photo-roller-horizontal {
+	0% {
+		-webkit-transform: translateX(-100%);
+		        transform: translateX(-100%);
+	}
+	100% {
+		-webkit-transform: translateX(-200%);
+		        transform: translateX(-200%);
+	}
+}
+
+@-webkit-keyframes mk-photo-roller-vertical {
+	0% {
+		-webkit-transform: translateY(-100%);
+		        transform: translateY(-100%);
+	}
+	100% {
+		-webkit-transform: translateY(-200%);
+		        transform: translateY(-200%);
+	}
+}
+
+@keyframes mk-photo-roller-vertical {
+	0% {
+		-webkit-transform: translateY(-100%);
+		        transform: translateY(-100%);
+	}
+	100% {
+		-webkit-transform: translateY(-200%);
+		        transform: translateY(-200%);
+	}
 }
 .ajax-container {
   position: relative;
@@ -11838,123 +11954,6 @@ html:not(.IE):not(.Edge) .mk-page-section .mk-color-layer {
   width: 100%;
 }
 
-/*
- * Background-position and Transform techniques tested and compared.
- *
- * Background-position is smooth in Chrome but laggy in other browsers,
- * It also causes performance issue.
- *
- * Transform is a bit laggy in Chrome but smooth in other browsers. It's a Chrome issue.
- * No performance issue found.
- */
-/*.mk-photo-roller,
-.mk-photo-roller-frame {
-	will-change: transform;
-	-webkit-transform: translate3d(0,0,0);
-	        transform: translate3d(0,0,0);
-}*/
-
-.mk-photo-roller {
-	width: 100%;
-	overflow: hidden; 
-	position: relative;
-}
-
-.mk-photo-roller-frame {
-	width: 100%;
-	position: relative;
-	-webkit-animation: mk-photo-roller-horizontal 30s infinite linear;
-	        animation: mk-photo-roller-horizontal 30s infinite linear;
-}
-
-.mk-photo-roller-frame.mk-vertical {
-	-webkit-animation: mk-photo-roller-vertical 30s infinite reverse linear;
-	        animation: mk-photo-roller-vertical 30s infinite reverse linear;
-}
-
-@media (max-width: 993px) {
-	.mk-photo-roller div.mk-photo-roller-frame.mk-vertical {
-		width: 100%;
-	}
-}
-
-.mk-photo-roller-frame:after {
-	content: "";
-	height: 100%;
-	width: 500%;
-	position: absolute;
-	left: 0;
-	top: 0;
-	background-size: 20% 100%;
-}
-
-.mk-photo-roller-frame.mk-vertical:after {
-	height: 500%;
-	background-size: auto 20%;
-}
-
-.mk-photo-roller-frame.mk-reverse-direction {
-	-webkit-animation-direction: reverse;
-	        animation-direction: reverse;
-}
-
-.mk-photo-roller-frame.mk-vertical.mk-reverse-direction {
-	-webkit-animation-direction: normal;
-	        animation-direction: normal;
-}
-
-.mk-photo-roller-frame.mk-pause-hover:hover {
-	-webkit-animation-play-state: paused;
-	        animation-play-state: paused;
-}
-
-.mk-photo-roller-frame-img {
-	width: 100%;
-}
-
-@-webkit-keyframes mk-photo-roller-horizontal {
-	0% {
-		-webkit-transform: translateX(-100%);
-		        transform: translateX(-100%);
-	}
-	100% {
-		-webkit-transform: translateX(-200%);
-		        transform: translateX(-200%);
-	}
-}
-
-@keyframes mk-photo-roller-horizontal {
-	0% {
-		-webkit-transform: translateX(-100%);
-		        transform: translateX(-100%);
-	}
-	100% {
-		-webkit-transform: translateX(-200%);
-		        transform: translateX(-200%);
-	}
-}
-
-@-webkit-keyframes mk-photo-roller-vertical {
-	0% {
-		-webkit-transform: translateY(-100%);
-		        transform: translateY(-100%);
-	}
-	100% {
-		-webkit-transform: translateY(-200%);
-		        transform: translateY(-200%);
-	}
-}
-
-@keyframes mk-photo-roller-vertical {
-	0% {
-		-webkit-transform: translateY(-100%);
-		        transform: translateY(-100%);
-	}
-	100% {
-		-webkit-transform: translateY(-200%);
-		        transform: translateY(-200%);
-	}
-}
 .mk-slideshow-box {
   position: relative;
 }

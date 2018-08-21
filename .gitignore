@@ -3,6 +3,7 @@ web/app/plugins/*
 !web/app/plugins/.gitkeep
 !web/app/plugins/artbees-captcha
 !web/app/plugins/js_composer_theme
+!web/app/plugins/gravityforms
 !web/app/themes/jupiter
 !web/app/themes/jupiter-child
 web/app/mu-plugins/*/

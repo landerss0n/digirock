@@ -37,13 +37,13 @@ $container_class[] = $el_class;
 			</div>
 			<div class="mk-subscribe--form-column _ table-cell">
 				<button id="mk-subscribe--button_<?php echo esc_attr( $id ); ?>" tabindex="<?php echo esc_attr( $tabindex_button ); ?>" class="mk-subscribe--button _ font-weight-b"> 
-					<span><?php echo esc_html( $button_text ); ?></span>
+					<span><?php echo wp_kses_post( $button_text ); ?></span>
 				</button>
 			</div>
 		</div>
 		<?php if ( 'true' == $gdpr_consent ) : ?>
 		<div class="mk-mailchimp-gdpr-consent">
-				<input type="checkbox" name="mailchimp_gdpr_check_<?php echo esc_attr( $id ); ?>" id="mailchimp_gdpr_check_<?php echo esc_attr( $id ); ?>" class="mk-checkbox" required="required" value="" tabindex="<?php echo esc_attr( $tabindex_gdpr ); ?>" /><label for="mailchimp_gdpr_check_<?php echo esc_attr( $id ); ?>"><?php echo esc_html( $gdpr_consent_text ); ?></label>
+				<input type="checkbox" name="mailchimp_gdpr_check_<?php echo esc_attr( $id ); ?>" id="mailchimp_gdpr_check_<?php echo esc_attr( $id ); ?>" class="mk-checkbox" required="required" value="" tabindex="<?php echo esc_attr( $tabindex_gdpr ); ?>" /><label for="mailchimp_gdpr_check_<?php echo esc_attr( $id ); ?>"><?php echo wp_kses_post( $gdpr_consent_text ); ?></label>
 		</div>
 	<?php endif; ?>
 	</form>

@@ -29,103 +29,99 @@ msgid_plural "Showing %1$s comments"
 msgstr[0] ""
 msgstr[1] ""
 
-#: comments.php:99
+#: comments.php:95
 msgid "pingbacks / trackbacks"
 msgstr ""
 
-#: comments.php:128
+#: comments.php:131
 msgid "Name (Required)"
 msgstr ""
 
-#: comments.php:129
+#: comments.php:133
 msgid "Email (Required)"
 msgstr ""
 
-#: comments.php:130, components/shortcodes/mk_contact_info/vc_map.php:60, components/shortcodes/mk_contact_form/styles/corporate.php:20, components/shortcodes/mk_contact_form/styles/line.php:35
+#: comments.php:135, components/shortcodes/mk_contact_info/vc_map.php:61, components/shortcodes/mk_contact_form/styles/corporate.php:20, components/shortcodes/mk_contact_form/styles/line.php:35
 msgid "Website"
 msgstr ""
 
-#: comments.php:136
+#: comments.php:138
+msgid "Save my name, email, and website in this browser for the next time I comment."
+msgstr ""
+
+#: comments.php:143
 msgid "Leave a Comment"
 msgstr ""
 
-#: comments.php:137
+#: comments.php:144
 msgid "LEAVE YOUR COMMENT"
 msgstr ""
 
-#: comments.php:140
+#: comments.php:147
 msgid "POST COMMENT"
 msgstr ""
 
-#: functions.php:182, framework/metaboxes/metabox-employee.php:34, framework/metaboxes/metabox-pages.php:113, framework/metaboxes/metabox-portfolios.php:107, framework/metaboxes/metabox-posts.php:106, components/shortcodes/mk_header/vc_map.php:58, framework/admin/theme-options/masterkey.php:2162
+#: functions.php:179, framework/metaboxes/metabox-employee.php:34, framework/metaboxes/metabox-pages.php:113, framework/metaboxes/metabox-portfolios.php:107, framework/metaboxes/metabox-posts.php:106, components/shortcodes/mk_header/vc_map.php:58, framework/admin/theme-options/masterkey.php:2162
 msgid "Primary Navigation"
 msgstr ""
 
-#: functions.php:183, framework/metaboxes/metabox-employee.php:35, framework/metaboxes/metabox-pages.php:114, framework/metaboxes/metabox-portfolios.php:108, framework/metaboxes/metabox-posts.php:107, components/shortcodes/mk_header/vc_map.php:59, framework/admin/theme-options/masterkey.php:2163
+#: functions.php:180, framework/metaboxes/metabox-employee.php:35, framework/metaboxes/metabox-pages.php:114, framework/metaboxes/metabox-portfolios.php:108, framework/metaboxes/metabox-posts.php:107, components/shortcodes/mk_header/vc_map.php:59, framework/admin/theme-options/masterkey.php:2163
 msgid "Second Navigation"
 msgstr ""
 
-#: functions.php:184, framework/metaboxes/metabox-employee.php:36, framework/metaboxes/metabox-pages.php:115, framework/metaboxes/metabox-portfolios.php:109, framework/metaboxes/metabox-posts.php:108, components/shortcodes/mk_header/vc_map.php:60, framework/admin/theme-options/masterkey.php:2164
+#: functions.php:181, framework/metaboxes/metabox-employee.php:36, framework/metaboxes/metabox-pages.php:115, framework/metaboxes/metabox-portfolios.php:109, framework/metaboxes/metabox-posts.php:108, components/shortcodes/mk_header/vc_map.php:60, framework/admin/theme-options/masterkey.php:2164
 msgid "Third Navigation"
 msgstr ""
 
-#: functions.php:185, framework/metaboxes/metabox-employee.php:37, framework/metaboxes/metabox-pages.php:116, framework/metaboxes/metabox-portfolios.php:110, framework/metaboxes/metabox-posts.php:109, components/shortcodes/mk_header/vc_map.php:61, framework/admin/theme-options/masterkey.php:2165
+#: functions.php:182, framework/metaboxes/metabox-employee.php:37, framework/metaboxes/metabox-pages.php:116, framework/metaboxes/metabox-portfolios.php:110, framework/metaboxes/metabox-posts.php:109, components/shortcodes/mk_header/vc_map.php:61, framework/admin/theme-options/masterkey.php:2165
 msgid "Fourth Navigation"
 msgstr ""
 
-#: functions.php:186, framework/metaboxes/metabox-employee.php:38, framework/metaboxes/metabox-pages.php:117, framework/metaboxes/metabox-portfolios.php:111, framework/metaboxes/metabox-posts.php:110, components/shortcodes/mk_header/vc_map.php:62, framework/admin/theme-options/masterkey.php:2166
+#: functions.php:183, framework/metaboxes/metabox-employee.php:38, framework/metaboxes/metabox-pages.php:117, framework/metaboxes/metabox-portfolios.php:111, framework/metaboxes/metabox-posts.php:110, components/shortcodes/mk_header/vc_map.php:62, framework/admin/theme-options/masterkey.php:2166
 msgid "Fifth Navigation"
 msgstr ""
 
-#: functions.php:187, framework/metaboxes/metabox-employee.php:39, framework/metaboxes/metabox-pages.php:118, framework/metaboxes/metabox-portfolios.php:112, framework/metaboxes/metabox-posts.php:111, components/shortcodes/mk_header/vc_map.php:63, framework/admin/theme-options/masterkey.php:2167
+#: functions.php:184, framework/metaboxes/metabox-employee.php:39, framework/metaboxes/metabox-pages.php:118, framework/metaboxes/metabox-portfolios.php:112, framework/metaboxes/metabox-posts.php:111, components/shortcodes/mk_header/vc_map.php:63, framework/admin/theme-options/masterkey.php:2167
 msgid "Sixth Navigation"
 msgstr ""
 
-#: functions.php:188, framework/metaboxes/metabox-pages.php:119, framework/metaboxes/metabox-posts.php:112, components/shortcodes/mk_header/vc_map.php:64, framework/admin/theme-options/masterkey.php:2168
+#: functions.php:185, framework/metaboxes/metabox-pages.php:119, framework/metaboxes/metabox-posts.php:112, components/shortcodes/mk_header/vc_map.php:64, framework/admin/theme-options/masterkey.php:2168
 msgid "Seventh Navigation"
 msgstr ""
 
-#: functions.php:189, framework/metaboxes/metabox-pages.php:120, framework/metaboxes/metabox-posts.php:113, components/shortcodes/mk_header/vc_map.php:65, framework/admin/theme-options/masterkey.php:2169
+#: functions.php:186, framework/metaboxes/metabox-pages.php:120, framework/metaboxes/metabox-posts.php:113, components/shortcodes/mk_header/vc_map.php:65, framework/admin/theme-options/masterkey.php:2169
 msgid "Eighth Navigation"
 msgstr ""
 
-#: functions.php:190, framework/metaboxes/metabox-pages.php:121, framework/metaboxes/metabox-posts.php:114, components/shortcodes/mk_header/vc_map.php:66, framework/admin/theme-options/masterkey.php:2170
+#: functions.php:187, framework/metaboxes/metabox-pages.php:121, framework/metaboxes/metabox-posts.php:114, components/shortcodes/mk_header/vc_map.php:66, framework/admin/theme-options/masterkey.php:2170
 msgid "Ninth Navigation"
 msgstr ""
 
-#: functions.php:191, framework/metaboxes/metabox-pages.php:122, framework/metaboxes/metabox-posts.php:115, components/shortcodes/mk_header/vc_map.php:67, framework/admin/theme-options/masterkey.php:2171
+#: functions.php:188, framework/metaboxes/metabox-pages.php:122, framework/metaboxes/metabox-posts.php:115, components/shortcodes/mk_header/vc_map.php:67, framework/admin/theme-options/masterkey.php:2171
 msgid "Tenth Navigation"
 msgstr ""
 
-#: functions.php:192, framework/admin/theme-options/masterkey.php:3570
+#: functions.php:189, framework/admin/theme-options/masterkey.php:3570
 msgid "Footer Navigation"
 msgstr ""
 
-#: functions.php:193
+#: functions.php:190
 msgid "Header Toolbar Navigation"
 msgstr ""
 
-#: functions.php:194
+#: functions.php:191
 msgid "Side Dashboard Navigation"
 msgstr ""
 
-#: functions.php:195, framework/admin/theme-options/masterkey.php:1950
+#: functions.php:192, framework/admin/theme-options/masterkey.php:1950
 msgid "Full Screen Navigation"
 msgstr ""
 
-#: functions.php:328, functions.php:328, framework/admin/control-panel/v2/layout/header.php:14
+#: functions.php:325, functions.php:325, framework/admin/control-panel/v2/layout/header.php:14
 msgid "Control Panel"
 msgstr ""
 
-#: functions.php:336, functions.php:336
-msgid "New UI"
-msgstr ""
-
-#: functions.php:342, functions.php:342
-msgid "UI Page Options"
-msgstr ""
-
-#: functions.php:377
+#: functions.php:351
 msgid "<h2>Your server's PHP version (%1$s) is not supported.</h2> <p>This version is old, insecure and slow. Please update it as soon as possible.</p><h3>Required/Recommened Version:</h3><p>Please read <a href=\"%2$s\" target=\"_blank\">Checking Server Requirements</a> article to learn about WordPress, Jupiter and other plugins' server requirements.</p><h3>Update:</h3><p>Please contact your host provider/server administrator to increase the PHP version.</p>"
 msgstr ""
 
@@ -485,11 +481,11 @@ msgstr ""
 msgid "Posted in:"
 msgstr ""
 
-#: woocommerce/content-product.php:119
+#: woocommerce/content-product.php:115
 msgid "OUT OF STOCK"
 msgstr ""
 
-#: woocommerce/content-product.php:123, components/shortcodes/mk_products/mk_products.php:225
+#: woocommerce/content-product.php:119, components/shortcodes/mk_products/mk_products.php:225
 msgid "Sale"
 msgstr ""
 
@@ -600,7 +596,7 @@ msgstr ""
 msgid "%s Parent"
 msgstr ""
 
-#: framework/custom-post-types/config.php:192, components/shortcodes/mk_contact_info/vc_map.php:12, components/shortcodes/mk_countdown/vc_map.php:13, components/shortcodes/mk_flexslider/vc_map.php:12, components/shortcodes/mk_gallery/vc_map.php:240, components/shortcodes/mk_icon_box/vc_map.php:20, components/shortcodes/mk_icon_box2/vc_map.php:144, components/shortcodes/mk_icon_box_gradient/vc_map.php:187, components/shortcodes/mk_laptop_slideshow/vc_map.php:12, components/shortcodes/mk_lcd_slideshow/vc_map.php:12, components/shortcodes/mk_mini_callout/vc_map.php:12, components/shortcodes/mk_skill_meter/vc_map.php:11, components/shortcodes/mk_slideshow_box/vc_map.php:167, components/shortcodes/mk_steps/vc_map.php:13, components/shortcodes/mk_table/vc_map.php:12, components/shortcodes/mk_testimonials/vc_map.php:12, components/shortcodes/mk_woocommerce_recent_carousel/vc_map.php:22, components/shortcodes/vc_accordions/vc_map.php:15, components/shortcodes/vc_accordion_tab/vc_map.php:13, components/shortcodes/vc_column_text/vc_map.php:21, components/shortcodes/vc_tab/vc_map.php:14, components/shortcodes/vc_tabs/vc_map.php:17, framework/admin/theme-options/masterkey.php:654, framework/plugin-integrations/visual-composer/global-params.php:78, framework/admin/customizer/settings/widgets/dlg-glb-sty-title.php:22
+#: framework/custom-post-types/config.php:192, components/shortcodes/mk_contact_info/vc_map.php:13, components/shortcodes/mk_countdown/vc_map.php:13, components/shortcodes/mk_flexslider/vc_map.php:12, components/shortcodes/mk_gallery/vc_map.php:240, components/shortcodes/mk_icon_box/vc_map.php:20, components/shortcodes/mk_icon_box2/vc_map.php:144, components/shortcodes/mk_icon_box_gradient/vc_map.php:187, components/shortcodes/mk_laptop_slideshow/vc_map.php:12, components/shortcodes/mk_lcd_slideshow/vc_map.php:12, components/shortcodes/mk_mini_callout/vc_map.php:12, components/shortcodes/mk_skill_meter/vc_map.php:11, components/shortcodes/mk_slideshow_box/vc_map.php:167, components/shortcodes/mk_steps/vc_map.php:13, components/shortcodes/mk_table/vc_map.php:12, components/shortcodes/mk_testimonials/vc_map.php:12, components/shortcodes/mk_woocommerce_recent_carousel/vc_map.php:22, components/shortcodes/vc_accordions/vc_map.php:15, components/shortcodes/vc_accordion_tab/vc_map.php:13, components/shortcodes/vc_column_text/vc_map.php:22, components/shortcodes/vc_tab/vc_map.php:14, components/shortcodes/vc_tabs/vc_map.php:17, framework/admin/theme-options/masterkey.php:654, framework/plugin-integrations/visual-composer/global-params.php:78, framework/admin/customizer/settings/widgets/dlg-glb-sty-title.php:22
 msgid "Title"
 msgstr ""
 
@@ -1115,7 +1111,7 @@ msgstr ""
 msgid "Button Text"
 msgstr ""
 
-#: framework/metaboxes/metabox-animated-columns.php:76, framework/metaboxes/metabox-edge.php:48, framework/metaboxes/metabox-edge.php:63, framework/metaboxes/metabox-edge.php:78, framework/metaboxes/metabox-edge.php:179, framework/metaboxes/metabox-edge.php:288, framework/metaboxes/metabox-edge.php:300, framework/metaboxes/metabox-edge.php:311, framework/metaboxes/metabox-edge.php:312, framework/metaboxes/metabox-edge.php:328, framework/metaboxes/metabox-edge.php:349, framework/metaboxes/metabox-edge.php:360, framework/metaboxes/metabox-edge.php:372, framework/metaboxes/metabox-edge.php:397, framework/metaboxes/metabox-edge.php:409, framework/metaboxes/metabox-edge.php:420, framework/metaboxes/metabox-edge.php:432, framework/metaboxes/metabox-edge.php:457, framework/metaboxes/metabox-edge.php:470, framework/metaboxes/metabox-employee.php:162, framework/metaboxes/metabox-gallery.php:26, framework/metaboxes/metabox-portfolios.php:146, framework/metaboxes/metabox-posts.php:256, framework/metaboxes/metabox-posts.php:271, framework/metaboxes/metabox-posts.php:286, framework/metaboxes/metabox-posts.php:299, framework/metaboxes/metabox-posts.php:300, framework/metaboxes/metabox-posts.php:315, framework/metaboxes/metabox-pricing.php:42, framework/metaboxes/metabox-pricing.php:92, framework/metaboxes/metabox-pricing.php:105, framework/metaboxes/metabox-pricing.php:151, framework/metaboxes/metabox-pricing.php:164, framework/metaboxes/metabox-pricing.php:178, framework/metaboxes/metabox-pricing.php:192, framework/metaboxes/metabox-pricing.php:206, framework/metaboxes/metabox-pricing.php:235, framework/metaboxes/metabox-pricing.php:248, framework/metaboxes/metabox-pricing.php:261, framework/metaboxes/metabox-pricing.php:278, framework/metaboxes/metabox-pricing.php:291, framework/metaboxes/metabox-pricing.php:308, framework/metaboxes/metabox-pricing.php:321, framework/metaboxes/metabox-pricing.php:338, framework/metaboxes/metabox-pricing.php:351, framework/metaboxes/metabox-pricing.php:364, framework/metaboxes/metabox-pricing.php:375, framework/metaboxes/metabox-pricing.php:388, framework/metaboxes/metabox-pricing.php:402, framework/metaboxes/metabox-pricing.php:410, framework/metaboxes/metabox-tab-slider.php:43, framework/metaboxes/metabox-tab-slider.php:72, framework/metaboxes/metabox-testimonials.php:15, framework/metaboxes/metabox-testimonials.php:22, views/widgets/widgets-subnav.php:74, views/widgets/widgets-subnav.php:75, views/widgets/widgets-subnav.php:76, components/shortcodes/mk_advanced_gmaps/vc_map.php:42, components/shortcodes/mk_advanced_gmaps/vc_map.php:63, components/shortcodes/mk_advanced_gmaps/vc_map.php:70, components/shortcodes/mk_advanced_gmaps/vc_map.php:77, components/shortcodes/mk_advanced_gmaps/vc_map.php:100, components/shortcodes/mk_advanced_gmaps/vc_map.php:107, components/shortcodes/mk_advanced_gmaps/vc_map.php:114, components/shortcodes/mk_advanced_gmaps/vc_map.php:146, components/shortcodes/mk_advanced_gmaps/vc_map.php:154, components/shortcodes/mk_advanced_gmaps/vc_map.php:161, components/shortcodes/mk_advanced_gmaps/vc_map.php:200, components/shortcodes/mk_advanced_gmaps/vc_map.php:207, components/shortcodes/mk_advanced_gmaps/vc_map.php:214, components/shortcodes/mk_advanced_gmaps/vc_map.php:221, components/shortcodes/mk_advanced_gmaps/vc_map.php:233, components/shortcodes/mk_advanced_gmaps/vc_map.php:240, components/shortcodes/mk_advanced_gmaps/vc_map.php:247, components/shortcodes/mk_advanced_gmaps/vc_map.php:258, components/shortcodes/mk_advanced_gmaps/vc_map.php:283, components/shortcodes/mk_animated_columns/vc_map.php:81, components/shortcodes/mk_animated_columns/vc_map.php:88, components/shortcodes/mk_animated_columns/vc_map.php:95, components/shortcodes/mk_animated_columns/vc_map.php:124, components/shortcodes/mk_animated_columns/vc_map.php:170, components/shortcodes/mk_audio/vc_map.php:15, components/shortcodes/mk_audio/vc_map.php:22, components/shortcodes/mk_audio/vc_map.php:36, components/shortcodes/mk_banner_builder/vc_map.php:54, components/shortcodes/mk_blockquote/vc_map.php:15, components/shortcodes/mk_blockquote/vc_map.php:16, components/shortcodes/mk_blockquote/vc_map.php:40, components/shortcodes/mk_blockquote/vc_map.php:71, components/shortcodes/mk_blog/vc_map.php:67, components/shortcodes/mk_blog/vc_map.php:83, components/shortcodes/mk_blog/vc_map.php:100, components/shortcodes/mk_blog_carousel/vc_map.php:12, components/shortcodes/mk_blog_carousel/vc_map.php:25, components/shortcodes/mk_blog_carousel/vc_map.php:49, components/shortcodes/mk_category/vc_map.php:59, components/shortcodes/mk_category/vc_map.php:75, components/shortcodes/mk_category/vc_map.php:113, components/shortcodes/mk_category/vc_map.php:131, components/shortcodes/mk_category/vc_map.php:165, components/shortcodes/mk_category/vc_map.php:170, components/shortcodes/mk_category/vc_map.php:184, components/shortcodes/mk_category/vc_map.php:201, components/shortcodes/mk_chart/vc_map.php:19, components/shortcodes/mk_chart/vc_map.php:88, components/shortcodes/mk_chart/vc_map.php:99, components/shortcodes/mk_chart/vc_map.php:126, components/shortcodes/mk_chart/vc_map.php:141, components/shortcodes/mk_chart/vc_map.php:152, components/shortcodes/mk_chart/vc_map.php:174, components/shortcodes/mk_chart/vc_map.php:181, components/shortcodes/mk_circle_image/vc_map.php:15, components/shortcodes/mk_circle_image/vc_map.php:22, components/shortcodes/mk_clients/vc_map.php:76, components/shortcodes/mk_clients/vc_map.php:181, components/shortcodes/mk_contact_form/vc_map.php:22, components/shortcodes/mk_contact_form/vc_map.php:59, components/shortcodes/mk_contact_form/vc_map.php:65, components/shortcodes/mk_contact_form/vc_map.php:78, components/shortcodes/mk_contact_form/vc_map.php:91, components/shortcodes/mk_contact_form/vc_map.php:104, components/shortcodes/mk_contact_form/vc_map.php:117, components/shortcodes/mk_contact_form/vc_map.php:130, components/shortcodes/mk_contact_form/vc_map.php:147, components/shortcodes/mk_contact_form/vc_map.php:167, components/shortcodes/mk_contact_form/vc_map.php:182, components/shortcodes/mk_contact_form/vc_map.php:191, components/shortcodes/mk_countdown/vc_map.php:16, components/shortcodes/mk_custom_box/vc_map.php:26, components/shortcodes/mk_custom_box/vc_map.php:37, components/shortcodes/mk_custom_box/vc_map.php:48, components/shortcodes/mk_custom_box/vc_map.php:59, components/shortcodes/mk_custom_box/vc_map.php:70, components/shortcodes/mk_custom_box/vc_map.php:93, components/shortcodes/mk_custom_box/vc_map.php:105, components/shortcodes/mk_custom_box/vc_map.php:127, components/shortcodes/mk_custom_box/vc_map.php:142, components/shortcodes/mk_custom_box/vc_map.php:160, components/shortcodes/mk_custom_box/vc_map.php:181, components/shortcodes/mk_custom_box/vc_map.php:197, components/shortcodes/mk_custom_box/vc_map.php:216, components/shortcodes/mk_custom_box/vc_map.php:231, components/shortcodes/mk_custom_box/vc_map.php:276, components/shortcodes/mk_custom_box/vc_map.php:295, components/shortcodes/mk_custom_box/vc_map.php:308, components/shortcodes/mk_custom_box/vc_map.php:320, components/shortcodes/mk_custom_box/vc_map.php:339, components/shortcodes/mk_custom_box/vc_map.php:357, components/shortcodes/mk_custom_box/vc_map.php:379, components/shortcodes/mk_custom_box/vc_map.php:395, components/shortcodes/mk_custom_box/vc_map.php:412, components/shortcodes/mk_custom_box/vc_map.php:433, components/shortcodes/mk_custom_box/vc_map.php:450, components/shortcodes/mk_custom_box/vc_map.php:467, components/shortcodes/mk_custom_box/vc_map.php:555, components/shortcodes/mk_custom_box/vc_map.php:577, components/shortcodes/mk_custom_box/vc_map.php:593, components/shortcodes/mk_custom_box/vc_map.php:610, components/shortcodes/mk_custom_box/vc_map.php:631, components/shortcodes/mk_custom_box/vc_map.php:647, components/shortcodes/mk_custom_box/vc_map.php:673, components/shortcodes/mk_custom_list/vc_map.php:15, components/shortcodes/mk_custom_list/vc_map.php:23, components/shortcodes/mk_custom_list/vc_map.php:36, components/shortcodes/mk_custom_list/vc_map.php:48, components/shortcodes/mk_divider/vc_map.php:81, components/shortcodes/mk_divider/vc_map.php:102, components/shortcodes/mk_divider/vc_map.php:120, components/shortcodes/mk_divider/vc_map.php:141, components/shortcodes/mk_divider/vc_map.php:156, components/shortcodes/mk_divider/vc_map.php:175, components/shortcodes/mk_divider/vc_map.php:195, components/shortcodes/mk_divider/vc_map.php:209, components/shortcodes/mk_divider/vc_map.php:229, components/shortcodes/mk_dropcaps/vc_map.php:15, components/shortcodes/mk_dropcaps/vc_map.php:16, components/shortcodes/mk_dropcaps/vc_map.php:26, components/shortcodes/mk_dropcaps/vc_map.php:37, components/shortcodes/mk_dropcaps/vc_map.php:67, components/shortcodes/mk_dropcaps/vc_map.php:80, components/shortcodes/mk_edge_one_pager/vc_map.php:50, components/shortcodes/mk_edge_slider/vc_map.php:84, components/shortcodes/mk_edge_slider/vc_map.php:107, components/shortcodes/mk_edge_slider/vc_map.php:132, components/shortcodes/mk_edge_slider/vc_map.php:144, components/shortcodes/mk_edge_slider/vc_map.php:152, components/shortcodes/mk_employees/vc_map.php:20, components/shortcodes/mk_employees/vc_map.php:42, components/shortcodes/mk_employees/vc_map.php:62, components/shortcodes/mk_employees/vc_map.php:79, components/shortcodes/mk_employees/vc_map.php:224, components/shortcodes/mk_employees/vc_map.php:232, components/shortcodes/mk_employees/vc_map.php:240, components/shortcodes/mk_employees/vc_map.php:248, components/shortcodes/mk_fancy_title/vc_map.php:16, components/shortcodes/mk_fancy_title/vc_map.php:17, components/shortcodes/mk_fancy_title/vc_map.php:46, components/shortcodes/mk_fancy_title/vc_map.php:64, components/shortcodes/mk_fancy_title/vc_map.php:78, components/shortcodes/mk_fancy_title/vc_map.php:92, components/shortcodes/mk_fancy_title/vc_map.php:109, components/shortcodes/mk_fancy_title/vc_map.php:128, components/shortcodes/mk_fancy_title/vc_map.php:142, components/shortcodes/mk_fancy_title/vc_map.php:159, components/shortcodes/mk_fancy_title/vc_map.php:166, components/shortcodes/mk_fancy_title/vc_map.php:235, components/shortcodes/mk_fancy_title/vc_map.php:246, components/shortcodes/mk_fancy_title/vc_map.php:259, components/shortcodes/mk_fancy_title/vc_map.php:281, components/shortcodes/mk_fancy_title/vc_map.php:292, components/shortcodes/mk_fancy_title/vc_map.php:305, components/shortcodes/mk_fancy_title/vc_map.php:317, components/shortcodes/mk_fancy_title/vc_map.php:346, components/shortcodes/mk_fancy_title/vc_map.php:358, components/shortcodes/mk_fancy_title/vc_map.php:376, components/shortcodes/mk_fancy_title/vc_map.php:394, components/shortcodes/mk_fancy_title/vc_map.php:409, components/shortcodes/mk_faq/vc_map.php:19, components/shortcodes/mk_faq/vc_map.php:26, components/shortcodes/mk_faq/vc_map.php:102, components/shortcodes/mk_flexslider/vc_map.php:15, components/shortcodes/mk_flexslider/vc_map.php:66, components/shortcodes/mk_flexslider/vc_map.php:77, components/shortcodes/mk_flexslider/vc_map.php:81, components/shortcodes/mk_flexslider/vc_map.php:98, components/shortcodes/mk_flexslider/vc_map.php:109, components/shortcodes/mk_flexslider/vc_map.php:130, components/shortcodes/mk_flexslider/vc_map.php:137, components/shortcodes/mk_flexslider/vc_map.php:144, components/shortcodes/mk_flexslider/vc_map.php:155, components/shortcodes/mk_flickr/vc_map.php:15, components/shortcodes/mk_flipbox/vc_map.php:19, components/shortcodes/mk_flipbox/vc_map.php:27, components/shortcodes/mk_flipbox/vc_map.php:34, components/shortcodes/mk_flipbox/vc_map.php:45, components/shortcodes/mk_flipbox/vc_map.php:51, components/shortcodes/mk_flipbox/vc_map.php:65, components/shortcodes/mk_flipbox/vc_map.php:88, components/shortcodes/mk_flipbox/vc_map.php:109, components/shortcodes/mk_flipbox/vc_map.php:123, components/shortcodes/mk_flipbox/vc_map.php:133, components/shortcodes/mk_flipbox/vc_map.php:141, components/shortcodes/mk_flipbox/vc_map.php:149, components/shortcodes/mk_flipbox/vc_map.php:159, components/shortcodes/mk_flipbox/vc_map.php:167, components/shortcodes/mk_flipbox/vc_map.php:174, components/shortcodes/mk_flipbox/vc_map.php:182, components/shortcodes/mk_flipbox/vc_map.php:192, components/shortcodes/mk_flipbox/vc_map.php:200, components/shortcodes/mk_flipbox/vc_map.php:208, components/shortcodes/mk_flipbox/vc_map.php:218, components/shortcodes/mk_flipbox/vc_map.php:226, components/shortcodes/mk_flipbox/vc_map.php:234, components/shortcodes/mk_flipbox/vc_map.php:242, components/shortcodes/mk_flipbox/vc_map.php:249, components/shortcodes/mk_flipbox/vc_map.php:256, components/shortcodes/mk_flipbox/vc_map.php:263, components/shortcodes/mk_flipbox/vc_map.php:274, components/shortcodes/mk_font_icons/vc_map.php:25, components/shortcodes/mk_font_icons/vc_map.php:32, components/shortcodes/mk_font_icons/vc_map.php:46, components/shortcodes/mk_font_icons/vc_map.php:60, components/shortcodes/mk_font_icons/vc_map.php:77, components/shortcodes/mk_font_icons/vc_map.php:96, components/shortcodes/mk_font_icons/vc_map.php:111, components/shortcodes/mk_font_icons/vc_map.php:134, components/shortcodes/mk_font_icons/vc_map.php:163, components/shortcodes/mk_font_icons/vc_map.php:187, components/shortcodes/mk_font_icons/vc_map.php:205, components/shortcodes/mk_font_icons/vc_map.php:218, components/shortcodes/mk_font_icons/vc_map.php:251, components/shortcodes/mk_fullwidth_slideshow/vc_map.php:26, components/shortcodes/mk_fullwidth_slideshow/vc_map.php:33, components/shortcodes/mk_fullwidth_slideshow/vc_map.php:40, components/shortcodes/mk_fullwidth_slideshow/vc_map.php:93, components/shortcodes/mk_fullwidth_slideshow/vc_map.php:104, components/shortcodes/mk_fullwidth_slideshow/vc_map.php:121, components/shortcodes/mk_fullwidth_slideshow/vc_map.php:132, components/shortcodes/mk_fullwidth_slideshow/vc_map.php:153, components/shortcodes/mk_gallery/vc_map.php:16, components/shortcodes/mk_gallery/vc_map.php:23, components/shortcodes/mk_gallery/vc_map.php:104, components/shortcodes/mk_gallery/vc_map.php:135, components/shortcodes/mk_gallery/vc_map.php:147, components/shortcodes/mk_header/vc_map.php:31, components/shortcodes/mk_header/vc_map.php:36, components/shortcodes/mk_header/vc_map.php:69, components/shortcodes/mk_header/vc_map.php:117, components/shortcodes/mk_header/vc_map.php:125, components/shortcodes/mk_header/vc_map.php:133, components/shortcodes/mk_header/vc_map.php:141, components/shortcodes/mk_highlight/vc_map.php:15, components/shortcodes/mk_highlight/vc_map.php:22, components/shortcodes/mk_highlight/vc_map.php:29, components/shortcodes/mk_icon_box/vc_map.php:23, components/shortcodes/mk_icon_box/vc_map.php:34, components/shortcodes/mk_icon_box/vc_map.php:41, components/shortcodes/mk_icon_box/vc_map.php:48, components/shortcodes/mk_icon_box/vc_map.php:56, components/shortcodes/mk_icon_box/vc_map.php:63, components/shortcodes/mk_icon_box/vc_map.php:74, components/shortcodes/mk_icon_box/vc_map.php:86, components/shortcodes/mk_icon_box/vc_map.php:143, components/shortcodes/mk_icon_box/vc_map.php:150, components/shortcodes/mk_icon_box/vc_map.php:203, components/shortcodes/mk_icon_box2/vc_map.php:12, components/shortcodes/mk_icon_box2/vc_map.php:23, components/shortcodes/mk_icon_box2/vc_map.php:41, components/shortcodes/mk_icon_box2/vc_map.php:67, components/shortcodes/mk_icon_box2/vc_map.php:80, components/shortcodes/mk_icon_box2/vc_map.php:93, components/shortcodes/mk_icon_box2/vc_map.php:107, components/shortcodes/mk_icon_box2/vc_map.php:120, components/shortcodes/mk_icon_box2/vc_map.php:133, components/shortcodes/mk_icon_box2/vc_map.php:147, components/shortcodes/mk_icon_box2/vc_map.php:171, components/shortcodes/mk_icon_box2/vc_map.php:178, components/shortcodes/mk_icon_box2/vc_map.php:207, components/shortcodes/mk_icon_box2/vc_map.php:215, components/shortcodes/mk_icon_box2/vc_map.php:233, components/shortcodes/mk_icon_box2/vc_map.php:241, components/shortcodes/mk_icon_box_gradient/vc_map.php:13, components/shortcodes/mk_icon_box_gradient/vc_map.php:57, components/shortcodes/mk_icon_box_gradient/vc_map.php:65, components/shortcodes/mk_icon_box_gradient/vc_map.php:80, components/shortcodes/mk_icon_box_gradient/vc_map.php:94, components/shortcodes/mk_icon_box_gradient/vc_map.php:108, components/shortcodes/mk_icon_box_gradient/vc_map.php:125, components/shortcodes/mk_icon_box_gradient/vc_map.php:144, components/shortcodes/mk_icon_box_gradient/vc_map.php:158, components/shortcodes/mk_icon_box_gradient/vc_map.php:173, components/shortcodes/mk_icon_box_gradient/vc_map.php:182, components/shortcodes/mk_icon_box_gradient/vc_map.php:190, components/shortcodes/mk_icon_box_gradient/vc_map.php:214, components/shortcodes/mk_icon_box_gradient/vc_map.php:221, components/shortcodes/mk_icon_box_gradient/vc_map.php:250, components/shortcodes/mk_icon_box_gradient/vc_map.php:258, components/shortcodes/mk_icon_box_gradient/vc_map.php:276, components/shortcodes/mk_image/vc_map.php:16, components/shortcodes/mk_image/vc_map.php:24, components/shortcodes/mk_image/vc_map.php:49, components/shortcodes/mk_image/vc_map.php:66, components/shortcodes/mk_image/vc_map.php:100, components/shortcodes/mk_image/vc_map.php:114, components/shortcodes/mk_image/vc_map.php:129, components/shortcodes/mk_image/vc_map.php:136, components/shortcodes/mk_image/vc_map.php:143, components/shortcodes/mk_image/vc_map.php:153, components/shortcodes/mk_image/vc_map.php:160, components/shortcodes/mk_image/vc_map.php:178, components/shortcodes/mk_image/vc_map.php:189, components/shortcodes/mk_imagebox/vc_map.php:14, components/shortcodes/mk_imagebox/vc_map.php:88, components/shortcodes/mk_imagebox_item/vc_map.php:78, components/shortcodes/mk_imagebox_item/vc_map.php:91, components/shortcodes/mk_imagebox_item/vc_map.php:104, components/shortcodes/mk_imagebox_item/vc_map.php:111, components/shortcodes/mk_imagebox_item/vc_map.php:122, components/shortcodes/mk_imagebox_item/vc_map.php:129, components/shortcodes/mk_imagebox_item/vc_map.php:136, components/shortcodes/mk_imagebox_item/vc_map.php:144, components/shortcodes/mk_imagebox_item/vc_map.php:151, components/shortcodes/mk_imagebox_item/vc_map.php:158, components/shortcodes/mk_imagebox_item/vc_map.php:165, components/shortcodes/mk_imagebox_item/vc_map.php:172, components/shortcodes/mk_imagebox_item/vc_map.php:179, components/shortcodes/mk_imagebox_item/vc_map.php:186, components/shortcodes/mk_image_slideshow/vc_map.php:15, components/shortcodes/mk_image_slideshow/vc_map.php:22, components/shortcodes/mk_image_slideshow/vc_map.php:33, components/shortcodes/mk_image_slideshow/vc_map.php:44, components/shortcodes/mk_image_slideshow/vc_map.php:55, components/shortcodes/mk_image_slideshow/vc_map.php:66, components/shortcodes/mk_image_slideshow/vc_map.php:70, components/shortcodes/mk_image_slideshow/vc_map.php:87, components/shortcodes/mk_image_slideshow/vc_map.php:98, components/shortcodes/mk_image_switch/vc_map.php:7, components/shortcodes/mk_image_switch/vc_map.php:15, components/shortcodes/mk_image_switch/vc_map.php:22, components/shortcodes/mk_image_switch/vc_map.php:32, components/shortcodes/mk_image_switch/vc_map.php:43, components/shortcodes/mk_image_switch/vc_map.php:54, components/shortcodes/mk_image_switch/vc_map.php:80, components/shortcodes/mk_image_switch/vc_map.php:97, components/shortcodes/mk_laptop_slideshow/vc_map.php:15, components/shortcodes/mk_laptop_slideshow/vc_map.php:23, components/shortcodes/mk_laptop_slideshow/vc_map.php:46, components/shortcodes/mk_laptop_slideshow/vc_map.php:57, components/shortcodes/mk_layerslider/vc_map.php:67, components/shortcodes/mk_lcd_slideshow/vc_map.php:15, components/shortcodes/mk_lcd_slideshow/vc_map.php:22, components/shortcodes/mk_lcd_slideshow/vc_map.php:33, components/shortcodes/mk_lcd_slideshow/vc_map.php:44, components/shortcodes/mk_message_box/vc_map.php:15, components/shortcodes/mk_message_box/vc_map.php:16, components/shortcodes/mk_message_box/vc_map.php:29, components/shortcodes/mk_milestone/vc_map.php:25, components/shortcodes/mk_milestone/vc_map.php:36, components/shortcodes/mk_milestone/vc_map.php:43, components/shortcodes/mk_milestone/vc_map.php:128, components/shortcodes/mk_milestone/vc_map.php:135, components/shortcodes/mk_milestone/vc_map.php:146, components/shortcodes/mk_milestone/vc_map.php:153, components/shortcodes/mk_mini_callout/vc_map.php:15, components/shortcodes/mk_mini_callout/vc_map.php:22, components/shortcodes/mk_mini_callout/vc_map.php:30, components/shortcodes/mk_mini_callout/vc_map.php:37, components/shortcodes/mk_moving_image/vc_map.php:15, components/shortcodes/mk_moving_image/vc_map.php:27, components/shortcodes/mk_moving_image/vc_map.php:39, components/shortcodes/mk_news_tab/vc_map.php:15, components/shortcodes/mk_news_tab/vc_map.php:22, components/shortcodes/mk_ornamental_title/vc_map.php:15, components/shortcodes/mk_ornamental_title/vc_map.php:16, components/shortcodes/mk_ornamental_title/vc_map.php:46, components/shortcodes/mk_ornamental_title/vc_map.php:53, components/shortcodes/mk_ornamental_title/vc_map.php:66, components/shortcodes/mk_ornamental_title/vc_map.php:91, components/shortcodes/mk_ornamental_title/vc_map.php:102, components/shortcodes/mk_ornamental_title/vc_map.php:115, components/shortcodes/mk_ornamental_title/vc_map.php:132, components/shortcodes/mk_ornamental_title/vc_map.php:151, components/shortcodes/mk_ornamental_title/vc_map.php:185, components/shortcodes/mk_ornamental_title/vc_map.php:201, components/shortcodes/mk_ornamental_title/vc_map.php:212, components/shortcodes/mk_ornamental_title/vc_map.php:223, components/shortcodes/mk_ornamental_title/vc_map.php:234, components/shortcodes/mk_page_section/vc_map.php:50, components/shortcodes/mk_page_section/vc_map.php:66, components/shortcodes/mk_page_section/vc_map.php:89, components/shortcodes/mk_page_section/vc_map.php:143, components/shortcodes/mk_page_section/vc_map.php:196, components/shortcodes/mk_page_section/vc_map.php:207, components/shortcodes/mk_page_section/vc_map.php:269, components/shortcodes/mk_page_section/vc_map.php:317, components/shortcodes/mk_page_section/vc_map.php:456, components/shortcodes/mk_page_section/vc_map.php:471, components/shortcodes/mk_page_section/vc_map.php:561, components/shortcodes/mk_page_section/vc_map.php:571, components/shortcodes/mk_page_section/vc_map.php:592, components/shortcodes/mk_page_section/vc_map.php:598, components/shortcodes/mk_page_section/vc_map.php:628, components/shortcodes/mk_page_section/vc_map.php:636, components/shortcodes/mk_page_section/vc_map.php:654, components/shortcodes/mk_page_section/vc_map.php:659, components/shortcodes/mk_page_section/vc_map.php:689, components/shortcodes/mk_page_section/vc_map.php:697, components/shortcodes/mk_photo_album/vc_map.php:20, components/shortcodes/mk_photo_album/vc_map.php:32, components/shortcodes/mk_photo_album/vc_map.php:53, components/shortcodes/mk_photo_album/vc_map.php:57, components/shortcodes/mk_photo_album/vc_map.php:69, components/shortcodes/mk_photo_album/vc_map.php:81, components/shortcodes/mk_photo_album/vc_map.php:211, components/shortcodes/mk_photo_album/vc_map.php:223, components/shortcodes/mk_photo_album/vc_map.php:243, components/shortcodes/mk_photo_album/vc_map.php:256, components/shortcodes/mk_photo_album/vc_map.php:285, components/shortcodes/mk_photo_album/vc_map.php:297, components/shortcodes/mk_photo_album/vc_map.php:330, components/shortcodes/mk_photo_album/vc_map.php:351, components/shortcodes/mk_photo_album/vc_map.php:362, components/shortcodes/mk_photo_album/vc_map.php:381, components/shortcodes/mk_photo_album/vc_map.php:399, components/shortcodes/mk_portfolio/vc_map.php:208, components/shortcodes/mk_portfolio/vc_map.php:266, components/shortcodes/mk_portfolio/vc_map.php:273, components/shortcodes/mk_portfolio/vc_map.php:286, components/shortcodes/mk_portfolio_carousel/vc_map.php:47, components/shortcodes/mk_portfolio_carousel/vc_map.php:66, components/shortcodes/mk_portfolio_carousel/vc_map.php:109, components/shortcodes/mk_portfolio_carousel/vc_map.php:157, components/shortcodes/mk_portfolio_carousel/vc_map.php:168, components/shortcodes/mk_pricing_table/vc_map.php:12, components/shortcodes/mk_products/vc_map.php:8, components/shortcodes/mk_products/vc_map.php:12, components/shortcodes/mk_products/vc_map.php:22, components/shortcodes/mk_products/vc_map.php:33, components/shortcodes/mk_products/vc_map.php:40, components/shortcodes/mk_products/vc_map.php:123, components/shortcodes/mk_products/vc_map.php:136, components/shortcodes/mk_products/vc_map.php:149, components/shortcodes/mk_products/vc_map.php:179, components/shortcodes/mk_products/vc_map.php:195, components/shortcodes/mk_products/vc_map.php:209, components/shortcodes/mk_products/vc_map.php:223, components/shortcodes/mk_products/vc_map.php:238, components/shortcodes/mk_products/vc_map.php:253, components/shortcodes/mk_products/vc_map.php:268, components/shortcodes/mk_revslider/vc_map.php:30, components/shortcodes/mk_skill_meter/vc_map.php:37, components/shortcodes/mk_skill_meter/vc_map.php:45, components/shortcodes/mk_skill_meter/vc_map.php:52, components/shortcodes/mk_skill_meter/vc_map.php:59, components/shortcodes/mk_skill_meter/vc_map.php:66, components/shortcodes/mk_skill_meter_chart/vc_map.php:27, components/shortcodes/mk_skill_meter_chart/vc_map.php:53, components/shortcodes/mk_skill_meter_chart/vc_map.php:79, components/shortcodes/mk_skill_meter_chart/vc_map.php:105, components/shortcodes/mk_skill_meter_chart/vc_map.php:131, components/shortcodes/mk_skill_meter_chart/vc_map.php:157, components/shortcodes/mk_skill_meter_chart/vc_map.php:183, components/shortcodes/mk_skill_meter_chart/vc_map.php:198, components/shortcodes/mk_skill_meter_chart/vc_map.php:205, components/shortcodes/mk_skill_meter_chart/vc_map.php:212, components/shortcodes/mk_slideshow_box/vc_map.php:41, components/shortcodes/mk_slideshow_box/vc_map.php:105, components/shortcodes/mk_social_networks/vc_map.php:117, components/shortcodes/mk_steps/vc_map.php:16, components/shortcodes/mk_steps/vc_map.php:47, components/shortcodes/mk_steps/vc_map.php:55, components/shortcodes/mk_steps/vc_map.php:76, components/shortcodes/mk_steps/vc_map.php:84, components/shortcodes/mk_steps/vc_map.php:105, components/shortcodes/mk_steps/vc_map.php:113, components/shortcodes/mk_steps/vc_map.php:134, components/shortcodes/mk_steps/vc_map.php:142, components/shortcodes/mk_steps/vc_map.php:163, components/shortcodes/mk_steps/vc_map.php:171, components/shortcodes/mk_subscribe/vc_map.php:8, components/shortcodes/mk_subscribe/vc_map.php:16, components/shortcodes/mk_subscribe/vc_map.php:23, components/shortcodes/mk_subscribe/vc_map.php:44, components/shortcodes/mk_subscribe/vc_map.php:53, components/shortcodes/mk_subscribe/vc_map.php:82, components/shortcodes/mk_subscribe/vc_map.php:94, components/shortcodes/mk_subscribe/vc_map.php:120, components/shortcodes/mk_subscribe/vc_map.php:128, components/shortcodes/mk_subscribe/vc_map.php:153, components/shortcodes/mk_subscribe/vc_map.php:169, components/shortcodes/mk_subscribe/vc_map.php:185, components/shortcodes/mk_subscribe/vc_map.php:193, components/shortcodes/mk_subscribe/vc_map.php:218, components/shortcodes/mk_subscribe/vc_map.php:226, components/shortcodes/mk_subscribe/vc_map.php:243, components/shortcodes/mk_subscribe/vc_map.php:251, components/shortcodes/mk_subscribe/vc_map.php:259, components/shortcodes/mk_subscribe/vc_map.php:276, components/shortcodes/mk_subscribe/vc_map.php:285, components/shortcodes/mk_swipe_slideshow/vc_map.php:16, components/shortcodes/mk_swipe_slideshow/vc_map.php:20, components/shortcodes/mk_swipe_slideshow/vc_map.php:34, components/shortcodes/mk_swipe_slideshow/vc_map.php:51, components/shortcodes/mk_swipe_slideshow/vc_map.php:61, components/shortcodes/mk_swipe_slideshow/vc_map.php:78, components/shortcodes/mk_swipe_slideshow/vc_map.php:89, components/shortcodes/mk_swipe_slideshow/vc_map.php:96, components/shortcodes/mk_table/vc_map.php:15, components/shortcodes/mk_tab_slider/vc_map.php:58, components/shortcodes/mk_tab_slider/vc_map.php:66, components/shortcodes/mk_testimonials/vc_map.php:15, components/shortcodes/mk_testimonials/vc_map.php:19, components/shortcodes/mk_testimonials/vc_map.php:31, components/shortcodes/mk_testimonials/vc_map.php:132, components/shortcodes/mk_testimonials/vc_map.php:149, components/shortcodes/mk_testimonials/vc_map.php:162, components/shortcodes/mk_testimonials/vc_map.php:169, components/shortcodes/mk_testimonials/vc_map.php:176, components/shortcodes/mk_testimonials/vc_map.php:187, components/shortcodes/mk_testimonials/vc_map.php:194, components/shortcodes/mk_testimonials/vc_map.php:205, components/shortcodes/mk_testimonials/vc_map.php:218, components/shortcodes/mk_theatre_slider/vc_map.php:8, components/shortcodes/mk_theatre_slider/vc_map.php:12, components/shortcodes/mk_theatre_slider/vc_map.php:29, components/shortcodes/mk_theatre_slider/vc_map.php:33, components/shortcodes/mk_theatre_slider/vc_map.php:95, components/shortcodes/mk_theatre_slider/vc_map.php:114, components/shortcodes/mk_theatre_slider/vc_map.php:127, components/shortcodes/mk_theatre_slider/vc_map.php:137, components/shortcodes/mk_theatre_slider/vc_map.php:155, components/shortcodes/mk_title_box/vc_map.php:16, components/shortcodes/mk_title_box/vc_map.php:24, components/shortcodes/mk_title_box/vc_map.php:53, components/shortcodes/mk_title_box/vc_map.php:71, components/shortcodes/mk_title_box/vc_map.php:100, components/shortcodes/mk_title_box/vc_map.php:122, components/shortcodes/mk_title_box/vc_map.php:135, components/shortcodes/mk_title_box/vc_map.php:147, components/shortcodes/mk_toggle/vc_map.php:20, components/shortcodes/mk_toggle/vc_map.php:33, components/shortcodes/mk_tooltip/vc_map.php:15, components/shortcodes/mk_tooltip/vc_map.php:22, components/shortcodes/mk_woocommerce_recent_carousel/vc_map.php:12, components/shortcodes/mk_woocommerce_recent_carousel/vc_map.php:61, components/shortcodes/mk_woocommerce_recent_carousel/vc_map.php:145, components/shortcodes/mk_woocommerce_recent_carousel/vc_map.php:160, components/shortcodes/mk_woocommerce_recent_carousel/vc_map.php:175, components/shortcodes/mk_woocommerce_recent_carousel/vc_map.php:190, components/shortcodes/vc_accordions/vc_map.php:18, components/shortcodes/vc_accordions/vc_map.php:29, components/shortcodes/vc_accordions/vc_map.php:40, components/shortcodes/vc_accordions/vc_map.php:64, components/shortcodes/vc_column/vc_map.php:46, components/shortcodes/vc_column_text/vc_map.php:43, components/shortcodes/vc_column_text/vc_map.php:54, components/shortcodes/vc_tabs/vc_map.php:20, components/shortcodes/vc_tabs/vc_map.php:79, components/shortcodes/vc_twitter/vc_map.php:15, components/shortcodes/vc_video/vc_map.php:15, components/shortcodes/vc_video/vc_map.php:30, framework/admin/theme-options/masterkey.php:678, framework/admin/theme-options/masterkey.php:690, framework/admin/theme-options/masterkey.php:1524, framework/admin/theme-options/masterkey.php:1959, framework/admin/theme-options/masterkey.php:2009, framework/admin/theme-options/masterkey.php:2024, framework/admin/theme-options/masterkey.php:2036, framework/admin/theme-options/masterkey.php:2051, framework/admin/theme-options/masterkey.php:2493, framework/admin/theme-options/masterkey.php:3197, framework/admin/theme-options/masterkey.php:3205, framework/admin/theme-options/masterkey.php:3213, framework/admin/theme-options/masterkey.php:3221, framework/admin/theme-options/masterkey.php:3348, framework/admin/theme-options/masterkey.php:3411, framework/admin/theme-options/masterkey.php:3463, framework/admin/theme-options/masterkey.php:3622, framework/admin/theme-options/masterkey.php:3724, framework/admin/theme-options/masterkey.php:3736, framework/admin/theme-options/masterkey.php:4401, framework/admin/theme-options/masterkey.php:5225, framework/admin/theme-options/masterkey.php:5226, framework/plugin-integrations/visual-composer/global-params.php:93, framework/plugin-integrations/visual-composer/global-params.php:100, framework/plugin-integrations/visual-composer/global-params.php:115, framework/plugin-integrations/visual-composer/global-params.php:130, framework/plugin-integrations/visual-composer/global-params.php:148, framework/plugin-integrations/visual-composer/global-params.php:168, framework/plugin-integrations/visual-composer/global-params.php:184, components/shortcodes/mk_blog/loop-styles/magazine.php:48, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:36, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:44, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:48, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:52, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:56, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:60, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:159, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:163, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:167, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:171, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:175, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:179, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:183, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:187, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:191, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:195, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:199, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:207, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:211, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:215, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:219, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:223, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:227, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:231, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:235, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:239, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:243, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:247, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:251, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:255, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:259, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:263, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:267, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:271, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:275, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:279, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:283, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:287, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:291, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:295, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:299, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:303, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:307, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:311, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:315, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:319, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:323, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:327, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:331, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:335, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:339, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:343, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:347, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:351
+#: framework/metaboxes/metabox-animated-columns.php:76, framework/metaboxes/metabox-edge.php:48, framework/metaboxes/metabox-edge.php:63, framework/metaboxes/metabox-edge.php:78, framework/metaboxes/metabox-edge.php:179, framework/metaboxes/metabox-edge.php:288, framework/metaboxes/metabox-edge.php:300, framework/metaboxes/metabox-edge.php:311, framework/metaboxes/metabox-edge.php:312, framework/metaboxes/metabox-edge.php:328, framework/metaboxes/metabox-edge.php:349, framework/metaboxes/metabox-edge.php:360, framework/metaboxes/metabox-edge.php:372, framework/metaboxes/metabox-edge.php:397, framework/metaboxes/metabox-edge.php:409, framework/metaboxes/metabox-edge.php:420, framework/metaboxes/metabox-edge.php:432, framework/metaboxes/metabox-edge.php:457, framework/metaboxes/metabox-edge.php:470, framework/metaboxes/metabox-employee.php:162, framework/metaboxes/metabox-gallery.php:26, framework/metaboxes/metabox-portfolios.php:146, framework/metaboxes/metabox-posts.php:256, framework/metaboxes/metabox-posts.php:271, framework/metaboxes/metabox-posts.php:286, framework/metaboxes/metabox-posts.php:299, framework/metaboxes/metabox-posts.php:300, framework/metaboxes/metabox-posts.php:315, framework/metaboxes/metabox-pricing.php:42, framework/metaboxes/metabox-pricing.php:92, framework/metaboxes/metabox-pricing.php:105, framework/metaboxes/metabox-pricing.php:151, framework/metaboxes/metabox-pricing.php:164, framework/metaboxes/metabox-pricing.php:178, framework/metaboxes/metabox-pricing.php:192, framework/metaboxes/metabox-pricing.php:206, framework/metaboxes/metabox-pricing.php:235, framework/metaboxes/metabox-pricing.php:248, framework/metaboxes/metabox-pricing.php:261, framework/metaboxes/metabox-pricing.php:278, framework/metaboxes/metabox-pricing.php:291, framework/metaboxes/metabox-pricing.php:308, framework/metaboxes/metabox-pricing.php:321, framework/metaboxes/metabox-pricing.php:338, framework/metaboxes/metabox-pricing.php:351, framework/metaboxes/metabox-pricing.php:364, framework/metaboxes/metabox-pricing.php:375, framework/metaboxes/metabox-pricing.php:388, framework/metaboxes/metabox-pricing.php:402, framework/metaboxes/metabox-pricing.php:410, framework/metaboxes/metabox-tab-slider.php:43, framework/metaboxes/metabox-tab-slider.php:72, framework/metaboxes/metabox-testimonials.php:15, framework/metaboxes/metabox-testimonials.php:22, views/widgets/widgets-subnav.php:74, views/widgets/widgets-subnav.php:75, views/widgets/widgets-subnav.php:76, components/shortcodes/mk_advanced_gmaps/vc_map.php:42, components/shortcodes/mk_advanced_gmaps/vc_map.php:63, components/shortcodes/mk_advanced_gmaps/vc_map.php:70, components/shortcodes/mk_advanced_gmaps/vc_map.php:77, components/shortcodes/mk_advanced_gmaps/vc_map.php:100, components/shortcodes/mk_advanced_gmaps/vc_map.php:107, components/shortcodes/mk_advanced_gmaps/vc_map.php:114, components/shortcodes/mk_advanced_gmaps/vc_map.php:146, components/shortcodes/mk_advanced_gmaps/vc_map.php:154, components/shortcodes/mk_advanced_gmaps/vc_map.php:161, components/shortcodes/mk_advanced_gmaps/vc_map.php:200, components/shortcodes/mk_advanced_gmaps/vc_map.php:207, components/shortcodes/mk_advanced_gmaps/vc_map.php:214, components/shortcodes/mk_advanced_gmaps/vc_map.php:221, components/shortcodes/mk_advanced_gmaps/vc_map.php:233, components/shortcodes/mk_advanced_gmaps/vc_map.php:240, components/shortcodes/mk_advanced_gmaps/vc_map.php:247, components/shortcodes/mk_advanced_gmaps/vc_map.php:258, components/shortcodes/mk_advanced_gmaps/vc_map.php:283, components/shortcodes/mk_animated_columns/vc_map.php:81, components/shortcodes/mk_animated_columns/vc_map.php:88, components/shortcodes/mk_animated_columns/vc_map.php:95, components/shortcodes/mk_animated_columns/vc_map.php:124, components/shortcodes/mk_animated_columns/vc_map.php:170, components/shortcodes/mk_audio/vc_map.php:15, components/shortcodes/mk_audio/vc_map.php:22, components/shortcodes/mk_audio/vc_map.php:36, components/shortcodes/mk_banner_builder/vc_map.php:54, components/shortcodes/mk_blockquote/vc_map.php:15, components/shortcodes/mk_blockquote/vc_map.php:16, components/shortcodes/mk_blockquote/vc_map.php:40, components/shortcodes/mk_blockquote/vc_map.php:71, components/shortcodes/mk_blog/vc_map.php:67, components/shortcodes/mk_blog/vc_map.php:83, components/shortcodes/mk_blog/vc_map.php:100, components/shortcodes/mk_blog_carousel/vc_map.php:12, components/shortcodes/mk_blog_carousel/vc_map.php:25, components/shortcodes/mk_blog_carousel/vc_map.php:49, components/shortcodes/mk_category/vc_map.php:59, components/shortcodes/mk_category/vc_map.php:75, components/shortcodes/mk_category/vc_map.php:113, components/shortcodes/mk_category/vc_map.php:131, components/shortcodes/mk_category/vc_map.php:165, components/shortcodes/mk_category/vc_map.php:170, components/shortcodes/mk_category/vc_map.php:184, components/shortcodes/mk_category/vc_map.php:201, components/shortcodes/mk_chart/vc_map.php:19, components/shortcodes/mk_chart/vc_map.php:88, components/shortcodes/mk_chart/vc_map.php:99, components/shortcodes/mk_chart/vc_map.php:126, components/shortcodes/mk_chart/vc_map.php:141, components/shortcodes/mk_chart/vc_map.php:152, components/shortcodes/mk_chart/vc_map.php:174, components/shortcodes/mk_chart/vc_map.php:181, components/shortcodes/mk_circle_image/vc_map.php:15, components/shortcodes/mk_circle_image/vc_map.php:22, components/shortcodes/mk_clients/vc_map.php:76, components/shortcodes/mk_clients/vc_map.php:181, components/shortcodes/mk_contact_form/vc_map.php:22, components/shortcodes/mk_contact_form/vc_map.php:59, components/shortcodes/mk_contact_form/vc_map.php:65, components/shortcodes/mk_contact_form/vc_map.php:78, components/shortcodes/mk_contact_form/vc_map.php:91, components/shortcodes/mk_contact_form/vc_map.php:104, components/shortcodes/mk_contact_form/vc_map.php:117, components/shortcodes/mk_contact_form/vc_map.php:130, components/shortcodes/mk_contact_form/vc_map.php:147, components/shortcodes/mk_contact_form/vc_map.php:167, components/shortcodes/mk_contact_form/vc_map.php:182, components/shortcodes/mk_contact_form/vc_map.php:191, components/shortcodes/mk_countdown/vc_map.php:16, components/shortcodes/mk_custom_box/vc_map.php:26, components/shortcodes/mk_custom_box/vc_map.php:37, components/shortcodes/mk_custom_box/vc_map.php:48, components/shortcodes/mk_custom_box/vc_map.php:59, components/shortcodes/mk_custom_box/vc_map.php:70, components/shortcodes/mk_custom_box/vc_map.php:93, components/shortcodes/mk_custom_box/vc_map.php:105, components/shortcodes/mk_custom_box/vc_map.php:127, components/shortcodes/mk_custom_box/vc_map.php:142, components/shortcodes/mk_custom_box/vc_map.php:160, components/shortcodes/mk_custom_box/vc_map.php:181, components/shortcodes/mk_custom_box/vc_map.php:197, components/shortcodes/mk_custom_box/vc_map.php:216, components/shortcodes/mk_custom_box/vc_map.php:231, components/shortcodes/mk_custom_box/vc_map.php:276, components/shortcodes/mk_custom_box/vc_map.php:295, components/shortcodes/mk_custom_box/vc_map.php:308, components/shortcodes/mk_custom_box/vc_map.php:320, components/shortcodes/mk_custom_box/vc_map.php:339, components/shortcodes/mk_custom_box/vc_map.php:357, components/shortcodes/mk_custom_box/vc_map.php:379, components/shortcodes/mk_custom_box/vc_map.php:395, components/shortcodes/mk_custom_box/vc_map.php:412, components/shortcodes/mk_custom_box/vc_map.php:433, components/shortcodes/mk_custom_box/vc_map.php:450, components/shortcodes/mk_custom_box/vc_map.php:467, components/shortcodes/mk_custom_box/vc_map.php:555, components/shortcodes/mk_custom_box/vc_map.php:577, components/shortcodes/mk_custom_box/vc_map.php:593, components/shortcodes/mk_custom_box/vc_map.php:610, components/shortcodes/mk_custom_box/vc_map.php:631, components/shortcodes/mk_custom_box/vc_map.php:647, components/shortcodes/mk_custom_box/vc_map.php:673, components/shortcodes/mk_custom_list/vc_map.php:15, components/shortcodes/mk_custom_list/vc_map.php:23, components/shortcodes/mk_custom_list/vc_map.php:36, components/shortcodes/mk_custom_list/vc_map.php:48, components/shortcodes/mk_divider/vc_map.php:81, components/shortcodes/mk_divider/vc_map.php:102, components/shortcodes/mk_divider/vc_map.php:120, components/shortcodes/mk_divider/vc_map.php:141, components/shortcodes/mk_divider/vc_map.php:156, components/shortcodes/mk_divider/vc_map.php:175, components/shortcodes/mk_divider/vc_map.php:195, components/shortcodes/mk_divider/vc_map.php:209, components/shortcodes/mk_divider/vc_map.php:229, components/shortcodes/mk_dropcaps/vc_map.php:15, components/shortcodes/mk_dropcaps/vc_map.php:16, components/shortcodes/mk_dropcaps/vc_map.php:26, components/shortcodes/mk_dropcaps/vc_map.php:37, components/shortcodes/mk_dropcaps/vc_map.php:67, components/shortcodes/mk_dropcaps/vc_map.php:80, components/shortcodes/mk_edge_one_pager/vc_map.php:50, components/shortcodes/mk_edge_slider/vc_map.php:84, components/shortcodes/mk_edge_slider/vc_map.php:107, components/shortcodes/mk_edge_slider/vc_map.php:132, components/shortcodes/mk_edge_slider/vc_map.php:144, components/shortcodes/mk_edge_slider/vc_map.php:152, components/shortcodes/mk_employees/vc_map.php:20, components/shortcodes/mk_employees/vc_map.php:42, components/shortcodes/mk_employees/vc_map.php:62, components/shortcodes/mk_employees/vc_map.php:79, components/shortcodes/mk_employees/vc_map.php:224, components/shortcodes/mk_employees/vc_map.php:232, components/shortcodes/mk_employees/vc_map.php:240, components/shortcodes/mk_employees/vc_map.php:248, components/shortcodes/mk_fancy_title/vc_map.php:16, components/shortcodes/mk_fancy_title/vc_map.php:17, components/shortcodes/mk_fancy_title/vc_map.php:46, components/shortcodes/mk_fancy_title/vc_map.php:64, components/shortcodes/mk_fancy_title/vc_map.php:78, components/shortcodes/mk_fancy_title/vc_map.php:92, components/shortcodes/mk_fancy_title/vc_map.php:109, components/shortcodes/mk_fancy_title/vc_map.php:128, components/shortcodes/mk_fancy_title/vc_map.php:142, components/shortcodes/mk_fancy_title/vc_map.php:159, components/shortcodes/mk_fancy_title/vc_map.php:166, components/shortcodes/mk_fancy_title/vc_map.php:235, components/shortcodes/mk_fancy_title/vc_map.php:246, components/shortcodes/mk_fancy_title/vc_map.php:259, components/shortcodes/mk_fancy_title/vc_map.php:281, components/shortcodes/mk_fancy_title/vc_map.php:292, components/shortcodes/mk_fancy_title/vc_map.php:305, components/shortcodes/mk_fancy_title/vc_map.php:317, components/shortcodes/mk_fancy_title/vc_map.php:346, components/shortcodes/mk_fancy_title/vc_map.php:358, components/shortcodes/mk_fancy_title/vc_map.php:376, components/shortcodes/mk_fancy_title/vc_map.php:394, components/shortcodes/mk_fancy_title/vc_map.php:409, components/shortcodes/mk_faq/vc_map.php:19, components/shortcodes/mk_faq/vc_map.php:26, components/shortcodes/mk_faq/vc_map.php:102, components/shortcodes/mk_flexslider/vc_map.php:15, components/shortcodes/mk_flexslider/vc_map.php:66, components/shortcodes/mk_flexslider/vc_map.php:77, components/shortcodes/mk_flexslider/vc_map.php:81, components/shortcodes/mk_flexslider/vc_map.php:98, components/shortcodes/mk_flexslider/vc_map.php:109, components/shortcodes/mk_flexslider/vc_map.php:130, components/shortcodes/mk_flexslider/vc_map.php:137, components/shortcodes/mk_flexslider/vc_map.php:144, components/shortcodes/mk_flexslider/vc_map.php:155, components/shortcodes/mk_flickr/vc_map.php:15, components/shortcodes/mk_flipbox/vc_map.php:19, components/shortcodes/mk_flipbox/vc_map.php:27, components/shortcodes/mk_flipbox/vc_map.php:34, components/shortcodes/mk_flipbox/vc_map.php:45, components/shortcodes/mk_flipbox/vc_map.php:51, components/shortcodes/mk_flipbox/vc_map.php:65, components/shortcodes/mk_flipbox/vc_map.php:88, components/shortcodes/mk_flipbox/vc_map.php:109, components/shortcodes/mk_flipbox/vc_map.php:123, components/shortcodes/mk_flipbox/vc_map.php:133, components/shortcodes/mk_flipbox/vc_map.php:141, components/shortcodes/mk_flipbox/vc_map.php:149, components/shortcodes/mk_flipbox/vc_map.php:159, components/shortcodes/mk_flipbox/vc_map.php:167, components/shortcodes/mk_flipbox/vc_map.php:174, components/shortcodes/mk_flipbox/vc_map.php:182, components/shortcodes/mk_flipbox/vc_map.php:192, components/shortcodes/mk_flipbox/vc_map.php:200, components/shortcodes/mk_flipbox/vc_map.php:208, components/shortcodes/mk_flipbox/vc_map.php:218, components/shortcodes/mk_flipbox/vc_map.php:226, components/shortcodes/mk_flipbox/vc_map.php:234, components/shortcodes/mk_flipbox/vc_map.php:242, components/shortcodes/mk_flipbox/vc_map.php:249, components/shortcodes/mk_flipbox/vc_map.php:256, components/shortcodes/mk_flipbox/vc_map.php:263, components/shortcodes/mk_flipbox/vc_map.php:274, components/shortcodes/mk_font_icons/vc_map.php:25, components/shortcodes/mk_font_icons/vc_map.php:32, components/shortcodes/mk_font_icons/vc_map.php:46, components/shortcodes/mk_font_icons/vc_map.php:60, components/shortcodes/mk_font_icons/vc_map.php:77, components/shortcodes/mk_font_icons/vc_map.php:96, components/shortcodes/mk_font_icons/vc_map.php:111, components/shortcodes/mk_font_icons/vc_map.php:134, components/shortcodes/mk_font_icons/vc_map.php:163, components/shortcodes/mk_font_icons/vc_map.php:187, components/shortcodes/mk_font_icons/vc_map.php:205, components/shortcodes/mk_font_icons/vc_map.php:218, components/shortcodes/mk_font_icons/vc_map.php:251, components/shortcodes/mk_fullwidth_slideshow/vc_map.php:26, components/shortcodes/mk_fullwidth_slideshow/vc_map.php:33, components/shortcodes/mk_fullwidth_slideshow/vc_map.php:40, components/shortcodes/mk_fullwidth_slideshow/vc_map.php:93, components/shortcodes/mk_fullwidth_slideshow/vc_map.php:104, components/shortcodes/mk_fullwidth_slideshow/vc_map.php:121, components/shortcodes/mk_fullwidth_slideshow/vc_map.php:132, components/shortcodes/mk_fullwidth_slideshow/vc_map.php:153, components/shortcodes/mk_gallery/vc_map.php:16, components/shortcodes/mk_gallery/vc_map.php:23, components/shortcodes/mk_gallery/vc_map.php:104, components/shortcodes/mk_gallery/vc_map.php:135, components/shortcodes/mk_gallery/vc_map.php:147, components/shortcodes/mk_header/vc_map.php:31, components/shortcodes/mk_header/vc_map.php:36, components/shortcodes/mk_header/vc_map.php:69, components/shortcodes/mk_header/vc_map.php:117, components/shortcodes/mk_header/vc_map.php:125, components/shortcodes/mk_header/vc_map.php:133, components/shortcodes/mk_header/vc_map.php:141, components/shortcodes/mk_highlight/vc_map.php:15, components/shortcodes/mk_highlight/vc_map.php:22, components/shortcodes/mk_highlight/vc_map.php:29, components/shortcodes/mk_icon_box/vc_map.php:23, components/shortcodes/mk_icon_box/vc_map.php:34, components/shortcodes/mk_icon_box/vc_map.php:41, components/shortcodes/mk_icon_box/vc_map.php:48, components/shortcodes/mk_icon_box/vc_map.php:56, components/shortcodes/mk_icon_box/vc_map.php:63, components/shortcodes/mk_icon_box/vc_map.php:74, components/shortcodes/mk_icon_box/vc_map.php:86, components/shortcodes/mk_icon_box/vc_map.php:143, components/shortcodes/mk_icon_box/vc_map.php:150, components/shortcodes/mk_icon_box/vc_map.php:203, components/shortcodes/mk_icon_box2/vc_map.php:12, components/shortcodes/mk_icon_box2/vc_map.php:23, components/shortcodes/mk_icon_box2/vc_map.php:41, components/shortcodes/mk_icon_box2/vc_map.php:67, components/shortcodes/mk_icon_box2/vc_map.php:80, components/shortcodes/mk_icon_box2/vc_map.php:93, components/shortcodes/mk_icon_box2/vc_map.php:107, components/shortcodes/mk_icon_box2/vc_map.php:120, components/shortcodes/mk_icon_box2/vc_map.php:133, components/shortcodes/mk_icon_box2/vc_map.php:147, components/shortcodes/mk_icon_box2/vc_map.php:171, components/shortcodes/mk_icon_box2/vc_map.php:178, components/shortcodes/mk_icon_box2/vc_map.php:207, components/shortcodes/mk_icon_box2/vc_map.php:215, components/shortcodes/mk_icon_box2/vc_map.php:233, components/shortcodes/mk_icon_box2/vc_map.php:241, components/shortcodes/mk_icon_box_gradient/vc_map.php:13, components/shortcodes/mk_icon_box_gradient/vc_map.php:57, components/shortcodes/mk_icon_box_gradient/vc_map.php:65, components/shortcodes/mk_icon_box_gradient/vc_map.php:80, components/shortcodes/mk_icon_box_gradient/vc_map.php:94, components/shortcodes/mk_icon_box_gradient/vc_map.php:108, components/shortcodes/mk_icon_box_gradient/vc_map.php:125, components/shortcodes/mk_icon_box_gradient/vc_map.php:144, components/shortcodes/mk_icon_box_gradient/vc_map.php:158, components/shortcodes/mk_icon_box_gradient/vc_map.php:173, components/shortcodes/mk_icon_box_gradient/vc_map.php:182, components/shortcodes/mk_icon_box_gradient/vc_map.php:190, components/shortcodes/mk_icon_box_gradient/vc_map.php:214, components/shortcodes/mk_icon_box_gradient/vc_map.php:221, components/shortcodes/mk_icon_box_gradient/vc_map.php:250, components/shortcodes/mk_icon_box_gradient/vc_map.php:258, components/shortcodes/mk_icon_box_gradient/vc_map.php:276, components/shortcodes/mk_image/vc_map.php:16, components/shortcodes/mk_image/vc_map.php:24, components/shortcodes/mk_image/vc_map.php:49, components/shortcodes/mk_image/vc_map.php:66, components/shortcodes/mk_image/vc_map.php:100, components/shortcodes/mk_image/vc_map.php:114, components/shortcodes/mk_image/vc_map.php:129, components/shortcodes/mk_image/vc_map.php:136, components/shortcodes/mk_image/vc_map.php:143, components/shortcodes/mk_image/vc_map.php:153, components/shortcodes/mk_image/vc_map.php:160, components/shortcodes/mk_image/vc_map.php:178, components/shortcodes/mk_image/vc_map.php:189, components/shortcodes/mk_imagebox/vc_map.php:14, components/shortcodes/mk_imagebox/vc_map.php:88, components/shortcodes/mk_imagebox_item/vc_map.php:78, components/shortcodes/mk_imagebox_item/vc_map.php:91, components/shortcodes/mk_imagebox_item/vc_map.php:104, components/shortcodes/mk_imagebox_item/vc_map.php:111, components/shortcodes/mk_imagebox_item/vc_map.php:122, components/shortcodes/mk_imagebox_item/vc_map.php:129, components/shortcodes/mk_imagebox_item/vc_map.php:136, components/shortcodes/mk_imagebox_item/vc_map.php:144, components/shortcodes/mk_imagebox_item/vc_map.php:151, components/shortcodes/mk_imagebox_item/vc_map.php:158, components/shortcodes/mk_imagebox_item/vc_map.php:165, components/shortcodes/mk_imagebox_item/vc_map.php:172, components/shortcodes/mk_imagebox_item/vc_map.php:179, components/shortcodes/mk_imagebox_item/vc_map.php:186, components/shortcodes/mk_image_slideshow/vc_map.php:15, components/shortcodes/mk_image_slideshow/vc_map.php:22, components/shortcodes/mk_image_slideshow/vc_map.php:33, components/shortcodes/mk_image_slideshow/vc_map.php:44, components/shortcodes/mk_image_slideshow/vc_map.php:55, components/shortcodes/mk_image_slideshow/vc_map.php:66, components/shortcodes/mk_image_slideshow/vc_map.php:70, components/shortcodes/mk_image_slideshow/vc_map.php:87, components/shortcodes/mk_image_slideshow/vc_map.php:98, components/shortcodes/mk_image_switch/vc_map.php:7, components/shortcodes/mk_image_switch/vc_map.php:15, components/shortcodes/mk_image_switch/vc_map.php:22, components/shortcodes/mk_image_switch/vc_map.php:32, components/shortcodes/mk_image_switch/vc_map.php:43, components/shortcodes/mk_image_switch/vc_map.php:54, components/shortcodes/mk_image_switch/vc_map.php:80, components/shortcodes/mk_image_switch/vc_map.php:97, components/shortcodes/mk_laptop_slideshow/vc_map.php:15, components/shortcodes/mk_laptop_slideshow/vc_map.php:23, components/shortcodes/mk_laptop_slideshow/vc_map.php:46, components/shortcodes/mk_laptop_slideshow/vc_map.php:57, components/shortcodes/mk_layerslider/vc_map.php:67, components/shortcodes/mk_lcd_slideshow/vc_map.php:15, components/shortcodes/mk_lcd_slideshow/vc_map.php:22, components/shortcodes/mk_lcd_slideshow/vc_map.php:33, components/shortcodes/mk_lcd_slideshow/vc_map.php:44, components/shortcodes/mk_message_box/vc_map.php:15, components/shortcodes/mk_message_box/vc_map.php:16, components/shortcodes/mk_message_box/vc_map.php:29, components/shortcodes/mk_milestone/vc_map.php:25, components/shortcodes/mk_milestone/vc_map.php:36, components/shortcodes/mk_milestone/vc_map.php:43, components/shortcodes/mk_milestone/vc_map.php:128, components/shortcodes/mk_milestone/vc_map.php:135, components/shortcodes/mk_milestone/vc_map.php:146, components/shortcodes/mk_milestone/vc_map.php:153, components/shortcodes/mk_mini_callout/vc_map.php:15, components/shortcodes/mk_mini_callout/vc_map.php:22, components/shortcodes/mk_mini_callout/vc_map.php:30, components/shortcodes/mk_mini_callout/vc_map.php:37, components/shortcodes/mk_moving_image/vc_map.php:15, components/shortcodes/mk_moving_image/vc_map.php:27, components/shortcodes/mk_moving_image/vc_map.php:39, components/shortcodes/mk_news_tab/vc_map.php:15, components/shortcodes/mk_news_tab/vc_map.php:22, components/shortcodes/mk_ornamental_title/vc_map.php:15, components/shortcodes/mk_ornamental_title/vc_map.php:16, components/shortcodes/mk_ornamental_title/vc_map.php:46, components/shortcodes/mk_ornamental_title/vc_map.php:53, components/shortcodes/mk_ornamental_title/vc_map.php:66, components/shortcodes/mk_ornamental_title/vc_map.php:91, components/shortcodes/mk_ornamental_title/vc_map.php:102, components/shortcodes/mk_ornamental_title/vc_map.php:115, components/shortcodes/mk_ornamental_title/vc_map.php:132, components/shortcodes/mk_ornamental_title/vc_map.php:151, components/shortcodes/mk_ornamental_title/vc_map.php:185, components/shortcodes/mk_ornamental_title/vc_map.php:201, components/shortcodes/mk_ornamental_title/vc_map.php:212, components/shortcodes/mk_ornamental_title/vc_map.php:223, components/shortcodes/mk_ornamental_title/vc_map.php:234, components/shortcodes/mk_page_section/vc_map.php:50, components/shortcodes/mk_page_section/vc_map.php:66, components/shortcodes/mk_page_section/vc_map.php:89, components/shortcodes/mk_page_section/vc_map.php:143, components/shortcodes/mk_page_section/vc_map.php:196, components/shortcodes/mk_page_section/vc_map.php:207, components/shortcodes/mk_page_section/vc_map.php:269, components/shortcodes/mk_page_section/vc_map.php:317, components/shortcodes/mk_page_section/vc_map.php:456, components/shortcodes/mk_page_section/vc_map.php:471, components/shortcodes/mk_page_section/vc_map.php:561, components/shortcodes/mk_page_section/vc_map.php:571, components/shortcodes/mk_page_section/vc_map.php:592, components/shortcodes/mk_page_section/vc_map.php:598, components/shortcodes/mk_page_section/vc_map.php:628, components/shortcodes/mk_page_section/vc_map.php:636, components/shortcodes/mk_page_section/vc_map.php:654, components/shortcodes/mk_page_section/vc_map.php:659, components/shortcodes/mk_page_section/vc_map.php:689, components/shortcodes/mk_page_section/vc_map.php:697, components/shortcodes/mk_photo_album/vc_map.php:20, components/shortcodes/mk_photo_album/vc_map.php:32, components/shortcodes/mk_photo_album/vc_map.php:53, components/shortcodes/mk_photo_album/vc_map.php:57, components/shortcodes/mk_photo_album/vc_map.php:69, components/shortcodes/mk_photo_album/vc_map.php:81, components/shortcodes/mk_photo_album/vc_map.php:211, components/shortcodes/mk_photo_album/vc_map.php:223, components/shortcodes/mk_photo_album/vc_map.php:243, components/shortcodes/mk_photo_album/vc_map.php:256, components/shortcodes/mk_photo_album/vc_map.php:285, components/shortcodes/mk_photo_album/vc_map.php:297, components/shortcodes/mk_photo_album/vc_map.php:330, components/shortcodes/mk_photo_album/vc_map.php:351, components/shortcodes/mk_photo_album/vc_map.php:362, components/shortcodes/mk_photo_album/vc_map.php:381, components/shortcodes/mk_photo_album/vc_map.php:399, components/shortcodes/mk_portfolio/vc_map.php:208, components/shortcodes/mk_portfolio/vc_map.php:266, components/shortcodes/mk_portfolio/vc_map.php:273, components/shortcodes/mk_portfolio/vc_map.php:286, components/shortcodes/mk_portfolio_carousel/vc_map.php:47, components/shortcodes/mk_portfolio_carousel/vc_map.php:66, components/shortcodes/mk_portfolio_carousel/vc_map.php:109, components/shortcodes/mk_portfolio_carousel/vc_map.php:157, components/shortcodes/mk_portfolio_carousel/vc_map.php:168, components/shortcodes/mk_pricing_table/vc_map.php:12, components/shortcodes/mk_products/vc_map.php:8, components/shortcodes/mk_products/vc_map.php:12, components/shortcodes/mk_products/vc_map.php:22, components/shortcodes/mk_products/vc_map.php:33, components/shortcodes/mk_products/vc_map.php:40, components/shortcodes/mk_products/vc_map.php:123, components/shortcodes/mk_products/vc_map.php:136, components/shortcodes/mk_products/vc_map.php:149, components/shortcodes/mk_products/vc_map.php:179, components/shortcodes/mk_products/vc_map.php:195, components/shortcodes/mk_products/vc_map.php:209, components/shortcodes/mk_products/vc_map.php:223, components/shortcodes/mk_products/vc_map.php:238, components/shortcodes/mk_products/vc_map.php:253, components/shortcodes/mk_products/vc_map.php:268, components/shortcodes/mk_revslider/vc_map.php:30, components/shortcodes/mk_skill_meter/vc_map.php:37, components/shortcodes/mk_skill_meter/vc_map.php:45, components/shortcodes/mk_skill_meter/vc_map.php:52, components/shortcodes/mk_skill_meter/vc_map.php:59, components/shortcodes/mk_skill_meter/vc_map.php:66, components/shortcodes/mk_skill_meter_chart/vc_map.php:27, components/shortcodes/mk_skill_meter_chart/vc_map.php:53, components/shortcodes/mk_skill_meter_chart/vc_map.php:79, components/shortcodes/mk_skill_meter_chart/vc_map.php:105, components/shortcodes/mk_skill_meter_chart/vc_map.php:131, components/shortcodes/mk_skill_meter_chart/vc_map.php:157, components/shortcodes/mk_skill_meter_chart/vc_map.php:183, components/shortcodes/mk_skill_meter_chart/vc_map.php:198, components/shortcodes/mk_skill_meter_chart/vc_map.php:205, components/shortcodes/mk_skill_meter_chart/vc_map.php:212, components/shortcodes/mk_slideshow_box/vc_map.php:41, components/shortcodes/mk_slideshow_box/vc_map.php:105, components/shortcodes/mk_social_networks/vc_map.php:117, components/shortcodes/mk_steps/vc_map.php:16, components/shortcodes/mk_steps/vc_map.php:47, components/shortcodes/mk_steps/vc_map.php:55, components/shortcodes/mk_steps/vc_map.php:76, components/shortcodes/mk_steps/vc_map.php:84, components/shortcodes/mk_steps/vc_map.php:105, components/shortcodes/mk_steps/vc_map.php:113, components/shortcodes/mk_steps/vc_map.php:134, components/shortcodes/mk_steps/vc_map.php:142, components/shortcodes/mk_steps/vc_map.php:163, components/shortcodes/mk_steps/vc_map.php:171, components/shortcodes/mk_subscribe/vc_map.php:8, components/shortcodes/mk_subscribe/vc_map.php:16, components/shortcodes/mk_subscribe/vc_map.php:23, components/shortcodes/mk_subscribe/vc_map.php:44, components/shortcodes/mk_subscribe/vc_map.php:53, components/shortcodes/mk_subscribe/vc_map.php:82, components/shortcodes/mk_subscribe/vc_map.php:94, components/shortcodes/mk_subscribe/vc_map.php:120, components/shortcodes/mk_subscribe/vc_map.php:128, components/shortcodes/mk_subscribe/vc_map.php:153, components/shortcodes/mk_subscribe/vc_map.php:169, components/shortcodes/mk_subscribe/vc_map.php:185, components/shortcodes/mk_subscribe/vc_map.php:193, components/shortcodes/mk_subscribe/vc_map.php:218, components/shortcodes/mk_subscribe/vc_map.php:226, components/shortcodes/mk_subscribe/vc_map.php:243, components/shortcodes/mk_subscribe/vc_map.php:251, components/shortcodes/mk_subscribe/vc_map.php:259, components/shortcodes/mk_subscribe/vc_map.php:276, components/shortcodes/mk_subscribe/vc_map.php:285, components/shortcodes/mk_swipe_slideshow/vc_map.php:16, components/shortcodes/mk_swipe_slideshow/vc_map.php:20, components/shortcodes/mk_swipe_slideshow/vc_map.php:34, components/shortcodes/mk_swipe_slideshow/vc_map.php:51, components/shortcodes/mk_swipe_slideshow/vc_map.php:61, components/shortcodes/mk_swipe_slideshow/vc_map.php:78, components/shortcodes/mk_swipe_slideshow/vc_map.php:89, components/shortcodes/mk_swipe_slideshow/vc_map.php:96, components/shortcodes/mk_table/vc_map.php:15, components/shortcodes/mk_tab_slider/vc_map.php:58, components/shortcodes/mk_tab_slider/vc_map.php:66, components/shortcodes/mk_testimonials/vc_map.php:15, components/shortcodes/mk_testimonials/vc_map.php:19, components/shortcodes/mk_testimonials/vc_map.php:31, components/shortcodes/mk_testimonials/vc_map.php:132, components/shortcodes/mk_testimonials/vc_map.php:149, components/shortcodes/mk_testimonials/vc_map.php:162, components/shortcodes/mk_testimonials/vc_map.php:169, components/shortcodes/mk_testimonials/vc_map.php:176, components/shortcodes/mk_testimonials/vc_map.php:187, components/shortcodes/mk_testimonials/vc_map.php:194, components/shortcodes/mk_testimonials/vc_map.php:205, components/shortcodes/mk_testimonials/vc_map.php:218, components/shortcodes/mk_theatre_slider/vc_map.php:8, components/shortcodes/mk_theatre_slider/vc_map.php:12, components/shortcodes/mk_theatre_slider/vc_map.php:29, components/shortcodes/mk_theatre_slider/vc_map.php:33, components/shortcodes/mk_theatre_slider/vc_map.php:95, components/shortcodes/mk_theatre_slider/vc_map.php:114, components/shortcodes/mk_theatre_slider/vc_map.php:127, components/shortcodes/mk_theatre_slider/vc_map.php:137, components/shortcodes/mk_theatre_slider/vc_map.php:155, components/shortcodes/mk_title_box/vc_map.php:16, components/shortcodes/mk_title_box/vc_map.php:24, components/shortcodes/mk_title_box/vc_map.php:53, components/shortcodes/mk_title_box/vc_map.php:71, components/shortcodes/mk_title_box/vc_map.php:100, components/shortcodes/mk_title_box/vc_map.php:122, components/shortcodes/mk_title_box/vc_map.php:135, components/shortcodes/mk_title_box/vc_map.php:147, components/shortcodes/mk_toggle/vc_map.php:20, components/shortcodes/mk_toggle/vc_map.php:33, components/shortcodes/mk_tooltip/vc_map.php:15, components/shortcodes/mk_tooltip/vc_map.php:22, components/shortcodes/mk_woocommerce_recent_carousel/vc_map.php:12, components/shortcodes/mk_woocommerce_recent_carousel/vc_map.php:61, components/shortcodes/mk_woocommerce_recent_carousel/vc_map.php:145, components/shortcodes/mk_woocommerce_recent_carousel/vc_map.php:160, components/shortcodes/mk_woocommerce_recent_carousel/vc_map.php:175, components/shortcodes/mk_woocommerce_recent_carousel/vc_map.php:190, components/shortcodes/vc_accordions/vc_map.php:18, components/shortcodes/vc_accordions/vc_map.php:29, components/shortcodes/vc_accordions/vc_map.php:40, components/shortcodes/vc_accordions/vc_map.php:64, components/shortcodes/vc_column/vc_map.php:47, components/shortcodes/vc_column_text/vc_map.php:44, components/shortcodes/vc_column_text/vc_map.php:55, components/shortcodes/vc_tabs/vc_map.php:20, components/shortcodes/vc_tabs/vc_map.php:79, components/shortcodes/vc_twitter/vc_map.php:15, components/shortcodes/vc_video/vc_map.php:15, components/shortcodes/vc_video/vc_map.php:30, framework/admin/theme-options/masterkey.php:678, framework/admin/theme-options/masterkey.php:690, framework/admin/theme-options/masterkey.php:1524, framework/admin/theme-options/masterkey.php:1959, framework/admin/theme-options/masterkey.php:2009, framework/admin/theme-options/masterkey.php:2024, framework/admin/theme-options/masterkey.php:2036, framework/admin/theme-options/masterkey.php:2051, framework/admin/theme-options/masterkey.php:2493, framework/admin/theme-options/masterkey.php:3197, framework/admin/theme-options/masterkey.php:3205, framework/admin/theme-options/masterkey.php:3213, framework/admin/theme-options/masterkey.php:3221, framework/admin/theme-options/masterkey.php:3348, framework/admin/theme-options/masterkey.php:3411, framework/admin/theme-options/masterkey.php:3463, framework/admin/theme-options/masterkey.php:3622, framework/admin/theme-options/masterkey.php:3724, framework/admin/theme-options/masterkey.php:3736, framework/admin/theme-options/masterkey.php:4401, framework/admin/theme-options/masterkey.php:5225, framework/admin/theme-options/masterkey.php:5226, framework/plugin-integrations/visual-composer/global-params.php:93, framework/plugin-integrations/visual-composer/global-params.php:100, framework/plugin-integrations/visual-composer/global-params.php:115, framework/plugin-integrations/visual-composer/global-params.php:130, framework/plugin-integrations/visual-composer/global-params.php:148, framework/plugin-integrations/visual-composer/global-params.php:168, framework/plugin-integrations/visual-composer/global-params.php:184, components/shortcodes/mk_blog/loop-styles/magazine.php:48, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:36, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:44, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:48, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:52, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:56, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:60, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:159, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:163, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:167, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:171, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:175, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:179, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:183, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:187, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:191, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:195, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:199, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:207, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:211, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:215, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:219, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:223, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:227, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:231, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:235, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:239, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:243, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:247, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:251, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:255, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:259, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:263, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:267, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:271, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:275, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:279, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:283, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:287, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:291, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:295, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:299, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:303, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:307, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:311, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:315, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:319, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:323, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:327, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:331, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:335, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:339, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:343, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:347, framework/admin/control-panel/logic/system-messages/logic-messages-lib.php:351
 msgstr ""
 
 #: framework/metaboxes/metabox-animated-columns.php:82, framework/metaboxes/metabox-timeline.php:22, components/shortcodes/mk_flipbox/vc_map.php:238
@@ -2266,7 +2262,7 @@ msgstr ""
 msgid "Featured Badge Text Color"
 msgstr ""
 
-#: framework/metaboxes/metabox-pricing.php:337, components/shortcodes/vc_column/vc_map.php:27
+#: framework/metaboxes/metabox-pricing.php:337, components/shortcodes/vc_column/vc_map.php:28
 msgid "Column Border Color"
 msgstr ""
 
@@ -2562,11 +2558,11 @@ msgstr ""
 msgid "Location of tab image."
 msgstr ""
 
-#: framework/metaboxes/metabox-tab-slider.php:65, components/shortcodes/mk_blog/vc_map.php:70, components/shortcodes/mk_button/vc_map.php:128, components/shortcodes/mk_button_gradient/vc_map.php:149, components/shortcodes/mk_custom_list/vc_map.php:58, components/shortcodes/mk_fancy_title/vc_map.php:313, components/shortcodes/mk_fancy_title/vc_map.php:327, components/shortcodes/mk_font_icons/vc_map.php:233, components/shortcodes/mk_header/vc_map.php:27, components/shortcodes/mk_icon_box/vc_map.php:113, components/shortcodes/mk_image/vc_map.php:174, components/shortcodes/mk_image_switch/vc_map.php:76, components/shortcodes/mk_milestone/vc_map.php:32, components/shortcodes/mk_moving_image/vc_map.php:35, components/shortcodes/mk_ornamental_title/vc_map.php:181, components/shortcodes/mk_page_title_box/vc_map.php:243, components/shortcodes/mk_portfolio/vc_map.php:217, components/shortcodes/mk_social_networks/vc_map.php:113, components/shortcodes/mk_theatre_slider/vc_map.php:140, components/shortcodes/mk_title_box/vc_map.php:143, components/shortcodes/vc_column_text/vc_map.php:39, framework/admin/theme-options/masterkey.php:2014, framework/admin/theme-options/masterkey.php:2041
+#: framework/metaboxes/metabox-tab-slider.php:65, components/shortcodes/mk_blog/vc_map.php:70, components/shortcodes/mk_button/vc_map.php:128, components/shortcodes/mk_button_gradient/vc_map.php:149, components/shortcodes/mk_custom_list/vc_map.php:58, components/shortcodes/mk_fancy_title/vc_map.php:313, components/shortcodes/mk_fancy_title/vc_map.php:327, components/shortcodes/mk_font_icons/vc_map.php:233, components/shortcodes/mk_header/vc_map.php:27, components/shortcodes/mk_icon_box/vc_map.php:113, components/shortcodes/mk_image/vc_map.php:174, components/shortcodes/mk_image_switch/vc_map.php:76, components/shortcodes/mk_milestone/vc_map.php:32, components/shortcodes/mk_moving_image/vc_map.php:35, components/shortcodes/mk_ornamental_title/vc_map.php:181, components/shortcodes/mk_page_title_box/vc_map.php:243, components/shortcodes/mk_portfolio/vc_map.php:217, components/shortcodes/mk_social_networks/vc_map.php:113, components/shortcodes/mk_theatre_slider/vc_map.php:140, components/shortcodes/mk_title_box/vc_map.php:143, components/shortcodes/vc_column_text/vc_map.php:40, framework/admin/theme-options/masterkey.php:2014, framework/admin/theme-options/masterkey.php:2041
 msgid "Left"
 msgstr ""
 
-#: framework/metaboxes/metabox-tab-slider.php:66, components/shortcodes/mk_blog/vc_map.php:71, components/shortcodes/mk_button/vc_map.php:129, components/shortcodes/mk_button_gradient/vc_map.php:150, components/shortcodes/mk_custom_list/vc_map.php:60, components/shortcodes/mk_fancy_title/vc_map.php:314, components/shortcodes/mk_fancy_title/vc_map.php:328, components/shortcodes/mk_font_icons/vc_map.php:234, components/shortcodes/mk_header/vc_map.php:29, components/shortcodes/mk_image/vc_map.php:175, components/shortcodes/mk_image_switch/vc_map.php:77, components/shortcodes/mk_moving_image/vc_map.php:36, components/shortcodes/mk_ornamental_title/vc_map.php:183, components/shortcodes/mk_page_title_box/vc_map.php:244, components/shortcodes/mk_portfolio/vc_map.php:219, components/shortcodes/mk_social_networks/vc_map.php:114, components/shortcodes/mk_theatre_slider/vc_map.php:142, components/shortcodes/mk_title_box/vc_map.php:144, components/shortcodes/vc_column_text/vc_map.php:40, framework/admin/theme-options/masterkey.php:2016, framework/admin/theme-options/masterkey.php:2043
+#: framework/metaboxes/metabox-tab-slider.php:66, components/shortcodes/mk_blog/vc_map.php:71, components/shortcodes/mk_button/vc_map.php:129, components/shortcodes/mk_button_gradient/vc_map.php:150, components/shortcodes/mk_custom_list/vc_map.php:60, components/shortcodes/mk_fancy_title/vc_map.php:314, components/shortcodes/mk_fancy_title/vc_map.php:328, components/shortcodes/mk_font_icons/vc_map.php:234, components/shortcodes/mk_header/vc_map.php:29, components/shortcodes/mk_image/vc_map.php:175, components/shortcodes/mk_image_switch/vc_map.php:77, components/shortcodes/mk_moving_image/vc_map.php:36, components/shortcodes/mk_ornamental_title/vc_map.php:183, components/shortcodes/mk_page_title_box/vc_map.php:244, components/shortcodes/mk_portfolio/vc_map.php:219, components/shortcodes/mk_social_networks/vc_map.php:114, components/shortcodes/mk_theatre_slider/vc_map.php:142, components/shortcodes/mk_title_box/vc_map.php:144, components/shortcodes/vc_column_text/vc_map.php:41, framework/admin/theme-options/masterkey.php:2016, framework/admin/theme-options/masterkey.php:2043
 msgid "Right"
 msgstr ""
 
@@ -2718,7 +2714,7 @@ msgstr ""
 msgid "Print"
 msgstr ""
 
-#: views/singular/wp-single-news.php:8, views/widgets/widgets-contact-form.php:41, components/shortcodes/mk_contact_form/vc_map.php:157, components/shortcodes/mk_contact_info/vc_map.php:30, framework/admin/theme-options/masterkey.php:642
+#: views/singular/wp-single-news.php:8, views/widgets/widgets-contact-form.php:41, components/shortcodes/mk_contact_form/vc_map.php:157, components/shortcodes/mk_contact_info/vc_map.php:31, framework/admin/theme-options/masterkey.php:642
 msgid "Email"
 msgstr ""
 
@@ -2774,7 +2770,7 @@ msgstr ""
 msgid "I consent to %s collecting my details through this form."
 msgstr ""
 
-#: views/widgets/widgets-contact-form.php:106, views/widgets/widgets-contact-info.php:85, views/widgets/widgets-flickr-feeds.php:67, views/widgets/widgets-gmap.php:94, views/widgets/widgets-news-slider.php:105, views/widgets/widgets-popular-posts.php:158, views/widgets/widgets-recent-portfolio.php:167, views/widgets/widgets-recent-posts.php:159, views/widgets/widgets-related-posts.php:170, views/widgets/widgets-slideshow.php:77, views/widgets/widgets-social-networks.php:327, views/widgets/widgets-subnav.php:63, views/widgets/widgets-testimonials.php:101, views/widgets/widgets-twitter-feeds.php:148, views/widgets/widgets-video.php:84
+#: views/widgets/widgets-contact-form.php:106, views/widgets/widgets-contact-info.php:85, views/widgets/widgets-flickr-feeds.php:67, views/widgets/widgets-gmap.php:94, views/widgets/widgets-news-slider.php:105, views/widgets/widgets-popular-posts.php:158, views/widgets/widgets-recent-portfolio.php:167, views/widgets/widgets-recent-posts.php:159, views/widgets/widgets-related-posts.php:170, views/widgets/widgets-slideshow.php:77, views/widgets/widgets-social-networks.php:327, views/widgets/widgets-subnav.php:63, views/widgets/widgets-testimonials.php:101, views/widgets/widgets-twitter-feeds.php:148, views/widgets/widgets-video.php:73
 msgid "Title:"
 msgstr ""
 
@@ -2782,19 +2778,19 @@ msgstr ""
 msgid "Email:"
 msgstr ""
 
-#: views/widgets/widgets-contact-form.php:117
+#: views/widgets/widgets-contact-form.php:116
 msgid "Show Captcha?"
 msgstr ""
 
-#: views/widgets/widgets-contact-form.php:122, components/shortcodes/mk_contact_form/vc_map.php:164
+#: views/widgets/widgets-contact-form.php:120, components/shortcodes/mk_contact_form/vc_map.php:164
 msgid "Show Phone Number Field?"
 msgstr ""
 
-#: views/widgets/widgets-contact-form.php:125, framework/admin/theme-options/masterkey.php:677
+#: views/widgets/widgets-contact-form.php:123, framework/admin/theme-options/masterkey.php:677
 msgid "GDPR Consent Check"
 msgstr ""
 
-#: views/widgets/widgets-contact-form.php:127
+#: views/widgets/widgets-contact-form.php:125
 msgid "GDPR Consent Checkbox Text:"
 msgstr ""
 
@@ -2954,7 +2950,7 @@ msgstr ""
 msgid "Color:"
 msgstr ""
 
-#: views/widgets/widgets-social-networks.php:361, framework/admin/generators/metabox-generator.php:663, framework/admin/theme-options/masterkey.php:1051, framework/admin/theme-options/masterkey.php:3046, framework/plugin-integrations/visual-composer/page-section.php:30
+#: views/widgets/widgets-social-networks.php:361, framework/admin/generators/metabox-generator.php:663, framework/admin/theme-options/masterkey.php:1051, framework/admin/theme-options/masterkey.php:3046, framework/plugin-integrations/visual-composer/page-section.php:33
 msgid "Custom"
 msgstr ""
 
@@ -3042,35 +3038,35 @@ msgstr ""
 msgid "First Please refer to Theme Options > API Integrations > Twitter Settings and complete the process in order to authenticate."
 msgstr ""
 
-#: views/widgets/widgets-video.php:88
+#: views/widgets/widgets-video.php:77
 msgid "Type:"
 msgstr ""
 
-#: views/widgets/widgets-video.php:90, components/shortcodes/mk_page_section/vc_map.php:272, components/shortcodes/mk_theatre_slider/vc_map.php:98
+#: views/widgets/widgets-video.php:79, components/shortcodes/mk_page_section/vc_map.php:272, components/shortcodes/mk_theatre_slider/vc_map.php:98
 msgid "Youtube"
 msgstr ""
 
-#: views/widgets/widgets-video.php:91, components/shortcodes/mk_page_section/vc_map.php:273, components/shortcodes/mk_theatre_slider/vc_map.php:99
+#: views/widgets/widgets-video.php:80, components/shortcodes/mk_page_section/vc_map.php:273, components/shortcodes/mk_theatre_slider/vc_map.php:99
 msgid "Vimeo"
 msgstr ""
 
-#: views/widgets/widgets-video.php:92
+#: views/widgets/widgets-video.php:81
 msgid "Dailymotion"
 msgstr ""
 
-#: views/widgets/widgets-video.php:93
+#: views/widgets/widgets-video.php:82
 msgid "bliptv"
 msgstr ""
 
-#: views/widgets/widgets-video.php:94
+#: views/widgets/widgets-video.php:83
 msgid "viddler"
 msgstr ""
 
-#: views/widgets/widgets-video.php:99
+#: views/widgets/widgets-video.php:88
 msgid "Clip Id:"
 msgstr ""
 
-#: views/widgets/widgets-video.php:102, components/shortcodes/mk_flexslider/vc_map.php:70, components/shortcodes/mk_image_slideshow/vc_map.php:26, components/shortcodes/mk_swipe_slideshow/vc_map.php:27, components/shortcodes/vc_column/vc_map.php:63, components/shortcodes/vc_column/vc_map.php:106, framework/admin/generators/metabox-generator.php:222, framework/admin/customizer/controls/mk-upload/class-mk-upload-control.php:76
+#: views/widgets/widgets-video.php:91, components/shortcodes/mk_flexslider/vc_map.php:70, components/shortcodes/mk_image_slideshow/vc_map.php:26, components/shortcodes/mk_swipe_slideshow/vc_map.php:27, components/shortcodes/vc_column/vc_map.php:64, components/shortcodes/vc_column/vc_map.php:109, framework/admin/generators/metabox-generator.php:222, framework/admin/customizer/controls/mk-upload/class-mk-upload-control.php:76
 msgid "Width"
 msgstr ""
 
@@ -3082,7 +3078,7 @@ msgstr ""
 msgid "Powerful Google Maps element."
 msgstr ""
 
-#: components/shortcodes/mk_advanced_gmaps/vc_map.php:12, components/shortcodes/mk_contact_form/vc_map.php:15, components/shortcodes/mk_contact_info/vc_map.php:7, components/shortcodes/mk_flickr/vc_map.php:8, components/shortcodes/mk_social_networks/vc_map.php:8, components/shortcodes/vc_twitter/vc_map.php:8, components/shortcodes/vc_video/vc_map.php:8
+#: components/shortcodes/mk_advanced_gmaps/vc_map.php:12, components/shortcodes/mk_contact_form/vc_map.php:15, components/shortcodes/mk_contact_info/vc_map.php:8, components/shortcodes/mk_flickr/vc_map.php:8, components/shortcodes/mk_social_networks/vc_map.php:8, components/shortcodes/vc_twitter/vc_map.php:8, components/shortcodes/vc_video/vc_map.php:8
 msgid "Social"
 msgstr ""
 
@@ -3238,7 +3234,7 @@ msgstr ""
 msgid "Custom Map Styles"
 msgstr ""
 
-#: components/shortcodes/mk_advanced_gmaps/vc_map.php:256, components/shortcodes/mk_advanced_gmaps/vc_map.php:281, components/shortcodes/mk_page_section/vc_map.php:194, components/shortcodes/mk_page_section/vc_map.php:559, components/shortcodes/mk_photo_album/vc_map.php:61, components/shortcodes/mk_photo_album/vc_map.php:73, components/shortcodes/mk_photo_album/vc_map.php:85, components/shortcodes/mk_photo_album/vc_map.php:215, components/shortcodes/mk_photo_album/vc_map.php:334, components/shortcodes/mk_slideshow_box/vc_map.php:113, components/shortcodes/mk_slideshow_box/vc_map.php:123, components/shortcodes/vc_row/vc_map.php:160, components/shortcodes/vc_row_inner/vc_map.php:53, framework/admin/control-panel/logic/system-messages/js-messages-lib.php:22
+#: components/shortcodes/mk_advanced_gmaps/vc_map.php:256, components/shortcodes/mk_advanced_gmaps/vc_map.php:281, components/shortcodes/mk_page_section/vc_map.php:194, components/shortcodes/mk_page_section/vc_map.php:559, components/shortcodes/mk_photo_album/vc_map.php:61, components/shortcodes/mk_photo_album/vc_map.php:73, components/shortcodes/mk_photo_album/vc_map.php:85, components/shortcodes/mk_photo_album/vc_map.php:215, components/shortcodes/mk_photo_album/vc_map.php:334, components/shortcodes/mk_slideshow_box/vc_map.php:113, components/shortcodes/mk_slideshow_box/vc_map.php:123, components/shortcodes/vc_row/vc_map.php:160, components/shortcodes/vc_row_inner/vc_map.php:55, framework/admin/control-panel/logic/system-messages/js-messages-lib.php:22
 msgid "Yes"
 msgstr ""
 
@@ -3278,11 +3274,11 @@ msgstr ""
 msgid "Shifts lightness of colors by a percentage of the original value if decreasing and a percentage of the remaining value if increasing. Valid values: [-100, 100]."
 msgstr ""
 
-#: components/shortcodes/mk_advanced_gmaps/vc_map.php:341, components/shortcodes/mk_animated_columns/vc_map.php:176, components/shortcodes/mk_audio/vc_map.php:48, components/shortcodes/mk_banner_builder/vc_map.php:106, components/shortcodes/mk_blockquote/vc_map.php:128, components/shortcodes/mk_blog/vc_map.php:341, components/shortcodes/mk_blog_carousel/vc_map.php:136, components/shortcodes/mk_blog_showcase/vc_map.php:91, components/shortcodes/mk_blog_teaser/vc_map.php:65, components/shortcodes/mk_button/vc_map.php:198, components/shortcodes/mk_button_gradient/vc_map.php:219, components/shortcodes/mk_category/vc_map.php:80, components/shortcodes/mk_chart/vc_map.php:187, components/shortcodes/mk_circle_image/vc_map.php:46, components/shortcodes/mk_clients/vc_map.php:186, components/shortcodes/mk_contact_form/vc_map.php:203, components/shortcodes/mk_contact_info/vc_map.php:67, components/shortcodes/mk_content_box/vc_map.php:34, components/shortcodes/mk_countdown/vc_map.php:59, components/shortcodes/mk_custom_box/vc_map.php:76, components/shortcodes/mk_custom_list/vc_map.php:69, components/shortcodes/mk_custom_sidebar/vc_map.php:19, components/shortcodes/mk_divider/vc_map.php:263, components/shortcodes/mk_dropcaps/vc_map.php:91, components/shortcodes/mk_edge_one_pager/vc_map.php:54, components/shortcodes/mk_edge_slider/vc_map.php:172, components/shortcodes/mk_employees/vc_map.php:213, components/shortcodes/mk_fancy_title/vc_map.php:336, components/shortcodes/mk_faq/vc_map.php:107, components/shortcodes/mk_flexslider/vc_map.php:160, components/shortcodes/mk_flickr/vc_map.php:87, components/shortcodes/mk_flipbox/vc_map.php:279, components/shortcodes/mk_font_icons/vc_map.php:257, components/shortcodes/mk_fullwidth_slideshow/vc_map.php:158, components/shortcodes/mk_gallery/vc_map.php:262, components/shortcodes/mk_header/vc_map.php:146, components/shortcodes/mk_highlight/vc_map.php:49, components/shortcodes/mk_icon_box/vc_map.php:209, components/shortcodes/mk_icon_box2/vc_map.php:247, components/shortcodes/mk_icon_box_gradient/vc_map.php:282, components/shortcodes/mk_image/vc_map.php:195, components/shortcodes/mk_imagebox/vc_map.php:104, components/shortcodes/mk_imagebox_item/vc_map.php:191, components/shortcodes/mk_image_slideshow/vc_map.php:124, components/shortcodes/mk_image_switch/vc_map.php:103, components/shortcodes/mk_laptop_slideshow/vc_map.php:70, components/shortcodes/mk_layerslider/vc_map.php:72, components/shortcodes/mk_lcd_slideshow/vc_map.php:57, components/shortcodes/mk_message_box/vc_map.php:34, components/shortcodes/mk_milestone/vc_map.php:158, components/shortcodes/mk_mini_callout/vc_map.php:42, components/shortcodes/mk_moving_image/vc_map.php:59, components/shortcodes/mk_news/vc_map.php:116, components/shortcodes/mk_news_tab/vc_map.php:37, components/shortcodes/mk_ornamental_title/vc_map.php:240, components/shortcodes/mk_page_section/vc_map.php:640, components/shortcodes/mk_page_section/vc_map.php:701, components/shortcodes/mk_page_section/vc_map.php:720, components/shortcodes/mk_page_title_box/vc_map.php:434, components/shortcodes/mk_photo_album/vc_map.php:195, components/shortcodes/mk_photo_roller/vc_map.php:69, components/shortcodes/mk_portfolio/vc_map.php:409, components/shortcodes/mk_portfolio_carousel/vc_map.php:197, components/shortcodes/mk_pricing_table/vc_map.php:71, components/shortcodes/mk_pricing_table_2/vc_map.php:61, components/shortcodes/mk_products/vc_map.php:168, components/shortcodes/mk_revslider/vc_map.php:34, components/shortcodes/mk_skill_meter/vc_map.php:71, components/shortcodes/mk_skill_meter_chart/vc_map.php:218, components/shortcodes/mk_slideshow_box/vc_map.php:176, components/shortcodes/mk_social_networks/vc_map.php:332, components/shortcodes/mk_steps/vc_map.php:185, components/shortcodes/mk_subscribe/vc_map.php:65, components/shortcodes/mk_swipe_slideshow/vc_map.php:114, components/shortcodes/mk_table/vc_map.php:78, components/shortcodes/mk_tab_slider/vc_map.php:71, components/shortcodes/mk_testimonials/vc_map.php:235, components/shortcodes/mk_theatre_slider/vc_map.php:160, components/shortcodes/mk_title_box/vc_map.php:153, components/shortcodes/mk_toggle/vc_map.php:50, components/shortcodes/mk_tooltip/vc_map.php:34, components/shortcodes/mk_woocommerce_recent_carousel/vc_map.php:134, components/shortcodes/vc_accordions/vc_map.php:79, components/shortcodes/vc_column/vc_map.php:51, components/shortcodes/vc_column/vc_map.php:93, components/shortcodes/vc_column_text/vc_map.php:60, components/shortcodes/vc_row/vc_map.php:165, components/shortcodes/vc_row_inner/vc_map.php:57, components/shortcodes/vc_tabs/vc_map.php:84, components/shortcodes/vc_twitter/vc_map.php:52, components/shortcodes/vc_video/vc_map.php:229
+#: components/shortcodes/mk_advanced_gmaps/vc_map.php:341, components/shortcodes/mk_animated_columns/vc_map.php:176, components/shortcodes/mk_audio/vc_map.php:48, components/shortcodes/mk_banner_builder/vc_map.php:106, components/shortcodes/mk_blockquote/vc_map.php:128, components/shortcodes/mk_blog/vc_map.php:341, components/shortcodes/mk_blog_carousel/vc_map.php:136, components/shortcodes/mk_blog_showcase/vc_map.php:91, components/shortcodes/mk_blog_teaser/vc_map.php:65, components/shortcodes/mk_button/vc_map.php:198, components/shortcodes/mk_button_gradient/vc_map.php:219, components/shortcodes/mk_category/vc_map.php:80, components/shortcodes/mk_chart/vc_map.php:187, components/shortcodes/mk_circle_image/vc_map.php:46, components/shortcodes/mk_clients/vc_map.php:186, components/shortcodes/mk_contact_form/vc_map.php:203, components/shortcodes/mk_contact_info/vc_map.php:68, components/shortcodes/mk_content_box/vc_map.php:34, components/shortcodes/mk_countdown/vc_map.php:59, components/shortcodes/mk_custom_box/vc_map.php:76, components/shortcodes/mk_custom_list/vc_map.php:69, components/shortcodes/mk_custom_sidebar/vc_map.php:19, components/shortcodes/mk_divider/vc_map.php:263, components/shortcodes/mk_dropcaps/vc_map.php:91, components/shortcodes/mk_edge_one_pager/vc_map.php:54, components/shortcodes/mk_edge_slider/vc_map.php:172, components/shortcodes/mk_employees/vc_map.php:213, components/shortcodes/mk_fancy_title/vc_map.php:336, components/shortcodes/mk_faq/vc_map.php:107, components/shortcodes/mk_flexslider/vc_map.php:160, components/shortcodes/mk_flickr/vc_map.php:87, components/shortcodes/mk_flipbox/vc_map.php:279, components/shortcodes/mk_font_icons/vc_map.php:257, components/shortcodes/mk_fullwidth_slideshow/vc_map.php:158, components/shortcodes/mk_gallery/vc_map.php:262, components/shortcodes/mk_header/vc_map.php:146, components/shortcodes/mk_highlight/vc_map.php:49, components/shortcodes/mk_icon_box/vc_map.php:209, components/shortcodes/mk_icon_box2/vc_map.php:247, components/shortcodes/mk_icon_box_gradient/vc_map.php:282, components/shortcodes/mk_image/vc_map.php:195, components/shortcodes/mk_imagebox/vc_map.php:104, components/shortcodes/mk_imagebox_item/vc_map.php:191, components/shortcodes/mk_image_slideshow/vc_map.php:124, components/shortcodes/mk_image_switch/vc_map.php:103, components/shortcodes/mk_laptop_slideshow/vc_map.php:70, components/shortcodes/mk_layerslider/vc_map.php:72, components/shortcodes/mk_lcd_slideshow/vc_map.php:57, components/shortcodes/mk_message_box/vc_map.php:34, components/shortcodes/mk_milestone/vc_map.php:158, components/shortcodes/mk_mini_callout/vc_map.php:42, components/shortcodes/mk_moving_image/vc_map.php:59, components/shortcodes/mk_news/vc_map.php:116, components/shortcodes/mk_news_tab/vc_map.php:37, components/shortcodes/mk_ornamental_title/vc_map.php:240, components/shortcodes/mk_page_section/vc_map.php:640, components/shortcodes/mk_page_section/vc_map.php:701, components/shortcodes/mk_page_section/vc_map.php:720, components/shortcodes/mk_page_title_box/vc_map.php:434, components/shortcodes/mk_photo_album/vc_map.php:195, components/shortcodes/mk_photo_roller/vc_map.php:69, components/shortcodes/mk_portfolio/vc_map.php:409, components/shortcodes/mk_portfolio_carousel/vc_map.php:197, components/shortcodes/mk_pricing_table/vc_map.php:71, components/shortcodes/mk_pricing_table_2/vc_map.php:61, components/shortcodes/mk_products/vc_map.php:168, components/shortcodes/mk_revslider/vc_map.php:34, components/shortcodes/mk_skill_meter/vc_map.php:71, components/shortcodes/mk_skill_meter_chart/vc_map.php:218, components/shortcodes/mk_slideshow_box/vc_map.php:176, components/shortcodes/mk_social_networks/vc_map.php:332, components/shortcodes/mk_steps/vc_map.php:185, components/shortcodes/mk_subscribe/vc_map.php:65, components/shortcodes/mk_swipe_slideshow/vc_map.php:114, components/shortcodes/mk_table/vc_map.php:78, components/shortcodes/mk_tab_slider/vc_map.php:71, components/shortcodes/mk_testimonials/vc_map.php:235, components/shortcodes/mk_theatre_slider/vc_map.php:160, components/shortcodes/mk_title_box/vc_map.php:153, components/shortcodes/mk_toggle/vc_map.php:50, components/shortcodes/mk_tooltip/vc_map.php:34, components/shortcodes/mk_woocommerce_recent_carousel/vc_map.php:134, components/shortcodes/vc_accordions/vc_map.php:79, components/shortcodes/vc_column/vc_map.php:52, components/shortcodes/vc_column/vc_map.php:96, components/shortcodes/vc_column_text/vc_map.php:61, components/shortcodes/vc_row/vc_map.php:165, components/shortcodes/vc_row_inner/vc_map.php:60, components/shortcodes/vc_tabs/vc_map.php:84, components/shortcodes/vc_twitter/vc_map.php:52, components/shortcodes/vc_video/vc_map.php:229
 msgid "Extra class name"
 msgstr ""
 
-#: components/shortcodes/mk_advanced_gmaps/vc_map.php:344, components/shortcodes/mk_contact_form/vc_map.php:206, components/shortcodes/mk_contact_info/vc_map.php:70, components/shortcodes/mk_countdown/vc_map.php:62, components/shortcodes/mk_custom_sidebar/vc_map.php:22, components/shortcodes/mk_flickr/vc_map.php:90, components/shortcodes/mk_icon_box/vc_map.php:212, components/shortcodes/mk_table/vc_map.php:81, components/shortcodes/vc_video/vc_map.php:232
+#: components/shortcodes/mk_advanced_gmaps/vc_map.php:344, components/shortcodes/mk_contact_form/vc_map.php:206, components/shortcodes/mk_contact_info/vc_map.php:71, components/shortcodes/mk_countdown/vc_map.php:62, components/shortcodes/mk_custom_sidebar/vc_map.php:22, components/shortcodes/mk_flickr/vc_map.php:90, components/shortcodes/mk_icon_box/vc_map.php:212, components/shortcodes/mk_table/vc_map.php:81, components/shortcodes/vc_video/vc_map.php:232
 msgid "If you wish to style particular content element differently, then use this field to add a class name and then refer to it in your CSS file."
 msgstr ""
 
@@ -3982,11 +3978,11 @@ msgstr ""
 msgid "Align"
 msgstr ""
 
-#: components/shortcodes/mk_button/vc_map.php:130, components/shortcodes/mk_button_gradient/vc_map.php:151, components/shortcodes/mk_custom_list/vc_map.php:59, components/shortcodes/mk_fancy_title/vc_map.php:315, components/shortcodes/mk_fancy_title/vc_map.php:326, components/shortcodes/mk_font_icons/vc_map.php:235, components/shortcodes/mk_header/vc_map.php:28, components/shortcodes/mk_image/vc_map.php:176, components/shortcodes/mk_image_switch/vc_map.php:78, components/shortcodes/mk_moving_image/vc_map.php:37, components/shortcodes/mk_ornamental_title/vc_map.php:182, components/shortcodes/mk_page_section/vc_map.php:26, components/shortcodes/mk_page_title_box/vc_map.php:242, components/shortcodes/mk_portfolio/vc_map.php:218, components/shortcodes/mk_social_networks/vc_map.php:115, components/shortcodes/mk_theatre_slider/vc_map.php:141, components/shortcodes/mk_title_box/vc_map.php:145, components/shortcodes/vc_column_text/vc_map.php:41, framework/admin/theme-options/masterkey.php:2015, framework/admin/theme-options/masterkey.php:2042
+#: components/shortcodes/mk_button/vc_map.php:130, components/shortcodes/mk_button_gradient/vc_map.php:151, components/shortcodes/mk_custom_list/vc_map.php:59, components/shortcodes/mk_fancy_title/vc_map.php:315, components/shortcodes/mk_fancy_title/vc_map.php:326, components/shortcodes/mk_font_icons/vc_map.php:235, components/shortcodes/mk_header/vc_map.php:28, components/shortcodes/mk_image/vc_map.php:176, components/shortcodes/mk_image_switch/vc_map.php:78, components/shortcodes/mk_moving_image/vc_map.php:37, components/shortcodes/mk_ornamental_title/vc_map.php:182, components/shortcodes/mk_page_section/vc_map.php:26, components/shortcodes/mk_page_title_box/vc_map.php:242, components/shortcodes/mk_portfolio/vc_map.php:218, components/shortcodes/mk_social_networks/vc_map.php:115, components/shortcodes/mk_theatre_slider/vc_map.php:141, components/shortcodes/mk_title_box/vc_map.php:145, components/shortcodes/vc_column_text/vc_map.php:42, framework/admin/theme-options/masterkey.php:2015, framework/admin/theme-options/masterkey.php:2042
 msgid "Center"
 msgstr ""
 
-#: components/shortcodes/mk_button/vc_map.php:131, components/shortcodes/mk_button_gradient/vc_map.php:152, components/shortcodes/mk_category/vc_map.php:173, components/shortcodes/mk_category/vc_map.php:187, components/shortcodes/mk_custom_box/vc_map.php:291, components/shortcodes/mk_custom_box/vc_map.php:304, components/shortcodes/mk_custom_box/vc_map.php:668, components/shortcodes/mk_fancy_title/vc_map.php:254, components/shortcodes/mk_ornamental_title/vc_map.php:146, components/shortcodes/mk_page_section/vc_map.php:73, components/shortcodes/mk_page_section/vc_map.php:506, components/shortcodes/mk_photo_album/vc_map.php:226, components/shortcodes/mk_photo_album/vc_map.php:402, components/shortcodes/mk_portfolio/vc_map.php:152, components/shortcodes/mk_subscribe/vc_map.php:138, components/shortcodes/mk_subscribe/vc_map.php:203, components/shortcodes/mk_testimonials/vc_map.php:213, components/shortcodes/vc_column/vc_map.php:37, components/shortcodes/vc_row/vc_map.php:90, components/shortcodes/vc_row/vc_map.php:107, components/shortcodes/vc_video/vc_map.php:202, framework/admin/theme-options/masterkey.php:1644, framework/admin/theme-options/masterkey.php:1686, framework/admin/theme-options/masterkey.php:1728, framework/admin/theme-options/masterkey.php:1770, framework/admin/theme-options/masterkey.php:1812, framework/admin/theme-options/masterkey.php:1854, framework/admin/theme-options/masterkey.php:2312, framework/admin/theme-options/masterkey.php:2402, framework/admin/theme-options/masterkey.php:2853, framework/admin/theme-options/masterkey.php:2909, framework/admin/theme-options/masterkey.php:2944, framework/admin/theme-options/masterkey.php:3029, framework/admin/theme-options/masterkey.php:3105, framework/admin/theme-options/masterkey.php:3378, framework/admin/theme-options/masterkey.php:3452, framework/admin/theme-options/masterkey.php:3770, framework/admin/theme-options/masterkey.php:3992, framework/admin/theme-options/masterkey.php:4279, framework/admin/customizer/settings/shop/product-list/dlg-settings.php:119
+#: components/shortcodes/mk_button/vc_map.php:131, components/shortcodes/mk_button_gradient/vc_map.php:152, components/shortcodes/mk_category/vc_map.php:173, components/shortcodes/mk_category/vc_map.php:187, components/shortcodes/mk_custom_box/vc_map.php:291, components/shortcodes/mk_custom_box/vc_map.php:304, components/shortcodes/mk_custom_box/vc_map.php:668, components/shortcodes/mk_fancy_title/vc_map.php:254, components/shortcodes/mk_ornamental_title/vc_map.php:146, components/shortcodes/mk_page_section/vc_map.php:73, components/shortcodes/mk_page_section/vc_map.php:506, components/shortcodes/mk_photo_album/vc_map.php:226, components/shortcodes/mk_photo_album/vc_map.php:402, components/shortcodes/mk_portfolio/vc_map.php:152, components/shortcodes/mk_subscribe/vc_map.php:138, components/shortcodes/mk_subscribe/vc_map.php:203, components/shortcodes/mk_testimonials/vc_map.php:213, components/shortcodes/vc_column/vc_map.php:38, components/shortcodes/vc_row/vc_map.php:90, components/shortcodes/vc_row/vc_map.php:107, components/shortcodes/vc_video/vc_map.php:202, framework/admin/theme-options/masterkey.php:1644, framework/admin/theme-options/masterkey.php:1686, framework/admin/theme-options/masterkey.php:1728, framework/admin/theme-options/masterkey.php:1770, framework/admin/theme-options/masterkey.php:1812, framework/admin/theme-options/masterkey.php:1854, framework/admin/theme-options/masterkey.php:2312, framework/admin/theme-options/masterkey.php:2402, framework/admin/theme-options/masterkey.php:2853, framework/admin/theme-options/masterkey.php:2909, framework/admin/theme-options/masterkey.php:2944, framework/admin/theme-options/masterkey.php:3029, framework/admin/theme-options/masterkey.php:3105, framework/admin/theme-options/masterkey.php:3378, framework/admin/theme-options/masterkey.php:3452, framework/admin/theme-options/masterkey.php:3770, framework/admin/theme-options/masterkey.php:3992, framework/admin/theme-options/masterkey.php:4279, framework/admin/customizer/settings/shop/product-list/dlg-settings.php:119
 msgid "None"
 msgstr ""
 
@@ -4014,7 +4010,7 @@ msgstr ""
 msgid "Margin Top"
 msgstr ""
 
-#: components/shortcodes/mk_button/vc_map.php:176, components/shortcodes/mk_button_gradient/vc_map.php:197, components/shortcodes/mk_clients/vc_map.php:174, components/shortcodes/mk_custom_box/vc_map.php:52, components/shortcodes/mk_gallery/vc_map.php:128, components/shortcodes/mk_icon_box/vc_map.php:196, components/shortcodes/mk_image/vc_map.php:182, components/shortcodes/mk_image_slideshow/vc_map.php:59, components/shortcodes/mk_image_switch/vc_map.php:90, components/shortcodes/mk_ornamental_title/vc_map.php:227, components/shortcodes/mk_page_section/vc_map.php:543, components/shortcodes/mk_theatre_slider/vc_map.php:148, components/shortcodes/mk_title_box/vc_map.php:115, components/shortcodes/vc_column_text/vc_map.php:47
+#: components/shortcodes/mk_button/vc_map.php:176, components/shortcodes/mk_button_gradient/vc_map.php:197, components/shortcodes/mk_clients/vc_map.php:174, components/shortcodes/mk_custom_box/vc_map.php:52, components/shortcodes/mk_gallery/vc_map.php:128, components/shortcodes/mk_icon_box/vc_map.php:196, components/shortcodes/mk_image/vc_map.php:182, components/shortcodes/mk_image_slideshow/vc_map.php:59, components/shortcodes/mk_image_switch/vc_map.php:90, components/shortcodes/mk_ornamental_title/vc_map.php:227, components/shortcodes/mk_page_section/vc_map.php:543, components/shortcodes/mk_theatre_slider/vc_map.php:148, components/shortcodes/mk_title_box/vc_map.php:115, components/shortcodes/vc_column_text/vc_map.php:48
 msgid "Margin Bottom"
 msgstr ""
 
@@ -4322,7 +4318,7 @@ msgstr ""
 msgid "Optionally you can link your image."
 msgstr ""
 
-#: components/shortcodes/mk_circle_image/vc_map.php:49, components/shortcodes/mk_content_box/vc_map.php:37, components/shortcodes/mk_custom_box/vc_map.php:79, components/shortcodes/mk_image/vc_map.php:198, components/shortcodes/mk_image_switch/vc_map.php:106, components/shortcodes/mk_mini_callout/vc_map.php:45, components/shortcodes/mk_moving_image/vc_map.php:62, components/shortcodes/mk_page_section/vc_map.php:723, components/shortcodes/mk_page_title_box/vc_map.php:437, components/shortcodes/mk_photo_roller/vc_map.php:72, components/shortcodes/vc_accordions/vc_map.php:81, components/shortcodes/vc_column/vc_map.php:53, components/shortcodes/vc_column_text/vc_map.php:63, components/shortcodes/vc_row/vc_map.php:167, components/shortcodes/vc_tabs/vc_map.php:87, components/shortcodes/vc_twitter/vc_map.php:55
+#: components/shortcodes/mk_circle_image/vc_map.php:49, components/shortcodes/mk_content_box/vc_map.php:37, components/shortcodes/mk_custom_box/vc_map.php:79, components/shortcodes/mk_image/vc_map.php:198, components/shortcodes/mk_image_switch/vc_map.php:106, components/shortcodes/mk_mini_callout/vc_map.php:45, components/shortcodes/mk_moving_image/vc_map.php:62, components/shortcodes/mk_page_section/vc_map.php:723, components/shortcodes/mk_page_title_box/vc_map.php:437, components/shortcodes/mk_photo_roller/vc_map.php:72, components/shortcodes/vc_accordions/vc_map.php:81, components/shortcodes/vc_column/vc_map.php:54, components/shortcodes/vc_column_text/vc_map.php:64, components/shortcodes/vc_row/vc_map.php:167, components/shortcodes/vc_tabs/vc_map.php:87, components/shortcodes/vc_twitter/vc_map.php:55
 msgid "If you wish to style particular content element differently, then use this field to add a class name and then refer to it in your css file."
 msgstr ""
 
@@ -4338,7 +4334,7 @@ msgstr ""
 msgid "Carousel"
 msgstr ""
 
-#: components/shortcodes/mk_clients/vc_map.php:17, components/shortcodes/mk_employees/vc_map.php:24, components/shortcodes/vc_column/vc_map.php:19, components/shortcodes/vc_column/vc_map.php:81
+#: components/shortcodes/mk_clients/vc_map.php:17, components/shortcodes/mk_employees/vc_map.php:24, components/shortcodes/vc_column/vc_map.php:20, components/shortcodes/vc_column/vc_map.php:84
 msgid "Column"
 msgstr ""
 
@@ -4494,35 +4490,35 @@ msgstr ""
 msgid "GDPR Consent Checkbox Text"
 msgstr ""
 
-#: components/shortcodes/mk_contact_info/vc_map.php:3
+#: components/shortcodes/mk_contact_info/vc_map.php:4
 msgid "Contact Info"
 msgstr ""
 
-#: components/shortcodes/mk_contact_info/vc_map.php:8
+#: components/shortcodes/mk_contact_info/vc_map.php:9
 msgid "Adds Contact info details."
 msgstr ""
 
-#: components/shortcodes/mk_contact_info/vc_map.php:18, components/shortcodes/mk_contact_form/styles/line.php:43
+#: components/shortcodes/mk_contact_info/vc_map.php:19, components/shortcodes/mk_contact_form/styles/line.php:43
 msgid "Phone"
 msgstr ""
 
-#: components/shortcodes/mk_contact_info/vc_map.php:24
+#: components/shortcodes/mk_contact_info/vc_map.php:25
 msgid "Fax"
 msgstr ""
 
-#: components/shortcodes/mk_contact_info/vc_map.php:36
+#: components/shortcodes/mk_contact_info/vc_map.php:37
 msgid "Address"
 msgstr ""
 
-#: components/shortcodes/mk_contact_info/vc_map.php:42
+#: components/shortcodes/mk_contact_info/vc_map.php:43
 msgid "Person"
 msgstr ""
 
-#: components/shortcodes/mk_contact_info/vc_map.php:48
+#: components/shortcodes/mk_contact_info/vc_map.php:49
 msgid "Company"
 msgstr ""
 
-#: components/shortcodes/mk_contact_info/vc_map.php:54
+#: components/shortcodes/mk_contact_info/vc_map.php:55
 msgid "Skype Username"
 msgstr ""
 
@@ -5726,7 +5722,7 @@ msgstr ""
 msgid "Powerful & versatile Icon Boxes."
 msgstr ""
 
-#: components/shortcodes/mk_icon_box/vc_map.php:49, components/shortcodes/mk_icon_box2/vc_map.php:208, components/shortcodes/mk_icon_box_gradient/vc_map.php:251, components/shortcodes/mk_mini_callout/vc_map.php:23, components/shortcodes/vc_column_text/vc_map.php:17
+#: components/shortcodes/mk_icon_box/vc_map.php:49, components/shortcodes/mk_icon_box2/vc_map.php:208, components/shortcodes/mk_icon_box_gradient/vc_map.php:251, components/shortcodes/mk_mini_callout/vc_map.php:23, components/shortcodes/vc_column_text/vc_map.php:18
 msgid "Enter your content."
 msgstr ""
 
@@ -6394,7 +6390,7 @@ msgstr ""
 msgid "Title as"
 msgstr ""
 
-#: components/shortcodes/mk_ornamental_title/vc_map.php:43, components/shortcodes/mk_tooltip/vc_map.php:12, components/shortcodes/vc_column_text/vc_map.php:14, framework/admin/theme-options/masterkey.php:2836, framework/admin/theme-options/masterkey.php:3263, framework/admin/theme-options/masterkey.php:3357, framework/admin/theme-options/masterkey.php:3490, framework/admin/theme-options/masterkey.php:3749, framework/admin/theme-options/masterkey.php:3898, framework/admin/theme-options/masterkey.php:3975
+#: components/shortcodes/mk_ornamental_title/vc_map.php:43, components/shortcodes/mk_tooltip/vc_map.php:12, components/shortcodes/vc_column_text/vc_map.php:15, framework/admin/theme-options/masterkey.php:2836, framework/admin/theme-options/masterkey.php:3263, framework/admin/theme-options/masterkey.php:3357, framework/admin/theme-options/masterkey.php:3490, framework/admin/theme-options/masterkey.php:3749, framework/admin/theme-options/masterkey.php:3898, framework/admin/theme-options/masterkey.php:3975
 msgid "Text"
 msgstr ""
 
@@ -6438,7 +6434,7 @@ msgstr ""
 msgid "How much empty space would you like to add?"
 msgstr ""
 
-#: components/shortcodes/mk_page_section/vc_map.php:3, framework/plugin-integrations/visual-composer/page-section.php:51
+#: components/shortcodes/mk_page_section/vc_map.php:3, framework/plugin-integrations/visual-composer/page-section.php:52
 msgid "Page Section"
 msgstr ""
 
@@ -6486,35 +6482,35 @@ msgstr ""
 msgid "Alternatively, this image could be shown in mobile devices with portrait orientation. It is recommended to use images with portrait ratio such as 2:3. "
 msgstr ""
 
-#: components/shortcodes/mk_page_section/vc_map.php:70, components/shortcodes/vc_column/vc_map.php:34
+#: components/shortcodes/mk_page_section/vc_map.php:70, components/shortcodes/vc_column/vc_map.php:35
 msgid "Background Blend Modes"
 msgstr ""
 
-#: components/shortcodes/mk_page_section/vc_map.php:74, components/shortcodes/vc_column/vc_map.php:38
+#: components/shortcodes/mk_page_section/vc_map.php:74, components/shortcodes/vc_column/vc_map.php:39
 msgid "Multiply"
 msgstr ""
 
-#: components/shortcodes/mk_page_section/vc_map.php:75, components/shortcodes/vc_column/vc_map.php:39
+#: components/shortcodes/mk_page_section/vc_map.php:75, components/shortcodes/vc_column/vc_map.php:40
 msgid "Screen"
 msgstr ""
 
-#: components/shortcodes/mk_page_section/vc_map.php:76, components/shortcodes/vc_column/vc_map.php:40
+#: components/shortcodes/mk_page_section/vc_map.php:76, components/shortcodes/vc_column/vc_map.php:41
 msgid "Overlay"
 msgstr ""
 
-#: components/shortcodes/mk_page_section/vc_map.php:77, components/shortcodes/vc_column/vc_map.php:41
+#: components/shortcodes/mk_page_section/vc_map.php:77, components/shortcodes/vc_column/vc_map.php:42
 msgid "Darken"
 msgstr ""
 
-#: components/shortcodes/mk_page_section/vc_map.php:78, components/shortcodes/vc_column/vc_map.php:42
+#: components/shortcodes/mk_page_section/vc_map.php:78, components/shortcodes/vc_column/vc_map.php:43
 msgid "Lighten"
 msgstr ""
 
-#: components/shortcodes/mk_page_section/vc_map.php:79, components/shortcodes/vc_column/vc_map.php:43
+#: components/shortcodes/mk_page_section/vc_map.php:79, components/shortcodes/vc_column/vc_map.php:44
 msgid "Soft Light"
 msgstr ""
 
-#: components/shortcodes/mk_page_section/vc_map.php:80, components/shortcodes/vc_column/vc_map.php:44
+#: components/shortcodes/mk_page_section/vc_map.php:80, components/shortcodes/vc_column/vc_map.php:45
 msgid "Luminosity"
 msgstr ""
 
@@ -6854,7 +6850,7 @@ msgstr ""
 msgid "This option sets whether the background image is fixed or scrolls with the rest of the page. <a href=\"http://www.w3schools.com/CSSref/pr_background-attachment.asp\">Read More</a>"
 msgstr ""
 
-#: components/shortcodes/mk_page_title_box/vc_map.php:238, components/shortcodes/vc_column_text/vc_map.php:35, framework/admin/theme-options/masterkey.php:2035
+#: components/shortcodes/mk_page_title_box/vc_map.php:238, components/shortcodes/vc_column_text/vc_map.php:36, framework/admin/theme-options/masterkey.php:2035
 msgid "Text Align"
 msgstr ""
 
@@ -8354,71 +8350,71 @@ msgstr ""
 msgid "12 columns - 1/1"
 msgstr ""
 
-#: components/shortcodes/vc_column/vc_map.php:30
+#: components/shortcodes/vc_column/vc_map.php:31
 msgid "You can optionally add border color to columns."
 msgstr ""
 
-#: components/shortcodes/vc_column/vc_map.php:57
+#: components/shortcodes/vc_column/vc_map.php:58
 msgid "Css"
 msgstr ""
 
-#: components/shortcodes/vc_column/vc_map.php:59
+#: components/shortcodes/vc_column/vc_map.php:60
 msgid "Design options"
 msgstr ""
 
-#: components/shortcodes/vc_column/vc_map.php:66, components/shortcodes/vc_column/vc_map.php:109, components/shortcodes/vc_column/vc_map.php:117
+#: components/shortcodes/vc_column/vc_map.php:67, components/shortcodes/vc_column/vc_map.php:112, components/shortcodes/vc_column/vc_map.php:120
 msgid "Responsive Options"
 msgstr ""
 
-#: components/shortcodes/vc_column/vc_map.php:67, components/shortcodes/vc_column/vc_map.php:110
+#: components/shortcodes/vc_column/vc_map.php:68, components/shortcodes/vc_column/vc_map.php:113
 msgid "Select column width."
 msgstr ""
 
-#: components/shortcodes/vc_column/vc_map.php:72, components/shortcodes/vc_column/vc_map.php:115
+#: components/shortcodes/vc_column/vc_map.php:73, components/shortcodes/vc_column/vc_map.php:118
 msgid "Responsiveness"
 msgstr ""
 
-#: components/shortcodes/vc_column/vc_map.php:74
+#: components/shortcodes/vc_column/vc_map.php:75
 msgid "Width & Responsiveness"
 msgstr ""
 
-#: components/shortcodes/vc_column/vc_map.php:75, components/shortcodes/vc_column/vc_map.php:118
+#: components/shortcodes/vc_column/vc_map.php:76, components/shortcodes/vc_column/vc_map.php:121
 msgid "Adjust column for different screen sizes. Control width, offset and visibility settings."
 msgstr ""
 
-#: components/shortcodes/vc_column/vc_map.php:96, components/shortcodes/vc_row_inner/vc_map.php:59
+#: components/shortcodes/vc_column/vc_map.php:99, components/shortcodes/vc_row_inner/vc_map.php:62
 msgid "Style particular content element differently - add a class name and refer to it in custom CSS."
 msgstr ""
 
-#: components/shortcodes/vc_column/vc_map.php:100, components/shortcodes/vc_row/vc_map.php:171, components/shortcodes/vc_row_inner/vc_map.php:63
+#: components/shortcodes/vc_column/vc_map.php:103, components/shortcodes/vc_row/vc_map.php:171, components/shortcodes/vc_row_inner/vc_map.php:66
 msgid "CSS box"
 msgstr ""
 
-#: components/shortcodes/vc_column/vc_map.php:102, components/shortcodes/vc_row/vc_map.php:173, components/shortcodes/vc_row_inner/vc_map.php:65
+#: components/shortcodes/vc_column/vc_map.php:105, components/shortcodes/vc_row/vc_map.php:173, components/shortcodes/vc_row_inner/vc_map.php:68
 msgid "Design Options"
 msgstr ""
 
-#: components/shortcodes/vc_column_text/vc_map.php:3
+#: components/shortcodes/vc_column_text/vc_map.php:4
 msgid "Text Block"
 msgstr ""
 
-#: components/shortcodes/vc_column_text/vc_map.php:16
+#: components/shortcodes/vc_column_text/vc_map.php:17
 msgid "<p>I am text block. Click edit button to change this text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>"
 msgstr ""
 
-#: components/shortcodes/vc_column_text/vc_map.php:24
+#: components/shortcodes/vc_column_text/vc_map.php:25
 msgid "You can optionally have global style title for this text block or leave this blank if you create your own title. Moreover you can disable this heading title's pattern divider using below option."
 msgstr ""
 
-#: components/shortcodes/vc_column_text/vc_map.php:28
+#: components/shortcodes/vc_column_text/vc_map.php:29
 msgid "Title Pattern?"
 msgstr ""
 
-#: components/shortcodes/vc_column_text/vc_map.php:31
+#: components/shortcodes/vc_column_text/vc_map.php:32
 msgid "If you want to remove the title pattern, disable this option."
 msgstr ""
 
-#: components/shortcodes/vc_row/vc_map.php:4, components/shortcodes/vc_row_inner/vc_map.php:4
+#: components/shortcodes/vc_row/vc_map.php:4, components/shortcodes/vc_row_inner/vc_map.php:5
 msgid "Row"
 msgstr ""
 
@@ -8426,7 +8422,7 @@ msgstr ""
 msgid "Full Width Row"
 msgstr ""
 
-#: components/shortcodes/vc_row/vc_map.php:19, components/shortcodes/vc_row_inner/vc_map.php:32
+#: components/shortcodes/vc_row/vc_map.php:19, components/shortcodes/vc_row_inner/vc_map.php:33
 msgid "When enabled, this row will no longer follow the main grid width and will stretch 100% to screen width."
 msgstr ""
 
@@ -8446,23 +8442,23 @@ msgstr ""
 msgid "When enabled, columns inside this row will stretch to the highest column."
 msgstr ""
 
-#: components/shortcodes/vc_row/vc_map.php:43, components/shortcodes/vc_row_inner/vc_map.php:22
+#: components/shortcodes/vc_row/vc_map.php:43, components/shortcodes/vc_row_inner/vc_map.php:23
 msgid "Attached Colums"
 msgstr ""
 
-#: components/shortcodes/vc_row/vc_map.php:46, components/shortcodes/vc_row_inner/vc_map.php:25
+#: components/shortcodes/vc_row/vc_map.php:46, components/shortcodes/vc_row_inner/vc_map.php:26
 msgid "When enabled, this option attachs child columns to each other. In other words columns inside this row will be stuck to each other."
 msgstr ""
 
-#: components/shortcodes/vc_row/vc_map.php:50, components/shortcodes/vc_row_inner/vc_map.php:36
+#: components/shortcodes/vc_row/vc_map.php:50, components/shortcodes/vc_row_inner/vc_map.php:37
 msgid "Column Paddings"
 msgstr ""
 
-#: components/shortcodes/vc_row/vc_map.php:57, components/shortcodes/vc_row_inner/vc_map.php:43
+#: components/shortcodes/vc_row/vc_map.php:57, components/shortcodes/vc_row_inner/vc_map.php:44
 msgid "This option creates pading space inside columns. This option will work when 'Attached Colums' option is enabled. Note that padding unit is by percent and will be applied to all directions."
 msgstr ""
 
-#: components/shortcodes/vc_row/vc_map.php:61, components/shortcodes/vc_row_inner/vc_map.php:16
+#: components/shortcodes/vc_row/vc_map.php:61, components/shortcodes/vc_row_inner/vc_map.php:17
 msgid "Row ID"
 msgstr ""
 
@@ -8510,27 +8506,27 @@ msgstr ""
 msgid "Enter parallax speed ratio (Note: Default value is 1.5, min value is 1)"
 msgstr ""
 
-#: components/shortcodes/vc_row/vc_map.php:156, components/shortcodes/vc_row_inner/vc_map.php:50
+#: components/shortcodes/vc_row/vc_map.php:156, components/shortcodes/vc_row_inner/vc_map.php:51
 msgid "Disable row"
 msgstr ""
 
-#: components/shortcodes/vc_row/vc_map.php:158, components/shortcodes/vc_row_inner/vc_map.php:52
+#: components/shortcodes/vc_row/vc_map.php:158, components/shortcodes/vc_row_inner/vc_map.php:53
 msgid "If checked the row won't be visible on the public side of your website. You can switch it back any time."
 msgstr ""
 
-#: components/shortcodes/vc_row_inner/vc_map.php:12
+#: components/shortcodes/vc_row_inner/vc_map.php:13
 msgid "Place content elements inside the row"
 msgstr ""
 
-#: components/shortcodes/vc_row_inner/vc_map.php:18
+#: components/shortcodes/vc_row_inner/vc_map.php:19
 msgid "Enter optional row ID. Make sure it is unique, and it is valid as w3c specification: %s (Must not have spaces)"
 msgstr ""
 
-#: components/shortcodes/vc_row_inner/vc_map.php:18
+#: components/shortcodes/vc_row_inner/vc_map.php:19
 msgid "link"
 msgstr ""
 
-#: components/shortcodes/vc_row_inner/vc_map.php:29
+#: components/shortcodes/vc_row_inner/vc_map.php:30
 msgid "Fullwidth Content"
 msgstr ""
 
@@ -11850,35 +11846,35 @@ msgstr ""
 msgid "Factor that slowdown the animation, the more the smoothier (default: 30)"
 msgstr ""
 
-#: framework/plugin-integrations/visual-composer/page-section.php:30
+#: framework/plugin-integrations/visual-composer/page-section.php:33
 msgid "Custom layout"
 msgstr ""
 
-#: framework/plugin-integrations/visual-composer/page-section.php:45
+#: framework/plugin-integrations/visual-composer/page-section.php:46
 msgid "Drag Page Section to reorder"
 msgstr ""
 
-#: framework/plugin-integrations/visual-composer/page-section.php:46
+#: framework/plugin-integrations/visual-composer/page-section.php:47
 msgid "Add column"
 msgstr ""
 
-#: framework/plugin-integrations/visual-composer/page-section.php:47
+#: framework/plugin-integrations/visual-composer/page-section.php:48
 msgid "Delete this Page Section"
 msgstr ""
 
-#: framework/plugin-integrations/visual-composer/page-section.php:48
+#: framework/plugin-integrations/visual-composer/page-section.php:49
 msgid "Edit this Page Section"
 msgstr ""
 
-#: framework/plugin-integrations/visual-composer/page-section.php:49
+#: framework/plugin-integrations/visual-composer/page-section.php:50
 msgid "Clone this Page Section"
 msgstr ""
 
-#: framework/plugin-integrations/visual-composer/page-section.php:51
+#: framework/plugin-integrations/visual-composer/page-section.php:52
 msgid "Theme Page Section Element"
 msgstr ""
 
-#: framework/plugin-integrations/visual-composer/page-section.php:51
+#: framework/plugin-integrations/visual-composer/page-section.php:52
 msgid "Toggle Page Section"
 msgstr ""
 

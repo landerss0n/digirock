@@ -6,7 +6,7 @@ include( $path . '/config.php' );
 
 wp_enqueue_script( 'wpb_composer_front_js' );
 
-$id = ! empty( $el_id ) ? (' id="' . $el_id . '"') : '';
+$id = ! empty( $el_id ) ? (' id="' . esc_attr( $el_id ) . '"') : '';
 
 $post_id = global_get_post_id();
 $page_layout = get_post_meta( $post_id, '_layout', true );
@@ -23,7 +23,7 @@ $row_classes[] = ( 'yes' === $disable_element ) ? 'vc_hidden-lg vc_hidden-xs vc_
 ?>
 
 
-<div<?php echo esc_attr( $id ); ?> class="wpb_row vc_inner vc_row vc_row-fluid <?php echo esc_attr( implode( ' ', $row_classes ) ); ?>">
+<div<?php echo $id ; ?> class="wpb_row vc_inner vc_row vc_row-fluid <?php echo esc_attr( implode( ' ', $row_classes ) ); ?>">
 	<?php if ( 'false' == $is_fullwidth_content ) { ?>
 			<div class="mk-grid">
 	<?php } ?>	

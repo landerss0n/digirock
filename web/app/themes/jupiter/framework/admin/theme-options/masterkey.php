@@ -685,7 +685,7 @@ $options = array(
 							'styleClasses' => 'col-sm-12 col-md-6',
 						),	
 						array(
-							'type'  => 'mk-input',
+							'type'  => 'mk-textarea',
 							'label' => __( 'GDPR Consent Checkbox Text', 'mk_framework' ),
 							'help'  => __( '' , 'mk_framework' ),
 							'model' => 'quick_contact_gdpr_consent_text',

@@ -1,9 +1,9 @@
 <?php
 /*
-Plugin Name: WPBakery Page Builder (Modified Version)
+Plugin Name: WPBakery Page Builder
 Plugin URI: http://wpbakery.com
 Description: Drag and drop page builder for WordPress. Take full control over your WordPress site, build any layout you can imagine – no programming knowledge required.
-Version: 5.4.7
+Version: 5.5.2
 Author: Michael M - WPBakery.com
 Author URI: http://wpbakery.com
 */
@@ -19,7 +19,7 @@ if ( ! defined( 'WPB_VC_VERSION' ) ) {
 	/**
 	 *
 	 */
-	define( 'WPB_VC_VERSION', '5.4.5' );
+	define( 'WPB_VC_VERSION', '5.5.2' );
 }
 
 /**
@@ -103,7 +103,7 @@ class Vc_Manager {
 	/**
 	 * @var string
 	 */
-	private $plugin_name = 'js_composer_theme/js_composer.php';
+	private $plugin_name = 'js_composer/js_composer.php';
 
 	/**
 	 * Core singleton class

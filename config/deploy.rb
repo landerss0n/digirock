@@ -1,6 +1,6 @@
-set :application, 'digiwise.se'
-set :repo_url, 'git@bitbucket.org:landerss0n/digiwise.git'
-set :wpcli_local_url, 'dev.digiwise.se'
+set :application, 'folder.se'
+set :repo_url, 'git@bitbucket.org:landerss0n/repo.git'
+set :wpcli_local_url, 'dev.app.se'
 
 # Branch options
 # Prompts for the branch name (defaults to current branch)
@@ -33,7 +33,7 @@ end
 
 # The above restart task is not run by default
 # Uncomment the following line to run it on deploys if needed
-after 'deploy:publishing', 'deploy:restart'
+#after 'deploy:publishing', 'deploy:restart'
 
 namespace :deploy do
   desc 'Update WordPress template root paths to point to the new release'

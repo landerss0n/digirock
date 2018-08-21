@@ -25,17 +25,17 @@ if ( ! function_exists( 'mk_build_main_wrapper' ) ) {
 	 */
 	function mk_build_main_wrapper( $content, $wrapper_custom_class = '', $master_holder_class = '' ) {
 
-				// Get theme options from global mk_options variable.
+		// Get theme options from global mk_options variable.
 		global $mk_options, $post;
 
-				// Get layout option from post meta
+		// Get layout option from post meta.
 		$layout = is_singular() ? get_post_meta( $post->ID, '_layout', true ) : '';
 
-				// Check if it's single portfolio and and get the layout option from theme options
-		$layout = (is_singular( 'portfolio' )) ? ($layout == 'default' ? $mk_options['portfolio_single_layout'] : $layout) : $layout;
+		// Check if it's single portfolio and and get the layout option from theme options.
+		$layout = (is_singular( 'portfolio' )) ? ('default' == $layout ? $mk_options['portfolio_single_layout'] : $layout) : $layout;
 
-		// Check if it's single blog and and get the layout option from theme options
-		$layout = (is_singular()) ? (($layout == 'default') ? $mk_options['single_layout'] : $layout) : $layout;
+		// Check if it's single blog and and get the layout option from theme options.
+		$layout = (is_singular()) ? (('default' == $layout) ? $mk_options['single_layout'] : $layout) : $layout;
 
 		// Employees single should always be full width.
 		$layout = is_singular( 'employees' ) ? 'full' : $layout;
@@ -58,7 +58,7 @@ if ( ! function_exists( 'mk_build_main_wrapper' ) ) {
 
 		$wrapper_class = empty( $wrapper_custom_class ) ? 'mk-main-wrapper ' . $layout_grid : $wrapper_custom_class;
 
-		$wrapper_id = is_singular() ? 'id="mk-page-id-' . $post->ID . '"' : '';
+		$wrapper_id = is_singular() ? 'id="mk-page-id-' . esc_attr( $post->ID ) . '"' : '';
 		$itemprop = (is_singular()) ? 'mainEntityOfPage' : 'mainContentOfPage';
 
 		$schema_markup = (is_singular()) ? get_schema_markup( 'blog' ) : get_schema_markup( 'main' );
@@ -66,7 +66,7 @@ if ( ! function_exists( 'mk_build_main_wrapper' ) ) {
 		$post_id = global_get_post_id();
 		$has_parallax = get_post_meta( $post_id, 'page_parallax', true ) ? get_post_meta( $post_id, 'page_parallax', true ) : 'false';
 		$parallax_conf = '';
-		if ( $has_parallax === 'true' ) {
+		if ( 'true' === $has_parallax ) {
 			$parallax_conf .= ' data-mk-component="Parallax" ';
 			$parallax_conf .= ' data-parallax-config=\'{"speed" : 0.3 }\' ';
 		}
@@ -94,13 +94,13 @@ if ( ! function_exists( 'mk_build_main_wrapper' ) ) {
 		}
 ?>
 
-		<div id="theme-page" class="master-holder <?php echo esc_attr( $master_holder_class ); ?> clearfix" <?php echo $schema_markup; ?>>
+		<div id="theme-page" class="master-holder <?php echo esc_attr( $master_holder_class ); ?> clearfix" <?php echo esc_attr( $schema_markup ); ?>>
 			<div class="master-holder-bg-holder">
 				<div id="theme-page-bg" class="master-holder-bg js-el" <?php echo $parallax_conf; ?> ></div>
 			</div>
 			<div class="mk-main-wrapper-holder">
-				<div <?php echo $wrapper_id; ?> class="theme-page-wrapper <?php echo $wrapper_class . ' ' . $layout . '-layout ' . $padding; ?>">
-					<div class="theme-content <?php echo $padding; ?>" itemprop="<?php echo $itemprop; ?>">
+				<div <?php echo $wrapper_id; ?> class="theme-page-wrapper <?php echo esc_attr( $wrapper_class ) . ' ' . esc_attr( $layout ) . '-layout ' . esc_attr( $padding ); ?>">
+					<div class="theme-content <?php echo esc_attr( $padding ); ?>" itemprop="<?php echo esc_attr( $itemprop ); ?>">
 							<?php echo $content; ?>
 							<div class="clearboth"></div>
 						<?php
@@ -111,12 +111,15 @@ if ( ! function_exists( 'mk_build_main_wrapper' ) ) {
 						}
 						?>
 					</div>
-					<?php if ( 'left' === $layout || 'right' === $layout ) { get_sidebar(); } ?>
+					<?php
+					if ( 'left' === $layout || 'right' === $layout ) {
+						get_sidebar(); }
+?>
 					<div class="clearboth"></div>
 				</div>
 			</div>
 			<?php
-			if ( is_singular( 'portfolio' ) && $mk_options['enable_portfolio_similar_posts'] === 'true' && get_post_meta( $post->ID, '_portfolio_similar', true ) === 'true' ) {
+			if ( is_singular( 'portfolio' ) && 'true' === $mk_options['enable_portfolio_similar_posts'] && 'true' === get_post_meta( $post->ID, '_portfolio_similar', true ) ) {
 				// Will be loaded in single portfolio page only. located in views/portfolio/portfolio-similar-posts.php.
 				mk_get_view( 'portfolio/components', 'portfolio-similar-posts' );
 			}
@@ -209,7 +212,7 @@ if ( ! function_exists( 'mk_gradient_option_parser' ) ) {
 					$output['name'] = 'diagonal_left_top';
 					break;
 			}
-		} elseif ( $style == 'radial' ) {
+		} elseif ( 'radial' == $style ) {
 			$output['type'] = $style;
 			$output['angle_1'] = '';
 			$output['angle_2'] = '';
@@ -234,7 +237,7 @@ if ( ! function_exists( 'mk_get_blog_single_style' ) ) {
 
 			global $mk_options, $post;
 			$style = get_post_meta( $post->ID, '_single_blog_style', true );
-			$style = ($style == 'default' || empty( $style )) ? $mk_options['single_blog_style'] : $style;
+			$style = ('default' == $style || empty( $style )) ? $mk_options['single_blog_style'] : $style;
 
 			return $style;
 	}
@@ -309,8 +312,31 @@ if ( ! function_exists( 'mk_get_bg_cover_class' ) ) {
 
 	function mk_get_bg_cover_class( $val ) {
 
-		if ( $val == 'true' ) {
+		if ( 'true' == $val ) {
 			return 'mk-background-stretch';
+		}
+	}
+}
+
+
+/**
+ * Its intended to get the right domain for GDPR purposes.
+ *
+ * @param   name     the third party website domain name
+ * @return  domain   string
+ */
+
+if ( ! function_exists( 'mk_get_thirdparty_embed_domain' ) ) {
+
+	function mk_get_thirdparty_domain_name( $name ) {
+		global $mk_options;
+		$gdpr = $mk_options['third_party_gdpr'];
+		if ( 'youtube' == $name ) {
+			if ( 'true' == $gdpr ) {
+				return 'youtube-nocookie.com';
+			} else {
+				return 'youtube.com';
+			}
 		}
 	}
 }
@@ -382,8 +408,7 @@ if ( ! function_exists( 'mk_insert_logo_middle_of_nav' ) ) {
 
 	function mk_insert_logo_middle_of_nav( $nav_id, $menu, $logo ) {
 
-			// Assign all first level menu item titles into array
-		// TODO: get main menu ID programatically
+		// Assign all first level menu item titles into array.
 		$menu_items = wp_get_nav_menu_items( $nav_id );
 		$titles = array();
 
@@ -391,11 +416,12 @@ if ( ! function_exists( 'mk_insert_logo_middle_of_nav' ) ) {
 			$parent = $menu_item->menu_item_parent;
 
 			if ( ! $parent ) {
-				$title = $menu_item->title;
-				$ID = $menu_item->ID;
-				$DOM_ID = 'menu-item-' . $ID;
-
+				if ( 'wpml_ls_menu_item' != $menu_item->type ) {
+					$title = $menu_item->title;
+					$ID = $menu_item->ID;
+					$DOM_ID = 'menu-item-' . $ID;
 					$titles[ $DOM_ID ] = $title;
+				}
 			}
 		}
 
@@ -403,21 +429,21 @@ if ( ! function_exists( 'mk_insert_logo_middle_of_nav' ) ) {
 			$count_menu_items = count( $titles );
 
 		if ( $count_menu_items % 2 == 0 ) :
-			// IF MENU ITEMS ARE EVEN NUMBERED
+			// IF MENU ITEMS ARE EVEN NUMBERED.
 			$insert_position = $count_menu_items / 2;
 
 		else :
 			// IF MENU ITEMS ARE ODD NUMBERED
-			// Count total lenght of letters
+			// Count total lenght of letters.
 			$letter_sum = 0;
 			foreach ( $titles as $key => $title ) {
 				$lenght = strlen( $title );
 				$letter_sum = $letter_sum + $lenght;
 			}
 
-						// Get insert position for logo by finding a point closest to a half number of letters without breaking the word.
+			// Get insert position for logo by finding a point closest to a half number of letters without breaking the word.
 			// The word that is in the middle is divided by the center point and we compare both sides.
-			// If left side is longer we set insert position after this word, otherwise before
+			// If left side is longer we set insert position after this word, otherwise before.
 			$half_letter_sum = $letter_sum / 2;
 			$left_half_sum = 0;
 			$set_position = false;
@@ -429,20 +455,20 @@ if ( ! function_exists( 'mk_insert_logo_middle_of_nav' ) ) {
 					$left_half_sum_before_addition = $left_half_sum;
 					$left_half_sum = $left_half_sum + $lenght;
 
-						// Check again after addition to see if we passed our center point
+					// Check again after addition to see if we passed our center point.
 					if ( $left_half_sum < $half_letter_sum ) {
 						$insert_position++;
 					} else {
 
-												// When we reach to our center point check the last title left & right sides.
+						// When we reach to our center point check the last title left & right sides.
 						// First set dividor to a number of letters that remain to reach to the center.
 						$length_to_center = $half_letter_sum - $left_half_sum_before_addition;
 
-												// To check if center point is on left or right side we check if it's smaller or higher from half title length
+						// To check if center point is on left or right side we check if it's smaller or higher from half title length.
 						$half_title = $lenght / 2;
 
-												// Set insert position after current title if center position is in right side of title or before when in left ( including exact center -
-						// as we usually have icons on right so it makes more sence to balance menu items a little bit more onto left )
+						// Set insert position after current title if center position is in right side of title or before when in left ( including exact center -
+						// as we usually have icons on right so it makes more sence to balance menu items a little bit more onto left ).
 						if ( $length_to_center > $half_title ) {
 							$insert_position++;
 							break;
@@ -455,7 +481,7 @@ if ( ! function_exists( 'mk_insert_logo_middle_of_nav' ) ) {
 
 		endif;
 
-			// Insert Logo
+		// Insert Logo.
 		$menu_item_ids = array_keys( $titles );
 		$menu_item_id = $menu_item_ids[ $insert_position ];
 		$match_string = '<li id="' . $menu_item_id . '"';
@@ -513,7 +539,7 @@ if ( ! function_exists( 'mk_getimagesize' ) ) {
 				$wp_filesystem = $mkfs->wp_filesystem;
 			}
 
-			// if the image is local
+			// if the image is local.
 			$home_url = esc_url( get_home_url( '/' ) );
 			$home_path = esc_url( get_home_path() );
 			$src_directory = str_replace( array( $home_url ), array( $home_path ), $src );
@@ -526,10 +552,10 @@ if ( ! function_exists( 'mk_getimagesize' ) ) {
 
 			}
 			// if the image is local
-			// if the image is not local
+			// if the image is not local.
 			$return = mk_curl_getimage_dimensions( $src );
 
-			// if our special curl function fails try with wp_get_http_headers one more time
+			// if our special curl function fails try with wp_get_http_headers one more time.
 			if ( ! is_array( $return ) ) {
 				$remote_file = wp_get_http_headers( $src );
 				if ( ! mk_is_image( $remote_file['content-type'] ) ) {
@@ -545,14 +571,14 @@ if ( ! function_exists( 'mk_getimagesize' ) ) {
 				}
 			}
 
-			// Get any existing copy of our transient data
+			// Get any existing copy of our transient data.
 			if ( is_array( $return ) ) {
-				// It wasn't there, so regenerate the data and save the transient
+				// It wasn't there, so regenerate the data and save the transient.
 				set_transient( $return_transient, $return, 15 * 60 );
 			}
 		}// End if().
 
-		if ( $return == '' ) {
+		if ( '' == $return ) {
 			$return = array( '', '', '' );
 		}
 
@@ -580,14 +606,14 @@ if ( ! function_exists( 'mk_getimagesize' ) ) {
 if ( ! function_exists( 'mk_curl_getimage' ) ) {
 	function mk_curl_getimage( $url ) {
 		$file_ext = strtolower( pathinfo( parse_url( $url )['path'], PATHINFO_EXTENSION ) );
-		// Returns undefined in some cases
+		// Returns undefined in some cases.
 		$range = '32768';
 
-		if ( $file_ext == 'png' ) {
+		if ( 'png' == $file_ext ) {
 			$range = '24';
-		} elseif ( $file_ext == 'gif' ) {
+		} elseif ( 'gif' == $file_ext ) {
 			$range = '10';
-		} elseif ( $file_ext == 'jpeg' or $file_ext == 'jpg' ) {
+		} elseif ( 'jpeg' == $file_ext || 'jpg' == $file_ext ) {
 			$range = '32768';
 		}
 
@@ -631,36 +657,36 @@ if ( ! function_exists( 'mk_curl_getimage_dimensions' ) ) {
 		}
 
 		$raw = mk_curl_getimage( $url );
-		if ( $raw == false ) {
+		if ( false == $raw ) {
 			return false;
 		}
 
 		$file_ext = strtolower( pathinfo( parse_url( $url )['path'], PATHINFO_EXTENSION ) );
-		if ( $file_ext == 'png' ) {
-			// The identity for a PNG is 8Bytes (64bits)long
+		if ( 'png' == $file_ext ) {
+			// The identity for a PNG is 8Bytes (64bits)long.
 			$ident = unpack( 'Nupper/Nlower', $raw );
-			// Make sure we get PNG
-			if ( $ident['upper'] !== 0x89504E47 || $ident['lower'] !== 0x0D0A1A0A ) {
+			// Make sure we get PNG.
+			if ( 0x89504E47 !== $ident['upper'] || 0x0D0A1A0A !== $ident['lower'] ) {
 				return false;
 			}
-			// Get rid of the first 8 bytes that we processed
+			// Get rid of the first 8 bytes that we processed.
 			$data = substr( $raw, 8 );
-			// Grab the first chunk tag, should be IHDR
+			// Grab the first chunk tag, should be IHDR.
 			$chunk = unpack( 'Nlength/Ntype', $data );
-			// IHDR must come first, if not we return false
-			if ( $chunk['type'] === 0x49484452 ) {
-				// Get rid of the 8 bytes we just processed
+			// IHDR must come first, if not we return false.
+			if ( 0x49484452 === $chunk['type'] ) {
+				// Get rid of the 8 bytes we just processed.
 				$data = substr( $data, 8 );
-				// Grab our x and y
+				// Grab our x and y.
 				$info = unpack( 'NX/NY', $data );
-				// Return in common format
+				// Return in common format.
 				return array( $info['X'], $info['Y'] );
 			} else {
 				return false;
 			}
 		}
 
-		if ( $file_ext == 'jpg' or $file_ext == 'jpeg' ) {
+		if ( 'jpg' == $file_ext || 'jpeg' == $file_ext ) {
 			$im = @imagecreatefromstring( $raw );
 			if ( $im ) {
 				$width = imagesx( $im );
@@ -669,19 +695,19 @@ if ( ! function_exists( 'mk_curl_getimage_dimensions' ) ) {
 			}
 		}
 
-		if ( $file_ext == 'gif' ) {
-			// The identity for a GIF is 6bytes (48Bits)long
+		if ( 'gif' == $file_ext ) {
+			// The identity for a GIF is 6bytes (48Bits)long.
 			$ident = unpack( 'nupper/nmiddle/nlower', $raw );
-			// Make sure we get GIF 87a or 89a
-			if ( $ident['upper'] !== 0x4749 || $ident['middle'] !== 0x4638 ||
-				($ident['lower'] !== 0x3761 && $ident['lower'] !== 0x3961) ) {
+			// Make sure we get GIF 87a or 89a.
+			if ( 0x4749 !== $ident['upper'] || 0x4638 !== $ident['middle'] ||
+				( 0x3761 !== $ident['lower'] && 0x3961 !== $ident['lower']) ) {
 				return false;
 			}
-			// Get rid of the first 6 bytes that we processed
+			// Get rid of the first 6 bytes that we processed.
 			$data = substr( $raw, 6 );
-			// Grab our x and y, GIF is little endian for width and length
+			// Grab our x and y, GIF is little endian for width and length.
 			$info = unpack( 'vX/vY', $raw );
-			// Return in common format
+			// Return in common format.
 			return array( $info['X'], $info['Y'] );
 		}
 
@@ -807,7 +833,7 @@ if ( ! function_exists( 'mk_get_category_enteries' ) ) {
 if ( ! function_exists( 'mk_get_page_enteries' ) ) {
 
 	function mk_get_page_enteries( $count = 50 ) {
-		// if (mk_page_is_vc_edit_form()) {
+
 		$page_enteries = get_pages( 'title_li=&orderby=name&number' . $count );
 
 		if ( ! empty( $page_enteries ) ) {
@@ -872,7 +898,7 @@ if ( ! function_exists( 'mk_is_pages_comments_enabled' ) ) {
 			return false;
 		}
 
-		if ( $mk_options['pages_comments'] == 'true' ) {
+		if ( 'true' == $mk_options['pages_comments'] ) {
 			return true;
 		}
 	}
@@ -889,7 +915,7 @@ if ( ! function_exists( 'mk_breadcrumbs_get_parents' ) ) {
 
 				$parents = array();
 
-		if ( $post_id == 0 ) {
+		if ( 0 == $post_id ) {
 			return $parents;
 		}
 
@@ -918,7 +944,7 @@ if ( ! function_exists( 'mk_get_blog_post_thumbnail' ) ) {
 	function mk_get_blog_post_thumbnail( $post_type = 'image' ) {
 		global $post;
 
-		if ( $post_type == 'portfolio' ) {
+		if ( 'portfolio' == $post_type ) {
 
 			if ( has_post_thumbnail() ) {
 
@@ -969,12 +995,12 @@ if ( ! function_exists( 'mk_str_contains' ) ) {
 	 */
 	function mk_str_contains( $haystack, $needles, $case_insensitive = false ) {
 		foreach ( (array) $needles as $needle ) {
-			if ( $case_insensitive == false ) {
+			if ( false == $case_insensitive ) {
 				$pos = strpos( $haystack, $needle );
 			} else {
 				$pos = stripos( $haystack, $needle );
 			}
-			if ( $needle != '' && $pos !== false ) {
+			if ( '' != $needle && false !== $pos ) {
 				return true;
 			}
 		}
@@ -1023,7 +1049,7 @@ if ( ! function_exists( 'str_replace_last' ) ) {
 	function str_replace_last( $search, $replace, $subject ) {
 		$pos = strrpos( $subject, $search );
 
-		if ( $pos !== false ) {
+		if ( false !== $pos ) {
 			$subject = substr_replace( $subject, $replace, $pos, strlen( $search ) );
 		}
 

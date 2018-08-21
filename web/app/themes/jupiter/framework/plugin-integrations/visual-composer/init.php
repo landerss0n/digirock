@@ -14,12 +14,12 @@ if ( ! defined( 'THEME_FRAMEWORK' ) ) {
  */
 
 
-// Do not proceed if Visual Composer plugin is not active
+// Do not proceed if Visual Composer plugin is not active.
 if ( ! class_exists( 'WPBakeryShortCode' ) ) {
 	return false;
 }
 
-// Disable some Visual Composer actions hook during template installation
+// Disable some Visual Composer actions hook during template installation.
 $mk_disable_vc_hook_on_template_installation_actions = [
 	'abb_install_template_procedure',
 	'abb_install_plugin',

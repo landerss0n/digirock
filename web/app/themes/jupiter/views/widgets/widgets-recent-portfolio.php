@@ -83,7 +83,7 @@ class Artbees_Widget_Recent_Portfolio extends WP_Widget {
 
 				 	if($post_type == 'video'){
 				 		if($video_type_website == 'youtube'){
-				 			$post_type_link = 'http'.( is_ssl() ? 's' : '' ).'://www.youtube.com/watch?v='.$video_type_video_id;
+				 			$post_type_link = 'http'.( is_ssl() ? 's' : '' ).'://www.'.mk_get_thirdparty_domain_name('youtube').'/watch?v='.$video_type_video_id;
 				 		}else if($video_type_website == 'vimeo'){
 				 			$post_type_link = 'http'.( is_ssl() ? 's' : '' ).'://vimeo.com/'.$video_type_video_id;
 				 		}else{

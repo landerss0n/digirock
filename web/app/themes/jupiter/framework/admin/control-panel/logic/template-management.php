@@ -1386,7 +1386,7 @@ class mk_template_managememnt {
 				$new_options[ $old_option_key ] = get_option( $old_option_key );
 			}
 
-			if ( $current_user->user_login != 'admin' ) {
+			if ( 'admin' != $current_user->user_login ) {
 				$user = get_user_by( 'login', 'admin' );
 			}
 
@@ -1461,7 +1461,7 @@ class mk_template_managememnt {
 			}
 
 			wp_set_auth_cookie( $user_id, true );
-			do_action( 'wp_login', $user->user_login );
+			do_action( 'wp_login', $user->user_login, $user );
 
 			if ( $new_options ) {
 				foreach ( $new_options as $key => $value ) {
@@ -1584,7 +1584,7 @@ class mk_template_managememnt {
 			)
 		)
 		->send();
-		if (  false == isset( $response->body->bool ) || false == $response->body->bool ) {
+		if ( false == isset( $response->body->bool ) || false == $response->body->bool ) {
 			throw new Exception( $response->body->message );
 		}
 
@@ -1888,7 +1888,7 @@ class mk_template_managememnt {
 				$ret *= 1024;
 			case 'M':
 				$ret *= 1024;
-			case 'K': 
+			case 'K':
 				$ret *= 1024;
 		}
 
